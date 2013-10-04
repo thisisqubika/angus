@@ -4,23 +4,24 @@ module Angus
   class ResourceDefinition
 
     def initialize(resource_name, representations)
-      @resource_name    = classify_resource(resource_name)
-      @representations  = representations || {}
+      @resource_name       = resource_name
+      @resource_class_name = classify_resource(resource_name)
+      @representations     = representations || {}
     end
 
     def operations
-      @representations.operations
+      @representations.operations[@resource_name.to_s]
     end
 
     def canonical_name
-      Angus::String.underscore(@resource_name.to_s)
+      Angus::String.underscore(@resource_class_name.to_s)
     end
 
     def resource_class
       return @resource_class if @resource_class
       require resource_path
 
-      @resource_class = Object.const_get(@resource_name)
+      @resource_class = Object.const_get(@resource_class_name)
     end
 
     def resource_path

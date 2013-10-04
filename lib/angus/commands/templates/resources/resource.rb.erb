@@ -1,0 +1,6 @@
+class <%= classify(resource_name) %> < Angus::BaseResource
+<% resource_actions.each do |action_name| %>
+  def <%= action_name %>
+  end
+<% end %>
+end

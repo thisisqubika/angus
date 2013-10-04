@@ -1,4 +1,5 @@
 require 'json'
+require 'logger'
 
 require_relative 'resource_definition'
 require_relative 'request_handler'
@@ -22,8 +23,9 @@ module Angus
       @resources_definitions = []
       @version = FIRST_VERSION
       @name = self.class.name.downcase
-      @configured = false
+      @configured  = false
       @definitions = nil
+      @logger      = Logger.new(STDOUT)
 
       configure!
 
@@ -60,40 +62,11 @@ module Angus
       @definitions.name
     end
 
-    #def discover_paths
-    #  {
-    #    'doc' => doc_path,
-    #    'api' => api_path
-    #  }
-    #end
-
     def register(resource_name, options = {})
       resource_definition = ResourceDefinition.new(resource_name, @definitions)
 
       @resources_definitions << resource_definition
     end
-
-    #def register_base_routes
-    #  router.on(:get, '/') do
-    #    render discover_paths
-    #  end
-    #
-    #  router.on(:get, base_path) do
-    #    render discover_paths
-    #  end
-    #
-    #  router.on(:get, doc_path) do
-    #    render(Picasso::SDoc::HtmlFormatter.format_service(@definitions), format: :html)
-    #  end
-    #end
-
-    #def doc_path
-    #  "#{base_path}/doc"
-    #end
-    #
-    #def api_path
-    #  "#{base_path}/api"
-    #end
 
     def base_path
       "/#{service_name}"
@@ -113,6 +86,7 @@ module Angus
           resource = resource_definition.resource_class.new(request, params)
 
           begin
+            @logger.info("Rendering #{resource.class.name}##{operation.code_name}")
             response = resource.send(operation.code_name) || {}
 
             messages = response.delete(:messages)
@@ -121,18 +95,14 @@ module Angus
 
             @response.write(response)
           rescue Exception => error
-            #return if handled_exceptions(error)
+            @logger.error("An exception occurs on #{resource.class.name}##{operation.code_name}")
+            @logger.error(error)
 
-            # TODO allow rescue_from Exception, with: :testing
-            puts error.inspect
+            status_code = get_error_status_code(error)
+            response = build_error_response(error)
 
-            #status_code = get_error_status_code(error)
-
-            #response = build_error_response(error)
-
-            #@response.status = status_code
-            #@response.write(response)
-            # TODO Handle exceptions
+            @response.status = status_code
+            @response.write(response)
           end
         end
       end

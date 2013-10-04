@@ -30,9 +30,6 @@ module Angus
       if message
         message.status_code
       else
-        #puts error.message
-        #puts error.backtrace
-
         HTTP_STATUS_CODE_INTERNAL_SERVER_ERROR
       end
     end
@@ -51,7 +48,7 @@ module Angus
     end
 
     def get_message_definition(key, level)
-      message = @messages.find { |name, definition|
+      message = @definitions.messages.find { |name, definition|
         name == key.to_s && definition['level'].downcase == level.downcase
       }
 
@@ -68,10 +65,6 @@ module Angus
       end
 
     end
-
-    #def self.cached_service_definition
-    #  @service_definition ||= Picasso::SDoc::DefinitionsReader.service_definition
-    #end
 
     # Builds a service success response
     #

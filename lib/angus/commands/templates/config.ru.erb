@@ -1,0 +1,10 @@
+$: << (File.dirname(__FILE__))
+
+require 'bundler'
+
+Bundler.setup
+
+require 'angus'
+require 'services/<%= app_name %>'
+
+run <%= classify(name) %>.new

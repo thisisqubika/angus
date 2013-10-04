@@ -11,7 +11,7 @@ module Angus
     attr_reader :env, :request, :response, :params
 
     def initialize
-      @router         = Picasso::Router.new
+      @router = Picasso::Router.new
     end
 
     def router
@@ -19,20 +19,16 @@ module Angus
     end
 
     def call(env)
-      @env      = env
-      #@request  = Rack::Request.new(env)
-      @response = Response.new
-      #@params   = Params.indifferent_params(@request.params)
+      begin
+        @env      = env
+        @response = Response.new
 
-      router.route(env)
+        router.route(env)
+      rescue Picasso::Router::NotImplementedError
+        @response.status = HTTP_STATUS_CODE_NOT_FOUND
 
-      # TODO handle execption
-      #if route_exists?(@request.request_method, @request.path)
-      #  get_route_block(@request.request_method, @request.path).call
-      #else
-      #  @response.status = 404
-      #  @response.write 'not found'
-      #end
+        render({'message' => 'page not found'}, {format: :json})
+      end
 
       @response.finish
     end
