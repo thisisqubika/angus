@@ -32,7 +32,7 @@ module Angus
       return {} unless response_representation
 
       case response_representation
-        when Picasso::SDoc::Definitions::Representation
+        when Angus::SDoc::Definitions::Representation
           result = []
 
           response_representation.fields.each do |field|
@@ -65,7 +65,7 @@ module Angus
 
     # TODO improve this find
     def representation_by_name(name)
-      @representations.representations.find {|representation| representation.name == name}
+      @representations.representations.find { |representation| representation.name == name }
     end
 
     private

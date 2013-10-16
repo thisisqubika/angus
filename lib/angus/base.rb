@@ -4,12 +4,13 @@ require 'logger'
 require_relative 'resource_definition'
 require_relative 'request_handler'
 require_relative 'base_resource'
+require_relative 'responses'
 
 require_relative 'renders/base'
 require_relative 'marshallings/base'
 require_relative 'base_actions'
 
-require 'picasso/sdoc'
+require 'angus/sdoc'
 
 module Angus
   class Base < RequestHandler
@@ -51,15 +52,19 @@ module Angus
       raise 'Already configured' if configured?
 
       # TODO ver como hacer configurable
-      @definitions = Picasso::SDoc::DefinitionsReader.service_definition('definitions')
+      @definitions = Angus::SDoc::DefinitionsReader.service_definition('definitions')
 
       configure
 
       @configured = true
     end
 
-    def service_name
-      @definitions.name
+    def service_code_name
+      @definitions.code_name
+    end
+
+    def service_version
+      @definitions.version
     end
 
     def register(resource_name, options = {})
@@ -69,7 +74,7 @@ module Angus
     end
 
     def base_path
-      "/#{service_name}"
+      "/#{service_code_name}"
     end
 
     def register_resource_routes(resource_definition)
@@ -86,8 +91,9 @@ module Angus
           resource = resource_definition.resource_class.new(request, params)
 
           begin
-            @logger.info("Rendering #{resource.class.name}##{operation.code_name}")
-            response = resource.send(operation.code_name) || {}
+            response = resource.send(operation.code_name)
+
+            response = {} unless response.is_a?(Hash)
 
             messages = response.delete(:messages)
 
@@ -95,10 +101,11 @@ module Angus
 
             @response.write(response)
           rescue Exception => error
-            @logger.error("An exception occurs on #{resource.class.name}##{operation.code_name}")
-            @logger.error(error)
-
             status_code = get_error_status_code(error)
+            if status_code == Angus::Responses::HTTP_STATUS_CODE_INTERNAL_SERVER_ERROR
+              @logger.error("An exception occurs on #{resource.class.name}##{operation.code_name}")
+              @logger.error(error)
+            end
             response = build_error_response(error)
 
             @response.status = status_code

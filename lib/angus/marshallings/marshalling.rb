@@ -107,7 +107,7 @@ module Angus
         hash[key.to_s]
       else
         #raise InvalidGetterError.new(key)
-        raise NoMethodError
+        raise NoMethodError.new(key.to_s)
       end
     end
 

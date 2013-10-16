@@ -1,3 +1,5 @@
+require 'angus/sdoc'
+
 module Angus
   module Responses
 
@@ -44,26 +46,15 @@ module Angus
     def get_error_definition(error)
       error_key = error.class.name
 
-      get_message_definition(error_key, Picasso::SDoc::Definitions::Message::ERROR_LEVEL)
+      get_message_definition(error_key, Angus::SDoc::Definitions::Message::ERROR_LEVEL)
     end
 
     def get_message_definition(key, level)
       message = @definitions.messages.find { |name, definition|
-        name == key.to_s && definition['level'].downcase == level.downcase
+        name == key.to_s && definition.level.downcase == level.downcase
       }
 
-      if message
-        definition = message.last
-
-        Picasso::SDoc::Message.new(
-          definition['level'],
-          definition['key'],
-          definition['description'],
-          definition['status_code'],
-          definition['text']
-        )
-      end
-
+      message.last if message
     end
 
     # Builds a service success response
@@ -101,7 +92,6 @@ module Angus
     # @return [ResponseMessage]
     def build_message(key, level, *params)
       message_definition = get_message_definition(key, level)
-      #Picasso::Responses.cached_service_definition.message(key, level)
 
       unless message_definition
         raise NameError.new("Could not found message with key: #{key}, level: #{level}")
@@ -113,7 +103,14 @@ module Angus
                       message_definition.description
                     end
 
-      ResponseMessage.new(key, level, description)
+      Angus::SDoc::Definitions::Message
+
+      message = Angus::SDoc::Definitions::Message.new
+      message.key = key
+      message.level = level
+      message.description = description
+
+      message
     end
 
     # Builds a service success response
@@ -130,7 +127,7 @@ module Angus
     def build_data_response(data, attributes, messages = [])
       marshalled_data = Angus::Marshalling.marshal_object(data, attributes)
 
-      messages = build_messages(Picasso::SDoc::Definitions::Message::INFO_LEVEL, messages)
+      messages = build_messages(Angus::SDoc::Definitions::Message::INFO_LEVEL, messages)
 
       build_success_response(marshalled_data, messages)
     end
@@ -145,7 +142,7 @@ module Angus
     #
     # @return [String] JSON response
     def build_no_data_response(messages = [])
-      messages = build_messages(Evolution::SDoc::Definitions::Message::INFO_LEVEL, messages)
+      messages = build_messages(Angus::SDoc::Definitions::Message::INFO_LEVEL, messages)
 
       build_success_response({}, messages)
     end
@@ -163,7 +160,7 @@ module Angus
     # @return [Array<ResponseMessage>]
     def build_messages(level, messages)
       (messages || []).map do |message|
-        if message.kind_of?(Evolution::ResponseMessage)
+        if message.kind_of?(Angus::SDoc::Definitions::Message)
           message
         else
           build_message(message, level)

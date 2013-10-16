@@ -17,14 +17,10 @@ Gem::Specification.new do |spec|
   spec.test_files    = Dir.glob('{spec}/**/*').grep(%r{^spec/})
   spec.require_paths = %w[lib]
   spec.bindir        = 'bin'
-  spec.executables   = %w['angus']
-
-  spec.post_install_message = <<-MESSAGE
-    Testing
-  MESSAGE
+  spec.executables   = %w[angus]
 
   spec.add_dependency('thor')
-  spec.add_dependency('picasso-sdoc', '~> 0.0')
+  spec.add_dependency('angus-sdoc', '~> 0.0')
   spec.add_dependency('picasso-router', '~> 0.0')
 
   spec.add_development_dependency('rake')
