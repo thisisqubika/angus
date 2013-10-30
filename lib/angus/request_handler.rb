@@ -1,3 +1,5 @@
+require 'angus-router'
+
 require_relative 'response'
 require_relative 'responses'
 
@@ -11,7 +13,7 @@ module Angus
     attr_reader :env, :request, :response, :params
 
     def initialize
-      @router = Picasso::Router.new
+      @router = Angus::Router.new
     end
 
     def router
@@ -24,10 +26,13 @@ module Angus
         @response = Response.new
 
         router.route(env)
-      rescue Picasso::Router::NotImplementedError
+      rescue Angus::Router::NotImplementedError
         @response.status = HTTP_STATUS_CODE_NOT_FOUND
 
-        render({'message' => 'page not found'}, {format: :json})
+        render({ 'status' => 'error',
+                 'messages' => [{ 'level' => 'error', 'key' => 'RouteNotFound',
+                                  'dsc' => 'Invalid route' }]
+               }, {format: :json})
       end
 
       @response.finish

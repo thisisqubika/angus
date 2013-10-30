@@ -6,11 +6,11 @@ require 'angus/version'
 Gem::Specification.new do |spec|
   spec.name          = 'angus'
   spec.version       = Angus::VERSION
-  spec.authors       = %w[*sigh*]
+  spec.authors       = ['Pablo Ifran', 'Adrian Gomez', 'Gianfranco Zas']
   spec.email         = %w[angus@moove-it.com]
   spec.description   = %q{angus}
   spec.summary       = %q{angus}
-  spec.homepage      = 'http://www.moove-it.com'
+  spec.homepage      = 'http://mooveit.github.io/angus-sdoc'
   spec.license       = 'MIT'
 
   spec.files         = Dir.glob('{lib}/**/*')
@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency('thor')
   spec.add_dependency('angus-sdoc', '~> 0.0')
-  spec.add_dependency('picasso-router', '~> 0.0')
+  spec.add_dependency('angus-router', '~> 0.0')
 
   spec.add_development_dependency('rake')
 
