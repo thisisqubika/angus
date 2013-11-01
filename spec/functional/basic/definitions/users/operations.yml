@@ -1,0 +1,36 @@
+get_user:
+  name: Obtener Información de un Usuario
+  description: >
+    Devuelve información del usuario, como por ejemplo e-mail y fecha de nacimiento.
+
+  path: /users/:user_id
+  method: get
+  uri:
+    - element: user_id
+      description: Identificador del usuario
+
+  response:
+    - element: profile
+      description: Perfil del usuario
+      required: true
+      type: user_profile
+
+  messages:
+    - key: ResourceNotFound
+
+get_users:
+  name: Obtener Lista de usuarios
+  description: >
+    Devuelve lista de usarios.
+
+  path: /users
+  method: get
+
+  response:
+    - element: users
+      description: Perfil del usuario
+      required: true
+      elements_type: user_profile
+
+  messages:
+    - key: ResourceNotFound

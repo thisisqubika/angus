@@ -10,7 +10,7 @@ module Angus
     end
 
     def operations
-      @representations.operations[@resource_name.to_s]
+      @representations.operations[@resource_name.to_s] || []
     end
 
     def canonical_name

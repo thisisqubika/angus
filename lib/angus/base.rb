@@ -89,6 +89,7 @@ module Angus
           params  = Params.indifferent_params(params)
 
           resource = resource_definition.resource_class.new(request, params)
+          @response['Content-Type'] = 'application/json'
 
           begin
             response = resource.send(operation.code_name)

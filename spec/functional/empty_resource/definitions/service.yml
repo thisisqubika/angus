@@ -1,0 +1,3 @@
+service:   'Empty resource'
+code_name: 'empty_resource'
+version:   '0.1'

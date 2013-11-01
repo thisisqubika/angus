@@ -20,8 +20,8 @@ Gem::Specification.new do |spec|
   spec.executables   = %w[angus]
 
   spec.add_dependency('thor')
-  spec.add_dependency('angus-sdoc', '~> 0.0')
-  spec.add_dependency('angus-router', '~> 0.0')
+  spec.add_dependency('angus-sdoc', '~> 0.0', '>= 0.0.3')
+  spec.add_dependency('angus-router', '~> 0.0', '>= 0.0.3')
 
   spec.add_development_dependency('rake')
 
@@ -29,6 +29,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency('rspec', '~> 2.12')
   spec.add_development_dependency('faker')
   spec.add_development_dependency('simplecov', '~> 0.7')
+  spec.add_development_dependency('rack-test', '~> 0.6')
   spec.add_development_dependency('simplecov-rcov', '~> 0.2')
   spec.add_development_dependency('simplecov-rcov-text', '~> 0.0')
   spec.add_development_dependency('ci_reporter')

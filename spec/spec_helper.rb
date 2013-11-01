@@ -24,4 +24,14 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = 'random'
 
+  config.around(:each) do |example|
+    old_work_dir = Dir.pwd
+
+    Dir.chdir(example.metadata[:work_dir] || old_work_dir)
+
+    example.run
+
+    Dir.chdir(old_work_dir)
+  end
+
 end

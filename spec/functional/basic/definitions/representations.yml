@@ -1,0 +1,9 @@
+user_profile:
+  - field: id
+    description: Idenfiticador del usuario
+    required: true
+    type: integer
+  - field: name
+    description: Nombres del usuario
+    required: true
+    type: string
