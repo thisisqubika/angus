@@ -21,34 +21,38 @@ module Angus
     end
 
     def call(env)
+      dup.call!(env)
+    end
+
+    def call!(env)
       begin
-        @env      = env
-        @response = Response.new
-
-        router.route(env)
+        response = router.route(env)
       rescue Angus::Router::NotImplementedError
-        @response.status = HTTP_STATUS_CODE_NOT_FOUND
+        response = Response.new
+        response.status = HTTP_STATUS_CODE_NOT_FOUND
 
-        render({ 'status' => 'error',
+        render(response, { 'status' => 'error',
                  'messages' => [{ 'level' => 'error', 'key' => 'RouteNotFound',
                                   'dsc' => 'Invalid route' }]
                }, {format: :json})
       end
 
-      @response.finish
+      response.finish
     end
 
     # TODO ver multiples formatos en el futuro
-    def render(content, options = {})
+    def render(response, content, options = {})
       format = options[:format] || DEFAULT_RENDER
       case(format)
         when :html
-          HtmlRender.render(@response, content)
+          HtmlRender.render(response, content)
         when :json
-          JsonRender.render(@response, content)
+          JsonRender.render(response, content)
         else
           raise 'Unknown render format'
-      end
+        end
+
+      response
     end
 
     # TODO ver esto en el futuro

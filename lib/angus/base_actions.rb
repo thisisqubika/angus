@@ -9,19 +9,25 @@ module Angus
     end
 
     def register_base_routes
-      router.on(:get, '/') do
-        render discover_paths
+      router.on(:get, '/') do |env, params|
+        response = Response.new
+
+        render(response, discover_paths)
       end
 
-      router.on(:get, base_path) do
-        render discover_paths
+      router.on(:get, base_path) do |env, params|
+        response = Response.new
+
+        render(response, discover_paths)
       end
 
       router.on(:get, doc_path) do |env, params|
+        response = Response.new
+
         if params[:format] == 'json'
-          render(Angus::SDoc::JsonFormatter.format_service(@definitions), format: :json)
+          render(response, Angus::SDoc::JsonFormatter.format_service(@definitions), format: :json)
         else
-          render(Angus::SDoc::HtmlFormatter.format_service(@definitions), format: :html)
+          render(response, Angus::SDoc::HtmlFormatter.format_service(@definitions), format: :html)
         end
       end
     end

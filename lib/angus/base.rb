@@ -86,31 +86,36 @@ module Angus
 
         router.on(method, op_path) do |env, params|
           request = Rack::Request.new(env)
-          params  = Params.indifferent_params(params)
+          params = Params.indifferent_params(params)
+          response = Response.new
 
           resource = resource_definition.resource_class.new(request, params)
-          @response['Content-Type'] = 'application/json'
+          response['Content-Type'] = 'application/json'
 
           begin
-            response = resource.send(operation.code_name)
+            op_response = resource.send(operation.code_name)
 
-            response = {} unless response.is_a?(Hash)
+            op_response = {} unless op_response.is_a?(Hash)
 
-            messages = response.delete(:messages)
+            messages = op_response.delete(:messages)
 
-            response = build_data_response(response, response_metadata, messages)
+            op_response = build_data_response(op_response, response_metadata, messages)
 
-            @response.write(response)
+            response.write(op_response)
+
+            response
           rescue Exception => error
             status_code = get_error_status_code(error)
             if status_code == Angus::Responses::HTTP_STATUS_CODE_INTERNAL_SERVER_ERROR
               @logger.error("An exception occurs on #{resource.class.name}##{operation.code_name}")
               @logger.error(error)
             end
-            response = build_error_response(error)
+            error_response = build_error_response(error)
 
-            @response.status = status_code
-            @response.write(response)
+            response.status = status_code
+            response.write(error_response)
+
+            response
           end
         end
       end
