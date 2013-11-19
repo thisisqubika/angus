@@ -1,4 +1,4 @@
-ResourceNotFound:
+UserNotFound:
   status_code: 404
   level: error
-  description: Recurso no encontrado
+  description: User not found

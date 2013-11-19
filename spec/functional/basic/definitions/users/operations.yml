@@ -16,7 +16,7 @@ get_user:
       type: user_profile
 
   messages:
-    - key: ResourceNotFound
+    - key: UserNotFound
 
 get_users:
   name: Obtener Lista de usuarios
@@ -31,6 +31,3 @@ get_users:
       description: Perfil del usuario
       required: true
       elements_type: user_profile
-
-  messages:
-    - key: ResourceNotFound

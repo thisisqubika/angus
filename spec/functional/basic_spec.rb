@@ -57,6 +57,30 @@ describe Spec::Functional::Basic, { :work_dir => "#{File.dirname(__FILE__ )}/bas
       last_response.header['Content-Type'].should eq('application/json')
     end
 
+    context 'when a expected error happens' do
+      it 'sets the correct status code' do
+        get '/basic/api/0.1/users/-1'
+
+        last_response.status.should eq(404)
+      end
+
+      it 'sets a json content type' do
+        get '/basic/api/0.1/users/-1'
+
+        last_response.header['Content-Type'].should eq('application/json')
+      end
+
+      describe 'the response body' do
+        subject(:body) {
+          get '/basic/api/0.1/users/-1'
+          JSON(last_response.body)
+        }
+
+        its(['status']) { should eq('error')}
+        its(['messages']) { should include({ 'level' => 'error', 'key' => 'UserNotFound',
+                                             'dsc' => 'User with id=-1 not found' })}
+      end
+    end
   end
 
 end
