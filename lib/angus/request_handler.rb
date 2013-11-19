@@ -10,8 +10,6 @@ module Angus
 
     DEFAULT_RENDER = :json
 
-    attr_reader :env, :request, :response, :params
-
     def initialize
       @router = Angus::Router.new
     end
@@ -53,13 +51,6 @@ module Angus
         end
 
       response
-    end
-
-    # TODO ver esto en el futuro
-    # Use the specified Rack middleware
-    def use(middleware, *args, &block)
-      @prototype = nil
-      @middleware << [middleware, args, block]
     end
 
   end

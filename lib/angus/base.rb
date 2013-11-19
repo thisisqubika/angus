@@ -9,6 +9,9 @@ require_relative 'responses'
 require_relative 'renders/base'
 require_relative 'marshallings/base'
 require_relative 'base_actions'
+require_relative 'definition_reader'
+
+require_relative 'middleware/exception_handler'
 
 require 'angus/sdoc'
 
@@ -27,11 +30,26 @@ module Angus
       @configured  = false
       @definitions = nil
       @logger      = Logger.new(STDOUT)
+      @middleware  = []
 
       configure!
 
       register_base_routes
       register_resources_routes
+    end
+
+    def self.build
+      app     = self.new
+      builder = Rack::Builder.new
+
+      app.middleware.each do |c,a,b|
+        builder.use(c, *a, &b)
+      end
+
+      builder.use Middleware::ExceptionHandler
+
+      builder.run(app)
+      builder
     end
 
     def register_resources_routes
@@ -44,14 +62,13 @@ module Angus
       @configured
     end
 
-    # TODO ver que hacer
     def configure
+      warn 'Empty configuration for service.'
     end
 
     def configure!
       raise 'Already configured' if configured?
 
-      # TODO ver como hacer configurable
       @definitions = Angus::SDoc::DefinitionsReader.service_definition('definitions')
 
       configure
@@ -65,6 +82,14 @@ module Angus
 
     def service_version
       @definitions.version
+    end
+
+    def middleware
+      @middleware
+    end
+
+    def use(middleware, *args, &block)
+      @middleware << [middleware, args, block]
     end
 
     def register(resource_name, options = {})
@@ -92,31 +117,16 @@ module Angus
           resource = resource_definition.resource_class.new(request, params)
           response['Content-Type'] = 'application/json'
 
-          begin
-            op_response = resource.send(operation.code_name)
+          op_response = resource.send(operation.code_name)
+          op_response = {} unless op_response.is_a?(Hash)
 
-            op_response = {} unless op_response.is_a?(Hash)
+          messages = op_response.delete(:messages)
 
-            messages = op_response.delete(:messages)
+          op_response = build_data_response(op_response, response_metadata, messages)
 
-            op_response = build_data_response(op_response, response_metadata, messages)
+          response.write(op_response)
 
-            response.write(op_response)
-
-            response
-          rescue Exception => error
-            status_code = get_error_status_code(error)
-            if status_code == Angus::Responses::HTTP_STATUS_CODE_INTERNAL_SERVER_ERROR
-              @logger.error("An exception occurs on #{resource.class.name}##{operation.code_name}")
-              @logger.error(error)
-            end
-            error_response = build_error_response(error)
-
-            response.status = status_code
-            response.write(error_response)
-
-            response
-          end
+          response
         end
       end
     end

@@ -8,7 +8,7 @@ describe Spec::Functional::Basic, { :work_dir => "#{File.dirname(__FILE__ )}/bas
   include Rack::Test::Methods
 
   def app
-    Spec::Functional::Basic.new
+    Spec::Functional::Basic.build
   end
 
   it 'responds to /' do

@@ -13,13 +13,13 @@ module Angus
     NEW_APP_DIRECTORIES = %W(#{DEFINITIONS_DIR} #{RESOURCES_DIR} #{SERVICES_DIR})
 
     NEW_APP_FILES = %w(
-    Gemfile
-    config.ru.erb
-    services/service.rb.erb
-    definitions/messages.yml
-    definitions/representations.yml
-    definitions/service.yml.erb
-  )
+      Gemfile
+      config.ru.erb
+      services/service.rb.erb
+      definitions/messages.yml
+      definitions/representations.yml
+      definitions/service.yml.erb
+    )
 
     FILE_MAPPINGS = {
       'services/service.rb.erb' => -> command, app_name { File.join(SERVICES_DIR, "#{command.underscore(command.classify(app_name))}.rb") },

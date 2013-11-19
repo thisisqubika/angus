@@ -1,40 +1,10 @@
 require 'angus/sdoc'
 
+require_relative 'status_codes'
+
 module Angus
   module Responses
-
-    HTTP_STATUS_CODE_OK = 200
-
-    HTTP_STATUS_CODE_FORBIDDEN = 403
-    HTTP_STATUS_CODE_NOT_FOUND = 404
-    HTTP_STATUS_CODE_CONFLICT = 409
-    HTTP_STATUS_CODE_UNPROCESSABLE_ENTITY = 422
-
-    HTTP_STATUS_CODE_INTERNAL_SERVER_ERROR = 500
-
-    # Returns a suitable HTTP status code for the given error
-    #
-    # If error param responds to #errors, then #{HTTP_STATUS_CODE_CONFLICT} will be returned.
-    #
-    # If error param responds to #error_key, then the status_code associated
-    #  with the message will be returned.
-    #
-    # @param [#errors, #error_key] error An error object
-    #
-    # @return [Integer] HTTP status code
-    def get_error_status_code(error)
-      if error.respond_to?(:errors)
-        return HTTP_STATUS_CODE_CONFLICT
-      end
-
-      message = get_error_definition(error)
-
-      if message
-        message.status_code
-      else
-        HTTP_STATUS_CODE_INTERNAL_SERVER_ERROR
-      end
-    end
+    include Angus::StatusCodes
 
     # Returns the error definition.
     #
@@ -73,12 +43,6 @@ module Angus
       end
 
       json(elements)
-    end
-
-    # Builds a service error response
-    def build_error_response(error)
-      error_messages = messages_from_error(error)
-      build_response(:error, *error_messages)
     end
 
     # Builds a ResponseMessage object

@@ -9,7 +9,7 @@ describe Spec::Functional::EmptyResource,
   include Rack::Test::Methods
 
   def app
-    Spec::Functional::EmptyResource.new
+    Spec::Functional::EmptyResource.build
   end
 
   it 'responds to /' do
