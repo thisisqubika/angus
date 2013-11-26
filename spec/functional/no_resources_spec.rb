@@ -9,7 +9,7 @@ describe Spec::Functional::NoResources,
   include Rack::Test::Methods
 
   def app
-    Spec::Functional::NoResources.build
+    Spec::Functional::NoResources.new
   end
 
   it 'responds to /' do

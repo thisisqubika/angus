@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
   spec.executables   = %w[angus]
 
   spec.add_dependency('thor')
-  spec.add_dependency('angus-sdoc', '~> 0.0', '>= 0.0.3')
+  spec.add_dependency('angus-sdoc', '~> 0.0', '>= 0.0.4')
   spec.add_dependency('angus-router', '~> 0.0', '>= 0.0.3')
 
   spec.add_development_dependency('rake')

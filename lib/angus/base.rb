@@ -11,8 +11,6 @@ require_relative 'marshallings/base'
 require_relative 'base_actions'
 require_relative 'definition_reader'
 
-require_relative 'middleware/exception_handler'
-
 require 'angus/sdoc'
 
 module Angus
@@ -21,16 +19,22 @@ module Angus
 
     FIRST_VERSION = '0.1'
 
+    PRODUCTION_ENV    = :production
+    DEVELOPMENT_ENV   = :development
+    TEST_ENV          = :test
+    DEFAULT_ENV       = DEVELOPMENT_ENV
+
+    attr_reader :definitions
+
     def initialize
       super
 
-      @resources_definitions = []
-      @version = FIRST_VERSION
-      @name = self.class.name.downcase
-      @configured  = false
-      @definitions = nil
-      @logger      = Logger.new(STDOUT)
-      @middleware  = []
+      @resources_definitions  = []
+      @version                = FIRST_VERSION
+      @name                   = self.class.name.downcase
+      @configured             = false
+      @definitions            = nil
+      @logger                 = Logger.new(STDOUT)
 
       configure!
 
@@ -38,24 +42,26 @@ module Angus
       register_resources_routes
     end
 
-    def self.build
-      app     = self.new
-      builder = Rack::Builder.new
-
-      app.middleware.each do |c,a,b|
-        builder.use(c, *a, &b)
-      end
-
-      builder.use Middleware::ExceptionHandler
-
-      builder.run(app)
-      builder
-    end
-
     def register_resources_routes
       @resources_definitions.each do |resource|
         register_resource_routes(resource)
       end
+    end
+
+    def production?
+      environment_name.to_sym == PRODUCTION_ENV
+    end
+
+    def development?
+      environment_name.to_sym == DEVELOPMENT_ENV
+    end
+
+    def test?
+      environment_name.to_sym == TEST_ENV
+    end
+
+    def environment_name
+      ENV['RACK_ENV'] || DEFAULT_ENV
     end
 
     def configured?
@@ -84,14 +90,6 @@ module Angus
       @definitions.version
     end
 
-    def middleware
-      @middleware
-    end
-
-    def use(middleware, *args, &block)
-      @middleware << [middleware, args, block]
-    end
-
     def register(resource_name, options = {})
       resource_definition = ResourceDefinition.new(resource_name, @definitions)
 
@@ -104,7 +102,7 @@ module Angus
 
     def register_resource_routes(resource_definition)
       resource_definition.operations.each do |operation|
-        method  = operation.method.to_sym
+        method  = operation.http_method.to_sym
         op_path = "#{api_path}#{operation.path}"
 
         response_metadata = resource_definition.build_response_metadata(operation.response_elements)

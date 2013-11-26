@@ -1,6 +1,7 @@
 require_relative '../definition_reader'
 require_relative '../responses'
 require_relative '../status_codes'
+require_relative '../../../lib/angus/renders/json_render'
 
 module Angus
   module Middleware
@@ -27,6 +28,65 @@ module Angus
       end
 
       private
+
+
+      # Builds a service error response
+      def build_error_response(error)
+        error_messages = messages_from_error(error)
+
+        JsonRender.convert(:status => :error, :messages => error_messages)
+      end
+
+
+      # Returns an array of messages errors to be sent in an operation response
+      #
+      # If {error} respond_to? :errors then the method returns one error message
+      #   for each one.
+      #
+      # Each message returned is a hash with:
+      #  - level
+      #  - key
+      #  - description
+      #
+      # @param [Exception] error The error to be returned
+      #
+      # @return [Array] an array of messages
+      def messages_from_error(error, level = :error)
+        messages = []
+
+        if error.respond_to?(:errors)
+          error.errors.each do |key, description|
+            messages << {:level => level, :key => key, :dsc => description}
+          end
+        elsif error.respond_to?(:error_key)
+          messages << {:level => level, :key => error.error_key,
+                       :dsc => error_message(error)}
+        else
+          messages << {:level => level, :key => error.class.name, :dsc => error.message}
+        end
+
+        messages
+      end
+
+
+      # Returns the message for an error.
+      #
+      # It first tries to get the message from text attribute of the error definition
+      #   if no definition is found or if the text attribute is blank it the returns the error
+      #   message attribute.
+      #
+      # @param [Exception] error The error to get the message for.
+      #
+      # @return [String] the error message.
+      def error_message(error)
+        error_definition = error_definition(error)
+
+        if error_definition && !error_definition.text.blank?
+          error_definition.text
+        else
+          error.message
+        end
+      end
 
       # Returns the error definition.
       #
@@ -63,62 +123,6 @@ module Angus
         else
           HTTP_STATUS_CODE_INTERNAL_SERVER_ERROR
         end
-      end
-
-      # Returns an array of messages errors to be sent in an operation response
-      #
-      # If {error} respond_to? :errors then the method returns one error message
-      #   for each one.
-      #
-      # Each message returned is a hash with:
-      #  - level
-      #  - key
-      #  - description
-      #
-      # @param [Exception] error The error to be returned
-      #
-      # @return [Array] an array of messages
-      def messages_from_error(error, level = :error)
-        messages = []
-
-        if error.respond_to?(:errors)
-          error.errors.each do |key, description|
-            messages << {:level => level, :key => key, :dsc => description}
-          end
-        elsif error.respond_to?(:error_key)
-          messages << {:level => level, :key => error.error_key,
-                       :dsc => error_message(error)}
-        else
-          messages << {:level => level, :key => error.class.name, :dsc => error.message}
-        end
-
-        messages
-      end
-
-      # Returns the message for an error.
-      #
-      # It first tries to get the message from text attribute of the error definition
-      #   if no definition is found or if the text attribute is blank it the returns the error
-      #   message attribute.
-      #
-      # @param [Exception] error The error to get the message for.
-      #
-      # @return [String] the error message.
-      def error_message(error)
-        error_definition = error_definition(error)
-
-        if error_definition && !error_definition.text.blank?
-          error_definition.text
-        else
-          error.message
-        end
-      end
-
-      # Builds a service error response
-      def build_error_response(error)
-        error_messages = messages_from_error(error)
-
-        JsonRender.convert(:status => :error, :messages => error_messages)
       end
 
     end
