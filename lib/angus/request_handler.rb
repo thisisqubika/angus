@@ -3,6 +3,7 @@ require 'angus-router'
 require_relative 'response'
 require_relative 'responses'
 require_relative 'middleware/exception_handler'
+require_relative 'exceptions'
 
 module Angus
   class RequestHandler
@@ -10,6 +11,8 @@ module Angus
     include Responses
 
     DEFAULT_RENDER = :json
+
+    attr_reader :middleware
 
     def initialize
       @router = Angus::Router.new
@@ -28,7 +31,11 @@ module Angus
 
     def to_app
       inner_app = lambda { |env| self.dup.call!(env) }
-      @middleware.reverse.inject(inner_app) { |app, middleware| middleware.call(app) }
+      @middleware.reverse.inject(inner_app) do |app, middleware|
+        klass, args, block = middleware
+
+        klass.new(app, *args, &block)
+      end
     end
 
     def call!(env)
@@ -63,7 +70,23 @@ module Angus
     end
 
     def use(middleware, *args, &block)
-      @middleware << lambda { |app| middleware.new(app, *args, &block) }
+      return if @middleware.map(&:first).include?(middleware)
+
+      @middleware << [middleware, args, block]
+    end
+
+    def use_before(klass, middleware, *args, &block)
+      return if @middleware.map(&:first).include?(middleware)
+      index = @middleware.map(&:first).index(klass) or raise MiddlewareNotFound.new(middleware)
+
+      @middleware.insert(index, [middleware, args, block])
+    end
+
+    def use_after(klass, middleware, *args, &block)
+      return if @middleware.map(&:first).include?(middleware)
+      index = @middleware.map(&:first).index(klass) or raise MiddlewareNotFound.new(middleware)
+
+      @middleware.insert(index + 1, [middleware, args, block])
     end
 
   end

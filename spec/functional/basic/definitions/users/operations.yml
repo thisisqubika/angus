@@ -1,7 +1,7 @@
 get_user:
-  name: Obtener Información de un Usuario
+  name: Obtener Informacion de un Usuario
   description: >
-    Devuelve información del usuario, como por ejemplo e-mail y fecha de nacimiento.
+    Devuelve informacion del usuario, como por ejemplo e-mail y fecha de nacimiento.
 
   path: /users/:user_id
   method: get
