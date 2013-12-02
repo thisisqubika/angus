@@ -97,4 +97,33 @@ describe Angus::RequestHandler, { :work_dir => work_dir } do
 
   end
 
+  describe '#disuse' do
+
+    let(:other_middleware) { Struct.new(:app) }
+
+    it 'removes the given class from the middleware' do
+      handler.disuse(Angus::Middleware::ExceptionHandler)
+
+      handler.middleware.map(&:first).should_not include(Angus::Middleware::ExceptionHandler)
+    end
+
+    it 'removes only given class from the middleware' do
+      handler.use(other_middleware)
+
+      handler.disuse(Angus::Middleware::ExceptionHandler)
+
+      handler.middleware.map(&:first).should_not include(Angus::Middleware::ExceptionHandler)
+      handler.middleware.map(&:first).should include(other_middleware)
+    end
+
+    context 'when the given class is not present in the middleware' do
+      it 'raises an MiddlewareNotFound error' do
+        expect {
+          handler.disuse(Angus::Middleware)
+        }.to raise_error(MiddlewareNotFound)
+      end
+    end
+
+  end
+
 end

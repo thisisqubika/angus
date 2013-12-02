@@ -89,5 +89,11 @@ module Angus
       @middleware.insert(index + 1, [middleware, args, block])
     end
 
+    def disuse(middleware)
+      index = @middleware.map(&:first).index(middleware) or raise MiddlewareNotFound.new(middleware)
+
+      @middleware.delete_at(index)
+    end
+
   end
 end
