@@ -1,0 +1,1625 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300|Bevan);
+/* line 277, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+meta.foundation-mq-small {
+  font-family: "only screen and (min-width: 768px)";
+  width: 768px; }
+
+/* line 282, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+meta.foundation-mq-medium {
+  font-family: "only screen and (min-width:1280px)";
+  width: 1280px; }
+
+/* line 287, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+meta.foundation-mq-large {
+  font-family: "only screen and (min-width:1440px)";
+  width: 1440px; }
+
+/* line 305, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 310, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+html,
+body {
+  background: #190707;
+  font-size: 100%; }
+
+/* line 316, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+body {
+  color: #1a1a1a;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  position: relative;
+  cursor: default; }
+
+/* line 328, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+a:hover {
+  cursor: pointer; }
+
+/* line 333, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+img,
+object,
+embed {
+  max-width: 100%;
+  height: auto; }
+
+/* line 336, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+object,
+embed {
+  height: 100%; }
+
+/* line 337, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+img {
+  -ms-interpolation-mode: bicubic; }
+
+/* line 343, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+#map_canvas img,
+#map_canvas embed,
+#map_canvas object,
+.map_canvas img,
+.map_canvas embed,
+.map_canvas object {
+  max-width: none !important; }
+
+/* line 348, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+.left {
+  float: left !important; }
+
+/* line 349, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+.right {
+  float: right !important; }
+
+/* line 350, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+.text-left {
+  text-align: left !important; }
+
+/* line 351, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+.text-right {
+  text-align: right !important; }
+
+/* line 352, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+.text-center {
+  text-align: center !important; }
+
+/* line 353, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+.text-justify {
+  text-align: justify !important; }
+
+/* line 354, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+.hide {
+  display: none; }
+
+/* line 360, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+.antialiased {
+  -webkit-font-smoothing: antialiased; }
+
+/* line 363, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+img {
+  display: inline-block;
+  vertical-align: middle; }
+
+/* line 373, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+textarea {
+  height: auto;
+  min-height: 50px; }
+
+/* line 376, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+select {
+  width: 100%; }
+
+/* line 111, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+p.lead {
+  font-size: 1.21875em;
+  line-height: 1.6; }
+
+/* line 116, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+.subheader {
+  line-height: 1.4;
+  color: #6f6f6f;
+  font-weight: 300;
+  margin-top: 0.2em;
+  margin-bottom: 0.5em; }
+
+/* Typography resets */
+/* line 145, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  direction: ltr; }
+
+/* Default Link Styles */
+/* line 152, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+a {
+  color: #9d0c0c;
+  text-decoration: none;
+  line-height: inherit; }
+  /* line 158, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  a:hover, a:focus {
+    color: #850a0a; }
+  /* line 160, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  a img {
+    border: none; }
+
+/* Default paragraph styles */
+/* line 164, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+p {
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 1.25em;
+  text-rendering: optimizeLegibility; }
+  /* line 174, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  p aside {
+    font-size: 0.875em;
+    line-height: 1.35;
+    font-style: italic; }
+
+/* Default header styles */
+/* line 182, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Bevan", cursive;
+  font-weight: normal;
+  font-style: normal;
+  color: #222222;
+  text-rendering: optimizeLegibility;
+  margin-top: 0.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.2125em; }
+  /* line 192, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    font-size: 60%;
+    color: #6f6f6f;
+    line-height: 0; }
+
+/* line 199, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+h1 {
+  font-size: 2.125em; }
+
+/* line 200, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+h2 {
+  font-size: 1.6875em; }
+
+/* line 201, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+h3 {
+  font-size: 1.375em; }
+
+/* line 202, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+h4 {
+  font-size: 1.125em; }
+
+/* line 203, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+h5 {
+  font-size: 1.125em; }
+
+/* line 204, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+h6 {
+  font-size: 1em; }
+
+/* line 208, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+hr {
+  border: solid #dddddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 1.25em 0 1.1875em;
+  height: 0; }
+
+/* Helpful Typography Defaults */
+/* line 218, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+em,
+i {
+  font-style: italic;
+  line-height: inherit; }
+
+/* line 224, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+strong,
+b {
+  font-weight: bold;
+  line-height: inherit; }
+
+/* line 229, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+small {
+  font-size: 60%;
+  line-height: inherit; }
+
+/* line 234, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+code {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-weight: normal;
+  color: #7f0a0c;
+  padding: 1em;
+  background: #fff;
+  display: block;
+  margin-bottom: 1em; }
+
+/* Lists */
+/* line 247, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+ul,
+ol,
+dl {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 1.25em;
+  list-style-position: outside;
+  font-family: inherit; }
+
+/* line 255, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+ul, ol {
+  margin-left: 0; }
+  /* line 257, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  ul.no-bullet, ol.no-bullet {
+    margin-left: 0; }
+
+/* Unordered Lists */
+/* line 264, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+ul li ul,
+ul li ol {
+  margin-left: 1.25em;
+  margin-bottom: 0;
+  font-size: 1em;
+  /* Override nested font-size change */ }
+/* line 273, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+ul.square li ul, ul.circle li ul, ul.disc li ul {
+  list-style: inherit; }
+/* line 276, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+ul.square {
+  list-style-type: square; }
+/* line 277, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+ul.circle {
+  list-style-type: circle; }
+/* line 278, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+ul.disc {
+  list-style-type: disc; }
+/* line 279, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+ul.no-bullet {
+  list-style: none; }
+
+/* Ordered Lists */
+/* line 286, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+ol li ul,
+ol li ol {
+  margin-left: 1.25em;
+  margin-bottom: 0; }
+
+/* Definition Lists */
+/* line 295, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+dl dt {
+  margin-bottom: 0.3em;
+  font-weight: bold; }
+/* line 299, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+dl dd {
+  margin-bottom: 0.75em; }
+
+/* Abbreviations */
+/* line 304, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+abbr,
+acronym {
+  text-transform: uppercase;
+  font-size: 90%;
+  color: #1a1a1a;
+  border-bottom: 1px dotted #dddddd;
+  cursor: help; }
+
+/* line 311, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+abbr {
+  text-transform: none; }
+
+/* Blockquotes */
+/* line 316, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+blockquote {
+  margin: 0 0 1.25em;
+  padding: 0.5625em 1.25em 0 1.1875em;
+  border-left: 1px solid #dddddd; }
+  /* line 321, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  blockquote cite {
+    display: block;
+    font-size: 0.8125em;
+    color: #555555; }
+    /* line 325, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+    blockquote cite:before {
+      content: "\2014 \0020"; }
+    /* line 330, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+    blockquote cite a,
+    blockquote cite a:visited {
+      color: #555555; }
+
+/* line 336, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+blockquote,
+blockquote p {
+  line-height: 1.6;
+  color: #6f6f6f; }
+
+/* Microformats */
+/* line 342, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+.vcard {
+  display: inline-block;
+  margin: 0 0 1.25em 0;
+  border: 1px solid #dddddd;
+  padding: 0.625em 0.75em; }
+  /* line 348, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  .vcard li {
+    margin: 0;
+    display: block; }
+  /* line 352, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  .vcard .fn {
+    font-weight: bold;
+    font-size: 0.9375em; }
+
+/* line 359, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+.vevent .summary {
+  font-weight: bold; }
+/* line 361, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+.vevent abbr {
+  cursor: default;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  padding: 0 0.0625em; }
+
+@media only screen and (min-width: 768px) {
+  /* line 372, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4; }
+
+  /* line 373, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  h1 {
+    font-size: 2.75em; }
+
+  /* line 374, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  h2 {
+    font-size: 2.3125em; }
+
+  /* line 375, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  h3 {
+    font-size: 1.6875em; }
+
+  /* line 376, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  h4 {
+    font-size: 1.4375em; } }
+/*
+ * Print styles.
+ *
+ * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+ * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
+*/
+/* line 387, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+.print-only {
+  display: none !important; }
+
+@media print {
+  /* line 389, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  /* line 397, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  /* line 398, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  /* line 400, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  /* line 405, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+
+  /* line 408, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  /* line 413, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */ }
+
+  /* line 416, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  /* line 418, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  img {
+    max-width: 100% !important; }
+
+  @page {
+    margin: 0.5cm; }
+
+  /* line 424, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  /* line 430, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  h2,
+  h3 {
+    page-break-after: avoid; }
+
+  /* line 432, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  .hide-on-print {
+    display: none !important; }
+
+  /* line 433, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  .print-only {
+    display: block !important; }
+
+  /* line 434, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  .hide-for-print {
+    display: none !important; }
+
+  /* line 435, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  .show-for-print {
+    display: inherit !important; } }
+/* Grid HTML Classes */
+/* line 116, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+.row {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 75em;
+  *zoom: 1; }
+  /* line 124, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+  .row:before, .row:after {
+    content: " ";
+    display: table; }
+  /* line 125, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+  .row:after {
+    clear: both; }
+  /* line 121, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .row.collapse > .column,
+  .row.collapse > .columns {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    float: left; }
+  /* line 123, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .row.collapse .row {
+    margin-left: 0;
+    margin-right: 0; }
+  /* line 126, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .row .row {
+    width: auto;
+    margin-left: -0.9375em;
+    margin-right: -0.9375em;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: none;
+    *zoom: 1; }
+    /* line 124, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+    .row .row:before, .row .row:after {
+      content: " ";
+      display: table; }
+    /* line 125, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+    .row .row:after {
+      clear: both; }
+    /* line 127, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+    .row .row.collapse {
+      width: auto;
+      margin: 0;
+      max-width: none;
+      *zoom: 1; }
+      /* line 124, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+      .row .row.collapse:before, .row .row.collapse:after {
+        content: " ";
+        display: table; }
+      /* line 125, /Users/murtun/angus/angus-web/source/assets/stylesheets/_global.scss */
+      .row .row.collapse:after {
+        clear: both; }
+
+/* line 132, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+.column,
+.columns {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 100%;
+  float: left; }
+
+@media only screen {
+  /* line 137, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .column,
+  .columns {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    float: left; }
+
+  /* line 140, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .small-1 {
+    position: relative;
+    width: 8.33333%; }
+
+  /* line 140, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .small-2 {
+    position: relative;
+    width: 16.66667%; }
+
+  /* line 140, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .small-3 {
+    position: relative;
+    width: 25%; }
+
+  /* line 140, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .small-4 {
+    position: relative;
+    width: 33.33333%; }
+
+  /* line 140, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .small-5 {
+    position: relative;
+    width: 41.66667%; }
+
+  /* line 140, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .small-6 {
+    position: relative;
+    width: 50%; }
+
+  /* line 140, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .small-7 {
+    position: relative;
+    width: 58.33333%; }
+
+  /* line 140, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .small-8 {
+    position: relative;
+    width: 66.66667%; }
+
+  /* line 140, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .small-9 {
+    position: relative;
+    width: 75%; }
+
+  /* line 140, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .small-10 {
+    position: relative;
+    width: 83.33333%; }
+
+  /* line 140, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .small-11 {
+    position: relative;
+    width: 91.66667%; }
+
+  /* line 140, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .small-12 {
+    position: relative;
+    width: 100%; }
+
+  /* line 144, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .small-offset-0 {
+    position: relative;
+    margin-left: 0%; }
+
+  /* line 144, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .small-offset-1 {
+    position: relative;
+    margin-left: 8.33333%; }
+
+  /* line 144, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .small-offset-2 {
+    position: relative;
+    margin-left: 16.66667%; }
+
+  /* line 144, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .small-offset-3 {
+    position: relative;
+    margin-left: 25%; }
+
+  /* line 144, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .small-offset-4 {
+    position: relative;
+    margin-left: 33.33333%; }
+
+  /* line 144, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .small-offset-5 {
+    position: relative;
+    margin-left: 41.66667%; }
+
+  /* line 144, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .small-offset-6 {
+    position: relative;
+    margin-left: 50%; }
+
+  /* line 144, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .small-offset-7 {
+    position: relative;
+    margin-left: 58.33333%; }
+
+  /* line 144, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .small-offset-8 {
+    position: relative;
+    margin-left: 66.66667%; }
+
+  /* line 144, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .small-offset-9 {
+    position: relative;
+    margin-left: 75%; }
+
+  /* line 144, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .small-offset-10 {
+    position: relative;
+    margin-left: 83.33333%; }
+
+  /* line 148, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  [class*="column"] + [class*="column"].end {
+    float: left; }
+
+  /* line 151, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .column.small-centered,
+  .columns.small-centered {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    float: none !important; } }
+/* Styles for screens that are atleast 768px; */
+@media only screen and (min-width: 768px) {
+  /* line 158, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .large-1 {
+    position: relative;
+    width: 8.33333%; }
+
+  /* line 158, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .large-2 {
+    position: relative;
+    width: 16.66667%; }
+
+  /* line 158, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .large-3 {
+    position: relative;
+    width: 25%; }
+
+  /* line 158, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .large-4 {
+    position: relative;
+    width: 33.33333%; }
+
+  /* line 158, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .large-5 {
+    position: relative;
+    width: 41.66667%; }
+
+  /* line 158, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .large-6 {
+    position: relative;
+    width: 50%; }
+
+  /* line 158, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .large-7 {
+    position: relative;
+    width: 58.33333%; }
+
+  /* line 158, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .large-8 {
+    position: relative;
+    width: 66.66667%; }
+
+  /* line 158, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .large-9 {
+    position: relative;
+    width: 75%; }
+
+  /* line 158, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .large-10 {
+    position: relative;
+    width: 83.33333%; }
+
+  /* line 158, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .large-11 {
+    position: relative;
+    width: 91.66667%; }
+
+  /* line 158, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .large-12 {
+    position: relative;
+    width: 100%; }
+
+  /* line 162, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .row .large-offset-0 {
+    position: relative;
+    margin-left: 0%; }
+
+  /* line 162, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .row .large-offset-1 {
+    position: relative;
+    margin-left: 8.33333%; }
+
+  /* line 162, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .row .large-offset-2 {
+    position: relative;
+    margin-left: 16.66667%; }
+
+  /* line 162, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .row .large-offset-3 {
+    position: relative;
+    margin-left: 25%; }
+
+  /* line 162, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .row .large-offset-4 {
+    position: relative;
+    margin-left: 33.33333%; }
+
+  /* line 162, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .row .large-offset-5 {
+    position: relative;
+    margin-left: 41.66667%; }
+
+  /* line 162, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .row .large-offset-6 {
+    position: relative;
+    margin-left: 50%; }
+
+  /* line 162, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .row .large-offset-7 {
+    position: relative;
+    margin-left: 58.33333%; }
+
+  /* line 162, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .row .large-offset-8 {
+    position: relative;
+    margin-left: 66.66667%; }
+
+  /* line 162, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .row .large-offset-9 {
+    position: relative;
+    margin-left: 75%; }
+
+  /* line 162, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .row .large-offset-10 {
+    position: relative;
+    margin-left: 83.33333%; }
+
+  /* line 162, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .row .large-offset-11 {
+    position: relative;
+    margin-left: 91.66667%; }
+
+  /* line 166, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .push-1 {
+    position: relative;
+    left: 8.33333%;
+    right: auto; }
+
+  /* line 167, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .pull-1 {
+    position: relative;
+    right: 8.33333%;
+    left: auto; }
+
+  /* line 166, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .push-2 {
+    position: relative;
+    left: 16.66667%;
+    right: auto; }
+
+  /* line 167, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .pull-2 {
+    position: relative;
+    right: 16.66667%;
+    left: auto; }
+
+  /* line 166, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .push-3 {
+    position: relative;
+    left: 25%;
+    right: auto; }
+
+  /* line 167, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto; }
+
+  /* line 166, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .push-4 {
+    position: relative;
+    left: 33.33333%;
+    right: auto; }
+
+  /* line 167, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .pull-4 {
+    position: relative;
+    right: 33.33333%;
+    left: auto; }
+
+  /* line 166, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .push-5 {
+    position: relative;
+    left: 41.66667%;
+    right: auto; }
+
+  /* line 167, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .pull-5 {
+    position: relative;
+    right: 41.66667%;
+    left: auto; }
+
+  /* line 166, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .push-6 {
+    position: relative;
+    left: 50%;
+    right: auto; }
+
+  /* line 167, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto; }
+
+  /* line 166, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .push-7 {
+    position: relative;
+    left: 58.33333%;
+    right: auto; }
+
+  /* line 167, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .pull-7 {
+    position: relative;
+    right: 58.33333%;
+    left: auto; }
+
+  /* line 166, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .push-8 {
+    position: relative;
+    left: 66.66667%;
+    right: auto; }
+
+  /* line 167, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .pull-8 {
+    position: relative;
+    right: 66.66667%;
+    left: auto; }
+
+  /* line 166, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .push-9 {
+    position: relative;
+    left: 75%;
+    right: auto; }
+
+  /* line 167, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto; }
+
+  /* line 166, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .push-10 {
+    position: relative;
+    left: 83.33333%;
+    right: auto; }
+
+  /* line 167, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .pull-10 {
+    position: relative;
+    right: 83.33333%;
+    left: auto; }
+
+  /* line 166, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .push-11 {
+    position: relative;
+    left: 91.66667%;
+    right: auto; }
+
+  /* line 167, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .pull-11 {
+    position: relative;
+    right: 91.66667%;
+    left: auto; }
+
+  /* line 171, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .column.large-centered,
+  .columns.large-centered {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    float: none !important; }
+
+  /* line 174, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .column.large-uncentered,
+  .columns.large-uncentered {
+    margin-left: 0;
+    margin-right: 0;
+    float: left !important; }
+
+  /* line 181, /Users/murtun/angus/angus-web/source/assets/stylesheets/_grid.scss */
+  .column.large-uncentered.opposite,
+  .columns.large-uncentered.opposite {
+    float: right !important; } }
+/* Foundation Visibility HTML Classes */
+/* line 11, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+.show-for-small,
+.show-for-medium-down,
+.show-for-large-down {
+  display: inherit !important; }
+
+/* line 17, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+.show-for-medium,
+.show-for-medium-up,
+.show-for-large,
+.show-for-large-up,
+.show-for-xlarge {
+  display: none !important; }
+
+/* line 23, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+.hide-for-medium,
+.hide-for-medium-up,
+.hide-for-large,
+.hide-for-large-up,
+.hide-for-xlarge {
+  display: inherit !important; }
+
+/* line 27, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+.hide-for-small,
+.hide-for-medium-down,
+.hide-for-large-down {
+  display: none !important; }
+
+/* Specific visilbity for tables */
+/* line 38, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+table.show-for-small, table.show-for-medium-down, table.show-for-large-down, table.hide-for-medium, table.hide-for-medium-up, table.hide-for-large, table.hide-for-large-up, table.hide-for-xlarge {
+  display: table; }
+
+/* line 48, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+thead.show-for-small, thead.show-for-medium-down, thead.show-for-large-down, thead.hide-for-medium, thead.hide-for-medium-up, thead.hide-for-large, thead.hide-for-large-up, thead.hide-for-xlarge {
+  display: table-header-group !important; }
+
+/* line 58, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+tbody.show-for-small, tbody.show-for-medium-down, tbody.show-for-large-down, tbody.hide-for-medium, tbody.hide-for-medium-up, tbody.hide-for-large, tbody.hide-for-large-up, tbody.hide-for-xlarge {
+  display: table-row-group !important; }
+
+/* line 68, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+tr.show-for-small, tr.show-for-medium-down, tr.show-for-large-down, tr.hide-for-medium, tr.hide-for-medium-up, tr.hide-for-large, tr.hide-for-large-up, tr.hide-for-xlarge {
+  display: table-row !important; }
+
+/* line 79, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+td.show-for-small, td.show-for-medium-down, td.show-for-large-down, td.hide-for-medium, td.hide-for-medium-up, td.hide-for-large, td.hide-for-large-up, td.hide-for-xlarge,
+th.show-for-small,
+th.show-for-medium-down,
+th.show-for-large-down,
+th.hide-for-medium,
+th.hide-for-medium-up,
+th.hide-for-large,
+th.hide-for-large-up,
+th.hide-for-xlarge {
+  display: table-cell !important; }
+
+/* Medium Displays: 768px - 1279px */
+@media only screen and (min-width: 768px) {
+  /* line 85, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  .show-for-medium,
+  .show-for-medium-up {
+    display: inherit !important; }
+
+  /* line 87, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  .show-for-small {
+    display: none !important; }
+
+  /* line 89, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  .hide-for-small {
+    display: inherit !important; }
+
+  /* line 92, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  .hide-for-medium,
+  .hide-for-medium-up {
+    display: none !important; }
+
+  /* Specific visilbity for tables */
+  /* line 98, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  table.show-for-medium, table.show-for-medium-up, table.hide-for-small {
+    display: table; }
+
+  /* line 103, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  thead.show-for-medium, thead.show-for-medium-up, thead.hide-for-small {
+    display: table-header-group !important; }
+
+  /* line 108, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  tbody.show-for-medium, tbody.show-for-medium-up, tbody.hide-for-small {
+    display: table-row-group !important; }
+
+  /* line 113, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  tr.show-for-medium, tr.show-for-medium-up, tr.hide-for-small {
+    display: table-row !important; }
+
+  /* line 119, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  td.show-for-medium, td.show-for-medium-up, td.hide-for-small,
+  th.show-for-medium,
+  th.show-for-medium-up,
+  th.hide-for-small {
+    display: table-cell !important; } }
+/* Large Displays: 1280px - 1440px */
+@media only screen and (min-width: 1280px) {
+  /* line 126, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  .show-for-large,
+  .show-for-large-up {
+    display: inherit !important; }
+
+  /* line 129, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  .show-for-medium,
+  .show-for-medium-down {
+    display: none !important; }
+
+  /* line 132, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  .hide-for-medium,
+  .hide-for-medium-down {
+    display: inherit !important; }
+
+  /* line 135, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  .hide-for-large,
+  .hide-for-large-up {
+    display: none !important; }
+
+  /* Specific visilbity for tables */
+  /* line 142, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  table.show-for-large, table.show-for-large-up, table.hide-for-medium, table.hide-for-medium-down {
+    display: table; }
+
+  /* line 148, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  thead.show-for-large, thead.show-for-large-up, thead.hide-for-medium, thead.hide-for-medium-down {
+    display: table-header-group !important; }
+
+  /* line 154, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  tbody.show-for-large, tbody.show-for-large-up, tbody.hide-for-medium, tbody.hide-for-medium-down {
+    display: table-row-group !important; }
+
+  /* line 160, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  tr.show-for-large, tr.show-for-large-up, tr.hide-for-medium, tr.hide-for-medium-down {
+    display: table-row !important; }
+
+  /* line 167, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  td.show-for-large, td.show-for-large-up, td.hide-for-medium, td.hide-for-medium-down,
+  th.show-for-large,
+  th.show-for-large-up,
+  th.hide-for-medium,
+  th.hide-for-medium-down {
+    display: table-cell !important; } }
+/* X-Large Displays: 1400px and up */
+@media only screen and (min-width: 1440px) {
+  /* line 173, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  .show-for-xlarge {
+    display: inherit !important; }
+
+  /* line 176, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  .show-for-large,
+  .show-for-large-down {
+    display: none !important; }
+
+  /* line 179, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  .hide-for-large,
+  .hide-for-large-down {
+    display: inherit !important; }
+
+  /* line 181, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  .hide-for-xlarge {
+    display: none !important; }
+
+  /* Specific visilbity for tables */
+  /* line 187, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  table.show-for-xlarge, table.hide-for-large, table.hide-for-large-down {
+    display: table; }
+
+  /* line 192, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  thead.show-for-xlarge, thead.hide-for-large, thead.hide-for-large-down {
+    display: table-header-group !important; }
+
+  /* line 197, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  tbody.show-for-xlarge, tbody.hide-for-large, tbody.hide-for-large-down {
+    display: table-row-group !important; }
+
+  /* line 202, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  tr.show-for-xlarge, tr.hide-for-large, tr.hide-for-large-down {
+    display: table-row !important; }
+
+  /* line 208, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  td.show-for-xlarge, td.hide-for-large, td.hide-for-large-down,
+  th.show-for-xlarge,
+  th.hide-for-large,
+  th.hide-for-large-down {
+    display: table-cell !important; } }
+/* Orientation targeting */
+/* line 215, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+.show-for-landscape,
+.hide-for-portrait {
+  display: inherit !important; }
+
+/* line 217, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+.hide-for-landscape,
+.show-for-portrait {
+  display: none !important; }
+
+/* Specific visilbity for tables */
+/* line 222, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+table.hide-for-landscape, table.show-for-portrait {
+  display: table; }
+
+/* line 226, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+thead.hide-for-landscape, thead.show-for-portrait {
+  display: table-header-group !important; }
+
+/* line 230, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+tbody.hide-for-landscape, tbody.show-for-portrait {
+  display: table-row-group !important; }
+
+/* line 234, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+tr.hide-for-landscape, tr.show-for-portrait {
+  display: table-row !important; }
+
+/* line 239, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+td.hide-for-landscape, td.show-for-portrait,
+th.hide-for-landscape,
+th.show-for-portrait {
+  display: table-cell !important; }
+
+@media only screen and (orientation: landscape) {
+  /* line 244, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  .show-for-landscape,
+  .hide-for-portrait {
+    display: inherit !important; }
+
+  /* line 246, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  .hide-for-landscape,
+  .show-for-portrait {
+    display: none !important; }
+
+  /* Specific visilbity for tables */
+  /* line 251, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  table.show-for-landscape, table.hide-for-portrait {
+    display: table; }
+
+  /* line 255, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  thead.show-for-landscape, thead.hide-for-portrait {
+    display: table-header-group !important; }
+
+  /* line 259, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  tbody.show-for-landscape, tbody.hide-for-portrait {
+    display: table-row-group !important; }
+
+  /* line 263, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  tr.show-for-landscape, tr.hide-for-portrait {
+    display: table-row !important; }
+
+  /* line 268, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  td.show-for-landscape, td.hide-for-portrait,
+  th.show-for-landscape,
+  th.hide-for-portrait {
+    display: table-cell !important; } }
+@media only screen and (orientation: portrait) {
+  /* line 274, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  .show-for-portrait,
+  .hide-for-landscape {
+    display: inherit !important; }
+
+  /* line 276, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  .hide-for-portrait,
+  .show-for-landscape {
+    display: none !important; }
+
+  /* Specific visilbity for tables */
+  /* line 281, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  table.show-for-portrait, table.hide-for-landscape {
+    display: table; }
+
+  /* line 285, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  thead.show-for-portrait, thead.hide-for-landscape {
+    display: table-header-group !important; }
+
+  /* line 289, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  tbody.show-for-portrait, tbody.hide-for-landscape {
+    display: table-row-group !important; }
+
+  /* line 293, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  tr.show-for-portrait, tr.hide-for-landscape {
+    display: table-row !important; }
+
+  /* line 298, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+  td.show-for-portrait, td.hide-for-landscape,
+  th.show-for-portrait,
+  th.hide-for-landscape {
+    display: table-cell !important; } }
+/* Touch-enabled device targeting */
+/* line 303, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+.show-for-touch {
+  display: none !important; }
+
+/* line 304, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+.hide-for-touch {
+  display: inherit !important; }
+
+/* line 305, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+.touch .show-for-touch {
+  display: inherit !important; }
+
+/* line 306, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+.touch .hide-for-touch {
+  display: none !important; }
+
+/* Specific visilbity for tables */
+/* line 309, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+table.hide-for-touch {
+  display: table; }
+
+/* line 310, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+.touch table.show-for-touch {
+  display: table; }
+
+/* line 311, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+thead.hide-for-touch {
+  display: table-header-group !important; }
+
+/* line 312, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+.touch thead.show-for-touch {
+  display: table-header-group !important; }
+
+/* line 313, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+tbody.hide-for-touch {
+  display: table-row-group !important; }
+
+/* line 314, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+.touch tbody.show-for-touch {
+  display: table-row-group !important; }
+
+/* line 315, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+tr.hide-for-touch {
+  display: table-row !important; }
+
+/* line 316, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+.touch tr.show-for-touch {
+  display: table-row !important; }
+
+/* line 317, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+td.hide-for-touch {
+  display: table-cell !important; }
+
+/* line 318, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+.touch td.show-for-touch {
+  display: table-cell !important; }
+
+/* line 319, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+th.hide-for-touch {
+  display: table-cell !important; }
+
+/* line 320, /Users/murtun/angus/angus-web/source/assets/stylesheets/_visibility.scss */
+.touch th.show-for-touch {
+  display: table-cell !important; }
+
+/* line 29, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+header {
+  position: relative;
+  background: transparent url("/assets/images/home_bg.png") no-repeat 50% 50%;
+  background-size: cover;
+  padding: 2em 0; }
+  /* line 34, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  header h1.logo {
+    background: url("/assets/images/angus_logo.png") no-repeat 50% 50%;
+    background-size: auto 100%;
+    height: 6.5em;
+    max-height: 430px;
+    width: 4.91279em;
+    max-width: 325.0px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 55%;
+    margin-right: auto; }
+    /* line 21, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    header h1.logo a {
+      display: block;
+      height: 6.5em; }
+      /* line 24, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+      header h1.logo a > span {
+        display: none; }
+  /* line 37, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  header .column {
+    margin-top: 2em; }
+    /* line 39, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    header .column h2 {
+      color: #fff;
+      position: relative;
+      z-index: 3;
+      text-transform: uppercase;
+      font-size: 1.8em;
+      line-height: 1em; }
+    /* line 47, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    header .column p {
+      color: #fff;
+      line-height: 1.15em; }
+
+/* line 53, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+.navigation {
+  position: fixed;
+  top: 0;
+  width: 100%; }
+  /* line 57, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  .navigation .wrapper {
+    max-width: 75em;
+    margin: 0 auto; }
+  /* line 61, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  .navigation ul.nav {
+    margin-right: 0.9375em;
+    font-size: 1.125em;
+    -webkit-transition: margin-top 0.25s ease-out;
+    -moz-transition: margin-top 0.25s ease-out;
+    transition: margin-top 0.25s ease-out; }
+    /* line 65, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    .navigation ul.nav.fixed {
+      margin-top: 1em; }
+    /* line 68, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    .navigation ul.nav li {
+      float: right;
+      clear: right;
+      margin-bottom: .5em; }
+      /* line 72, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+      .navigation ul.nav li a {
+        color: #fff;
+        background: #9d0c0c;
+        color: #fff;
+        padding: 0.4em 0.9375em;
+        -webkit-transition: all 0.25s ease-out;
+        -moz-transition: all 0.25s ease-out;
+        transition: all 0.25s ease-out;
+        display: block; }
+        /* line 79, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+        .navigation ul.nav li a:hover {
+          background: #c30000;
+          cursor: pointer; }
+        /* line 83, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+        .navigation ul.nav li a span {
+          display: none; }
+        /* line 86, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+        .navigation ul.nav li a.active, .navigation ul.nav li a.active:hover {
+          background: #999999; }
+      /* line 90, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+      .navigation ul.nav li.home {
+        opacity: 0;
+        padding: 0;
+        background: none;
+        -webkit-transition: all 0.25s ease-out;
+        -moz-transition: all 0.25s ease-out;
+        transition: all 0.25s ease-out; }
+        /* line 95, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+        .navigation ul.nav li.home a {
+          display: block;
+          background: url("/home.png") no-repeat 100% 50%;
+          background-size: auto 100%;
+          height: 1em;
+          width: 2em; }
+          /* line 101, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+          .navigation ul.nav li.home a span {
+            text-indent: 9999em; }
+        /* line 105, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+        .navigation ul.nav li.home.visible {
+          opacity: 1; }
+
+@media only screen and (max-width: 768px) {
+  /* line 114, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  .navigation {
+    position: relative; }
+    /* line 116, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    .navigation ul.nav {
+      margin: 0; }
+      /* line 118, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+      .navigation ul.nav li {
+        float: left;
+        clear: none;
+        font-size: .9em;
+        width: 23%; }
+        /* line 123, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+        .navigation ul.nav li a {
+          padding: .3em .5em;
+          height: 3.25em;
+          line-height: 1.15em;
+          box-shadow: inset 5em 0 5em rgba(0, 0, 0, 0.1); }
+        /* line 129, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+        .navigation ul.nav li.home {
+          opacity: 1;
+          width: 8%; }
+          /* line 132, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+          .navigation ul.nav li.home a {
+            padding: 0;
+            text-align: center;
+            height: 3.25em;
+            width: auto;
+            background-size: auto auto;
+            background-position: 50% 50%; }
+            /* line 139, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+            .navigation ul.nav li.home a span {
+              display: block;
+              float: none; }
+    /* line 148, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    .navigation.mobile-fixed {
+      position: fixed;
+      top: 0;
+      z-index: 9999; }
+      /* line 152, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+      .navigation.mobile-fixed ul.nav.fixed {
+        margin-top: 0; } }
+/* line 159, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+#fork {
+  position: absolute;
+  right: 0;
+  top: 0; }
+  /* line 163, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  #fork a {
+    float: right; }
+    /* line 165, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    #fork a img {
+      height: 7em; }
+
+/* line 171, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+.container {
+  background: #cccccc; }
+  /* line 173, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  .container .row {
+    padding: 4em 0; }
+  /* line 176, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  .container p.lead {
+    font-weight: 800;
+    margin-bottom: .5em;
+    font-size: 1.75em;
+    line-height: 1.15em; }
+  /* line 182, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  .container h3 {
+    color: #999999;
+    font-size: 2.5em;
+    margin-bottom: 1.5em; }
+  /* line 187, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  .container .image {
+    margin-bottom: 1em; }
+
+/* line 193, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+footer, footer .container {
+  background: #1a1a1a; }
+/* line 196, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+footer .container .row {
+  padding: 1em 0; }
+/* line 199, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+footer p {
+  margin-bottom: 0;
+  color: #cccccc;
+  font-size: .75em; }
+
+@media only screen and (min-width: 768px) {
+  /* line 208, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  header .column {
+    margin-top: 5em; }
+    /* line 210, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    header .column h2 {
+      font-size: 1.5em; }
+  /* line 214, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  header h1.logo {
+    background: url("/assets/images/angus_logo.png") no-repeat 50% 50%;
+    background-size: auto 100%;
+    height: 6.5em;
+    max-height: 430px;
+    width: 4.91279em;
+    max-width: 325.0px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto; }
+    /* line 21, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    header h1.logo a {
+      display: block;
+      height: 6.5em; }
+      /* line 24, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+      header h1.logo a > span {
+        display: none; }
+
+  /* line 218, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  .navigation ul {
+    margin-top: 5em; }
+    /* line 220, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    .navigation ul li {
+      font-size: .9em; }
+
+  /* line 225, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  .container .row {
+    padding-bottom: 9em; } }
+@media only screen and (min-width: 1280px) {
+  /* line 232, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  header {
+    padding: 4em 0; }
+    /* line 234, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    header .column {
+      margin-top: 9em; }
+      /* line 236, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+      header .column h2 {
+        font-size: 2em; }
+    /* line 240, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    header h1.logo {
+      background: url("/assets/images/angus_logo.png") no-repeat 50% 50%;
+      background-size: auto 100%;
+      height: 9em;
+      max-height: 430px;
+      width: 6.80233em;
+      max-width: 325.0px;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: auto;
+      margin-right: auto; }
+      /* line 21, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+      header h1.logo a {
+        display: block;
+        height: 9em; }
+        /* line 24, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+        header h1.logo a > span {
+          display: none; }
+
+  /* line 244, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  .navigation ul {
+    margin-top: 7em; }
+    /* line 246, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    .navigation ul li {
+      font-size: 1em; }
+
+  /* line 252, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  #fork a img {
+    height: auto; } }
+@media only screen and (min-width: 1440px) {
+  /* line 261, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  header .column {
+    margin-top: 10em; }
+    /* line 263, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    header .column h2 {
+      font-size: 2.5em; }
+  /* line 267, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  header h1.logo {
+    background: url("/assets/images/angus_logo.png") no-repeat 50% 50%;
+    background-size: auto 100%;
+    height: 10em;
+    max-height: 430px;
+    width: 7.55814em;
+    max-width: 325.0px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto; }
+    /* line 21, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    header h1.logo a {
+      display: block;
+      height: 10em; }
+      /* line 24, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+      header h1.logo a > span {
+        display: none; }
+
+  /* line 271, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  .navigation ul {
+    margin-top: 9em; } }
