@@ -1417,7 +1417,7 @@ header {
         /* line 95, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
         .navigation ul.nav li.home a {
           display: block;
-          background: url("/angus/home.png") no-repeat 100% 50%;
+          background: transparent url("/angus/home.png") no-repeat 100% 50%;
           background-size: auto 100%;
           height: 1em;
           width: 2em; }
@@ -1428,102 +1428,113 @@ header {
         .navigation ul.nav li.home.visible {
           opacity: 1; }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 480px) {
   /* line 114, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  header h1.logo {
+    position: absolute;
+    right: 0;
+    background-size: 80% auto;
+    top: 160px; } }
+@media only screen and (max-width: 768px) {
+  /* line 123, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   .navigation {
     position: relative; }
-    /* line 116, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    /* line 125, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
     .navigation ul.nav {
       margin: 0; }
-      /* line 118, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+      /* line 127, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
       .navigation ul.nav li {
         float: left;
         clear: none;
         font-size: .9em;
         width: 23%; }
-        /* line 123, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+        /* line 132, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
         .navigation ul.nav li a {
           padding: .3em .5em;
           height: 3.25em;
           line-height: 1.15em;
           box-shadow: inset 5em 0 5em rgba(0, 0, 0, 0.1); }
-        /* line 129, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+        /* line 138, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
         .navigation ul.nav li.home {
           opacity: 1;
           width: 8%; }
-          /* line 132, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+          /* line 141, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
           .navigation ul.nav li.home a {
             padding: 0;
             text-align: center;
             height: 3.25em;
             width: auto;
             background-size: auto auto;
-            background-position: 50% 50%; }
-            /* line 139, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+            background-position: 50% 50%;
+            background-color: #fff; }
+            /* line 149, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
             .navigation ul.nav li.home a span {
               display: block;
               float: none; }
-    /* line 148, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    /* line 158, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
     .navigation.mobile-fixed {
       position: fixed;
       top: 0;
       z-index: 9999; }
-      /* line 152, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+      /* line 162, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
       .navigation.mobile-fixed ul.nav.fixed {
         margin-top: 0; } }
-/* line 159, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+/* line 169, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
 #fork {
   position: absolute;
   right: 0;
   top: 0; }
-  /* line 163, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 173, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   #fork a {
     float: right; }
-    /* line 165, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    /* line 175, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
     #fork a img {
       height: 7em; }
 
-/* line 171, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+/* line 181, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
 .container {
   background: #cccccc; }
-  /* line 173, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 183, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   .container .row {
     padding: 4em 0; }
-  /* line 176, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 186, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   .container p.lead {
     font-weight: 800;
     margin-bottom: .5em;
     font-size: 1.75em;
     line-height: 1.15em; }
-  /* line 182, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 192, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   .container h3 {
     color: #999999;
     font-size: 2.5em;
     margin-bottom: 1.5em; }
-  /* line 187, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 197, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   .container .image {
     margin-bottom: 1em; }
 
-/* line 193, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+/* line 203, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
 footer, footer .container {
   background: #1a1a1a; }
-/* line 196, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+/* line 206, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
 footer .container .row {
   padding: 1em 0; }
-/* line 199, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+/* line 209, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
 footer p {
-  margin-bottom: 0;
   color: #cccccc;
   font-size: .75em; }
+  @media only screen and (min-width: 1280px) {
+    /* line 209, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    footer p {
+      margin-bottom: 0; } }
 
 @media only screen and (min-width: 768px) {
-  /* line 208, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 220, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   header .column {
     margin-top: 5em; }
-    /* line 210, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    /* line 222, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
     header .column h2 {
       font-size: 1.5em; }
-  /* line 214, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 226, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   header h1.logo {
     background: url("/angus/assets/images/angus_logo.png") no-repeat 50% 50%;
     background-size: auto 100%;
@@ -1543,27 +1554,27 @@ footer p {
       header h1.logo a > span {
         display: none; }
 
-  /* line 218, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 230, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   .navigation ul {
     margin-top: 5em; }
-    /* line 220, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    /* line 232, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
     .navigation ul li {
       font-size: .9em; }
 
-  /* line 225, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 237, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   .container .row {
     padding-bottom: 9em; } }
 @media only screen and (min-width: 1280px) {
-  /* line 232, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 247, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   header {
     padding: 4em 0; }
-    /* line 234, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    /* line 249, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
     header .column {
       margin-top: 9em; }
-      /* line 236, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+      /* line 251, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
       header .column h2 {
         font-size: 2em; }
-    /* line 240, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    /* line 255, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
     header h1.logo {
       background: url("/angus/assets/images/angus_logo.png") no-repeat 50% 50%;
       background-size: auto 100%;
@@ -1583,24 +1594,24 @@ footer p {
         header h1.logo a > span {
           display: none; }
 
-  /* line 244, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 259, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   .navigation ul {
     margin-top: 7em; }
-    /* line 246, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    /* line 261, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
     .navigation ul li {
       font-size: 1em; }
 
-  /* line 252, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 267, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   #fork a img {
     height: auto; } }
 @media only screen and (min-width: 1440px) {
-  /* line 261, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 276, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   header .column {
     margin-top: 10em; }
-    /* line 263, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    /* line 278, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
     header .column h2 {
       font-size: 2.5em; }
-  /* line 267, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 282, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   header h1.logo {
     background: url("/angus/assets/images/angus_logo.png") no-repeat 50% 50%;
     background-size: auto 100%;
@@ -1620,6 +1631,6 @@ footer p {
       header h1.logo a > span {
         display: none; }
 
-  /* line 271, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 286, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   .navigation ul {
     margin-top: 9em; } }

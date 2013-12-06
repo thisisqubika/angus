@@ -45,7 +45,7 @@ $(document).ready(function(){
     $(".navigation ul.nav").toggleClass("fixed");
   },{offset: 20})
 
-  $('.navigation').waypoint(function(direction){
+  $('.navigation li.home').waypoint(function(direction){
     $(".navigation").toggleClass("mobile-fixed");
   },{offset: 0})
 
