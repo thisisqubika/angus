@@ -1324,12 +1324,12 @@ th.hide-for-touch {
 /* line 29, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
 header {
   position: relative;
-  background: transparent url("/assets/images/home_bg.png") no-repeat 50% 50%;
+  background: transparent url("angus/assets/images/home_bg.png") no-repeat 50% 50%;
   background-size: cover;
   padding: 2em 0; }
   /* line 34, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   header h1.logo {
-    background: url("/assets/images/angus_logo.png") no-repeat 50% 50%;
+    background: url("angus/assets/images/angus_logo.png") no-repeat 50% 50%;
     background-size: auto 100%;
     height: 6.5em;
     max-height: 430px;
@@ -1417,7 +1417,7 @@ header {
         /* line 95, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
         .navigation ul.nav li.home a {
           display: block;
-          background: url("/home.png") no-repeat 100% 50%;
+          background: url("angus/home.png") no-repeat 100% 50%;
           background-size: auto 100%;
           height: 1em;
           width: 2em; }
@@ -1525,7 +1525,7 @@ footer p {
       font-size: 1.5em; }
   /* line 214, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   header h1.logo {
-    background: url("/assets/images/angus_logo.png") no-repeat 50% 50%;
+    background: url("angus/assets/images/angus_logo.png") no-repeat 50% 50%;
     background-size: auto 100%;
     height: 6.5em;
     max-height: 430px;
@@ -1565,7 +1565,7 @@ footer p {
         font-size: 2em; }
     /* line 240, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
     header h1.logo {
-      background: url("/assets/images/angus_logo.png") no-repeat 50% 50%;
+      background: url("angus/assets/images/angus_logo.png") no-repeat 50% 50%;
       background-size: auto 100%;
       height: 9em;
       max-height: 430px;
@@ -1602,7 +1602,7 @@ footer p {
       font-size: 2.5em; }
   /* line 267, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   header h1.logo {
-    background: url("/assets/images/angus_logo.png") no-repeat 50% 50%;
+    background: url("angus/assets/images/angus_logo.png") no-repeat 50% 50%;
     background-size: auto 100%;
     height: 10em;
     max-height: 430px;
