@@ -8,9 +8,9 @@ module Angus
     class ExceptionHandler
       include Angus::StatusCodes
 
-      def initialize(app)
+      def initialize(app, definitions = nil)
         @app = app
-        @definition_reader = Angus::DefinitionReader.new
+        @definition_reader = Angus::DefinitionReader.new(definitions)
       end
 
       def call(env)
@@ -29,14 +29,12 @@ module Angus
 
       private
 
-
       # Builds a service error response
       def build_error_response(error)
         error_messages = messages_from_error(error)
 
         JsonRender.convert(:status => :error, :messages => error_messages)
       end
-
 
       # Returns an array of messages errors to be sent in an operation response
       #
@@ -59,15 +57,14 @@ module Angus
             messages << {:level => level, :key => key, :dsc => description}
           end
         elsif error.respond_to?(:error_key)
-          messages << {:level => level, :key => error.error_key,
-                       :dsc => error_message(error)}
+          messages << { :level => level, :key => error.error_key,
+                        :dsc => error_message(error) }
         else
-          messages << {:level => level, :key => error.class.name, :dsc => error.message}
+          messages << { :level => level, :key => error.class.name, :dsc => error.message }
         end
 
         messages
       end
-
 
       # Returns the message for an error.
       #
@@ -103,7 +100,8 @@ module Angus
 
       # Returns a suitable HTTP status code for the given error
       #
-      # If error param responds to #errors, then #{HTTP_STATUS_CODE_CONFLICT} will be returned.
+      # If error param responds to #errors, then #{StatusCodes::HTTP_STATUS_CODE_CONFLICT} will
+      # be returned.
       #
       # If error param responds to #error_key, then the status_code associated
       #  with the message will be returned.

@@ -1,9 +1,25 @@
-user_profile:
+user:
   - field: id
-    description: Idenfiticador del usuario
+    description: User identifier
     required: true
     type: integer
   - field: name
-    description: Nombres del usuario
+    description: User name
     required: true
     type: string
+  - field: last_login
+    description: User last login time
+    required: true
+    type: datetime
+  - field: birth_date
+    description: User birth date
+    required: true
+    type: date
+  - field: gender
+    description: User gender
+    required: true
+    type: string
+  - field: roles
+    description: User roles
+    required: false
+    elements_type: integer

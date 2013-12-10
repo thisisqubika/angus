@@ -9,7 +9,7 @@ describe Spec::Functional::NoResources,
   include Rack::Test::Methods
 
   def app
-    Spec::Functional::NoResources.new
+    Rack::Lint.new(Spec::Functional::NoResources.new)
   end
 
   it 'responds to /' do
@@ -50,7 +50,7 @@ describe Spec::Functional::NoResources,
       it 'sets a html content type' do
         get url
 
-        last_response.header['Content-Type'].should eq('text/html')
+        last_response.header['Content-Type'].should eq('text/html;charset=utf-8')
       end
     end
 

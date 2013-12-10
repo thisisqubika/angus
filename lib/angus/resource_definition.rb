@@ -50,10 +50,9 @@ module Angus
           result
         else
           field_name = response_representation.name
-          field_type = response_representation.type || response_representation.elements_type
+          field_type_name = response_representation.type || response_representation.elements_type
 
-          # TODO fix this
-          representation = representation_by_name(field_type)
+          representation = representation_by_name(field_type_name)
 
           if representation.nil?
             field_name.to_sym

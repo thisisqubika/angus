@@ -27,7 +27,9 @@ module Angus
         if params[:format] == 'json'
           render(response, Angus::SDoc::JsonFormatter.format_service(@definitions), format: :json)
         else
-          render(response, Angus::SDoc::HtmlFormatter.format_service(@definitions), format: :html)
+          language = params[:lang] || self.default_doc_language
+          render(response, Angus::SDoc::HtmlFormatter.format_service(@definitions, language),
+                 format: :html)
         end
       end
     end

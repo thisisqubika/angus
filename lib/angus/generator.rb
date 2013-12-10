@@ -13,7 +13,7 @@ module Angus
     NEW_APP_DIRECTORIES = %W(#{DEFINITIONS_DIR} #{RESOURCES_DIR} #{SERVICES_DIR})
 
     NEW_APP_FILES = %w(
-      Gemfile
+      Gemfile.erb
       config.ru.erb
       services/service.rb.erb
       definitions/messages.yml

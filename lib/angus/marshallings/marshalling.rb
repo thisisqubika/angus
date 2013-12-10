@@ -4,26 +4,6 @@ require 'date'
 module Angus
   module Marshalling
 
-    # Marshal an object
-    #
-    # This method is intended for scalar objects and arrays of scalar objects.
-    #
-    # For more complex objects:
-    # @see Angus::Marshalling.marshal_object
-    #
-    # @param object The object to be marshalled
-    # @return [Array] An object suitable for be converted easily to JSON notation
-    #
-    # If {object} is an array, this method returns an array with all the elements marshalled
-    # Else returns a marshalled representation of the object.
-    def self.marshal(object)
-      if object.is_a?(Array)
-        object.map { |element| marshal(element) }
-      else
-        marshal_scalar(object)
-      end
-    end
-
     # Marshal a complex object.
     #
     # @param object The object to be marshalled
@@ -36,8 +16,11 @@ module Angus
           key = getter.keys[0]
           value = get_value(object, key)
 
-          #TODO Consider adding ActiveRecord::Relation support
-          #ex: "if value.is_a?(Array) || value.is_a?(ActiveRecord::Relation)"
+          #HACK to support ActiveRecord::Relation
+          if defined?(ActiveRecord::Relation) && value.is_a?(ActiveRecord::Relation)
+            value = value.to_a
+          end
+
           if value.is_a?(Array)
             result[key] = value.map { |object| marshal_object(object, getter.values[0]) }
           else
@@ -57,8 +40,8 @@ module Angus
     #
     # @param [Object] object The object to get the value from
     # @param [Symbol, String] getter to request from the object
-    # @raise [InvalidGetterError] when getter is not present
-    # in the object
+    # @raise [InvalidGetterError] when getter is not present in the object
+    #
     # @return [Object] the requested value
     def self.get_value(object, getter)
       if object.is_a?(Hash)
@@ -72,8 +55,9 @@ module Angus
     #
     # @param [Object] object The object to get the value from
     # @param [Symbol, String] method the method to invoke in the object
-    # @raise [InvalidGetterError] when the object does not responds
-    # to method as public.
+    #
+    # @raise [InvalidGetterError] when the object does not responds to method as public.
+    #
     # @return [Object] the requested value
     def self.get_value_from_object(object, method)
       value = object.public_send method.to_sym
@@ -85,9 +69,8 @@ module Angus
       else
         value
       end
-    # TODO ver si tirar una exception especifica o que hacer?
-    #rescue NoMethodError => error
-    #  raise InvalidGetterError.new(method, error.backtrace.first)
+    rescue NoMethodError => error
+      raise Marshalling::InvalidGetterError.new(method, error.backtrace.first)
     end
 
     # Gets a value from a hash for a given key.
@@ -106,8 +89,7 @@ module Angus
       elsif hash.has_key?(key.to_s)
         hash[key.to_s]
       else
-        #raise InvalidGetterError.new(key)
-        raise NoMethodError.new(key.to_s)
+        raise Marshalling::InvalidGetterError.new(key)
       end
     end
 

@@ -19,12 +19,15 @@ module Angus
 
     FIRST_VERSION = '0.1'
 
-    PRODUCTION_ENV    = :production
-    DEVELOPMENT_ENV   = :development
-    TEST_ENV          = :test
-    DEFAULT_ENV       = DEVELOPMENT_ENV
+    PRODUCTION_ENV        = :production
+    DEVELOPMENT_ENV       = :development
+    TEST_ENV              = :test
+    DEFAULT_ENV           = DEVELOPMENT_ENV
+    DEFAULT_DOC_LANGUAGE  = :en
 
     attr_reader :definitions
+
+    attr_accessor :default_doc_language
 
     def initialize
       super
@@ -35,6 +38,7 @@ module Angus
       @configured             = false
       @definitions            = nil
       @logger                 = Logger.new(STDOUT)
+      @default_doc_language   = DEFAULT_DOC_LANGUAGE
 
       configure!
 
@@ -113,7 +117,6 @@ module Angus
           response = Response.new
 
           resource = resource_definition.resource_class.new(request, params)
-          response['Content-Type'] = 'application/json'
 
           op_response = resource.send(operation.code_name)
           op_response = {} unless op_response.is_a?(Hash)

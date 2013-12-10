@@ -36,7 +36,7 @@ describe Angus::Middleware::ExceptionHandler, { :work_dir => work_dir } do
       app.stub(:call).with(any_args).and_raise(error)
     end
 
-    it 'returns CONFLICT ERROR' do
+    it 'returns HTTP_STATUS_CODE_CONFLICT ERROR' do
       response = middleware.call(env)
 
       response.first.should eq(Angus::StatusCodes::HTTP_STATUS_CODE_CONFLICT)

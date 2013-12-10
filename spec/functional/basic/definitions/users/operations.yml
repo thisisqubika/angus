@@ -13,7 +13,7 @@ get_user:
     - element: profile
       description: Perfil del usuario
       required: true
-      type: user_profile
+      type: user
 
   messages:
     - key: UserNotFound
@@ -30,4 +30,29 @@ get_users:
     - element: users
       description: Perfil del usuario
       required: true
-      elements_type: user_profile
+      elements_type: user
+
+create_user:
+  name: Create a new user
+  description: >
+    Creates and returns a new user.
+
+  path: /users
+  method: post
+
+  messages:
+    - key: UserCreatedSuccessfully
+
+delete_user:
+  name: Delete user
+  description: >
+    Deletes a user.
+
+  path: /users/:id
+  method: delete
+  uri:
+    - element: id
+      description: User identifier.
+
+  messages:
+      - key: UserDeletedSuccessfully

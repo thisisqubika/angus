@@ -3,8 +3,8 @@ module Angus
 
     attr_reader :definitions
 
-    def initialize
-      @definitions = SDoc::DefinitionsReader.service_definition('definitions')
+    def initialize(definitions = nil)
+      @definitions = definitions || SDoc::DefinitionsReader.service_definition('definitions')
     end
 
     def message_definition(key, level)

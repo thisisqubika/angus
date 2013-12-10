@@ -2,7 +2,7 @@ module Angus
   class Response < Rack::Response
     def initialize(*)
       super
-      headers['Content-Type'] ||= 'text/html'
+      headers['Content-Type'] ||= 'application/json'
     end
 
     def body=(value)
@@ -18,8 +18,8 @@ module Angus
       result = body
 
       if drop_content_info?
-        headers.delete "Content-Length"
-        headers.delete "Content-Type"
+        headers.delete('Content-Length')
+        headers.delete'Content-Type'
       end
 
       if drop_body?

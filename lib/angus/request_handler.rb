@@ -34,7 +34,13 @@ module Angus
       @middleware.reverse.inject(inner_app) do |app, middleware|
         klass, args, block = middleware
 
-        klass.new(app, *args, &block)
+        # HACK to improve performance for now, in reality Middleware::ExceptionHandler should get
+        # the doc from a know place or the documentation should be available to all middleware.
+        if klass == Middleware::ExceptionHandler
+          klass.new(app, @definitions)
+        else
+          klass.new(app, *args, &block)
+        end
       end
     end
 
@@ -54,7 +60,7 @@ module Angus
       response.finish
     end
 
-    # TODO ver multiples formatos en el futuro
+    # TODO add more formats in the future.
     def render(response, content, options = {})
       format = options[:format] || DEFAULT_RENDER
       case(format)
