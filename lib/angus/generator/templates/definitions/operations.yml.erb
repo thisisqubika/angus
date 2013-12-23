@@ -1,21 +1,24 @@
-<% resource_actions.each do |action_name| %>
-<%= action_name%>:
-  name:
-  description: |
-
-  path:
-  method:
+<% unless actions.nil? %>
+<% actions.each do |action_name| %>
+<%= action_name %>:
+  name: '<%= action_name %>'
+  description: '<%= action_description(action_name) %>'
+  path: '<%= action_path(action_name) %>'
+  method: '<%= action_method(action_name) %>'
+  <% unless is_demo? %>
   uri:
     - element:
       description:
+  <% end %>
 
   response:
-    - element:
-      description:
-      required:
-      type:
+    - element: '<%= response_element(action_name) %>'
+      description: '<%= response_description(action_name) %>'
+      required: <%= response_required(action_name) %>
+      type: <%= response_type(action_name) %>
 
   messages:
-    - key:
-      description:
+    - key: <%= message_key(action_name) %>
+      description: '<%= message_description(action_name) %>'
+<% end %>
 <% end %>
