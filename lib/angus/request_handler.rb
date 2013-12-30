@@ -31,7 +31,7 @@ module Angus
 
     def to_app
       inner_app = lambda { |env| self.dup.call!(env) }
-      @middleware.reverse.inject(inner_app) do |app, middleware|
+      @app ||= @middleware.reverse.inject(inner_app) do |app, middleware|
         klass, args, block = middleware
 
         # HACK to improve performance for now, in reality Middleware::ExceptionHandler should get

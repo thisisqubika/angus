@@ -8,9 +8,7 @@ describe Spec::Functional::NoResources,
          { :work_dir => "#{File.dirname(__FILE__ )}/no_resources" } do
   include Rack::Test::Methods
 
-  def app
-    Rack::Lint.new(Spec::Functional::NoResources.new)
-  end
+  subject(:app) { Rack::Lint.new(Spec::Functional::NoResources.new) }
 
   it 'responds to /' do
     get '/'

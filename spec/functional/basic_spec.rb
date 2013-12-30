@@ -7,9 +7,7 @@ require 'functional/basic/services/basic'
 describe Spec::Functional::Basic, { :work_dir => "#{File.dirname(__FILE__ )}/basic" } do
   include Rack::Test::Methods
 
-  def app
-    Rack::Lint.new(Spec::Functional::Basic.new)
-  end
+  subject(:app) { Rack::Lint.new(Spec::Functional::Basic.new) }
 
   it 'responds to /' do
     get '/'

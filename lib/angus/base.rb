@@ -9,6 +9,7 @@ require_relative 'responses'
 require_relative 'renders/base'
 require_relative 'marshallings/base'
 require_relative 'base_actions'
+require_relative 'proxy_actions'
 require_relative 'definition_reader'
 
 require 'angus/sdoc'
@@ -16,6 +17,7 @@ require 'angus/sdoc'
 module Angus
   class Base < RequestHandler
     include BaseActions
+    include ProxyActions
 
     FIRST_VERSION = '0.1'
 
@@ -41,6 +43,12 @@ module Angus
       @default_doc_language   = DEFAULT_DOC_LANGUAGE
 
       configure!
+
+      after_configure
+    end
+
+    def after_configure
+      super
 
       register_base_routes
       register_resources_routes
