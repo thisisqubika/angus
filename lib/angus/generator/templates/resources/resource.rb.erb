@@ -1,6 +1,11 @@
 class <%= classify(resource_name) %> < Angus::BaseResource
-<% resource_actions.each do |action_name| %>
-  def <%= action_name %>
+<% unless actions.nil? %>
+<% actions.each do |action_name| %>
+  def
+
+  {users: [{id: 1, name: 'User one'}, {id: 2, name: 'User two'}]}
+    <% end %>
   end
+<% end %>
 <% end %>
 end

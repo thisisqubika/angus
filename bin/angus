@@ -8,6 +8,12 @@ bin_file = Pathname.new(__FILE__).realpath
 # add self to libpath
 $:.unshift File.expand_path('../../lib', bin_file)
 
-require 'angus/command'
+require 'angus/commands/angus_command'
+require 'angus/commands/demo_command'
+require 'angus/commands/help_command'
+require 'angus/commands/new_service_command'
+require 'angus/commands/resource_command'
+require 'angus/commands/scaffold_command'
+require 'angus/commands/server_command'
 
-Angus::Command.start
+Angus::AngusCommand.start
