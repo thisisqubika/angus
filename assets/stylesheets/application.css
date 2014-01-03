@@ -256,10 +256,11 @@ code {
   padding: 1em;
   background: #fff;
   display: block;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  line-height: 1.5em; }
 
 /* Lists */
-/* line 247, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+/* line 248, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
 ul,
 ol,
 dl {
@@ -269,55 +270,55 @@ dl {
   list-style-position: outside;
   font-family: inherit; }
 
-/* line 255, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+/* line 256, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
 ul, ol {
   margin-left: 0; }
-  /* line 257, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  /* line 258, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
   ul.no-bullet, ol.no-bullet {
     margin-left: 0; }
 
 /* Unordered Lists */
-/* line 264, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+/* line 265, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
 ul li ul,
 ul li ol {
   margin-left: 1.25em;
   margin-bottom: 0;
   font-size: 1em;
   /* Override nested font-size change */ }
-/* line 273, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+/* line 274, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
 ul.square li ul, ul.circle li ul, ul.disc li ul {
   list-style: inherit; }
-/* line 276, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+/* line 277, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
 ul.square {
   list-style-type: square; }
-/* line 277, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+/* line 278, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
 ul.circle {
   list-style-type: circle; }
-/* line 278, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+/* line 279, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
 ul.disc {
   list-style-type: disc; }
-/* line 279, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+/* line 280, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
 ul.no-bullet {
   list-style: none; }
 
 /* Ordered Lists */
-/* line 286, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+/* line 287, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
 ol li ul,
 ol li ol {
   margin-left: 1.25em;
   margin-bottom: 0; }
 
 /* Definition Lists */
-/* line 295, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+/* line 296, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
 dl dt {
   margin-bottom: 0.3em;
   font-weight: bold; }
-/* line 299, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+/* line 300, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
 dl dd {
   margin-bottom: 0.75em; }
 
 /* Abbreviations */
-/* line 304, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+/* line 305, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
 abbr,
 acronym {
   text-transform: uppercase;
@@ -326,55 +327,55 @@ acronym {
   border-bottom: 1px dotted #dddddd;
   cursor: help; }
 
-/* line 311, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+/* line 312, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
 abbr {
   text-transform: none; }
 
 /* Blockquotes */
-/* line 316, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+/* line 317, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
 blockquote {
   margin: 0 0 1.25em;
   padding: 0.5625em 1.25em 0 1.1875em;
   border-left: 1px solid #dddddd; }
-  /* line 321, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  /* line 322, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
   blockquote cite {
     display: block;
     font-size: 0.8125em;
     color: #555555; }
-    /* line 325, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+    /* line 326, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
     blockquote cite:before {
       content: "\2014 \0020"; }
-    /* line 330, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+    /* line 331, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
     blockquote cite a,
     blockquote cite a:visited {
       color: #555555; }
 
-/* line 336, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+/* line 337, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
 blockquote,
 blockquote p {
   line-height: 1.6;
   color: #6f6f6f; }
 
 /* Microformats */
-/* line 342, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+/* line 343, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
 .vcard {
   display: inline-block;
   margin: 0 0 1.25em 0;
   border: 1px solid #dddddd;
   padding: 0.625em 0.75em; }
-  /* line 348, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  /* line 349, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
   .vcard li {
     margin: 0;
     display: block; }
-  /* line 352, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  /* line 353, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
   .vcard .fn {
     font-weight: bold;
     font-size: 0.9375em; }
 
-/* line 359, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+/* line 360, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
 .vevent .summary {
   font-weight: bold; }
-/* line 361, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+/* line 362, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
 .vevent abbr {
   cursor: default;
   text-decoration: none;
@@ -383,23 +384,23 @@ blockquote p {
   padding: 0 0.0625em; }
 
 @media only screen and (min-width: 768px) {
-  /* line 372, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  /* line 373, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4; }
 
-  /* line 373, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  /* line 374, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
   h1 {
     font-size: 2.75em; }
 
-  /* line 374, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  /* line 375, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
   h2 {
     font-size: 2.3125em; }
 
-  /* line 375, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  /* line 376, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
   h3 {
     font-size: 1.6875em; }
 
-  /* line 376, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  /* line 377, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
   h4 {
     font-size: 1.4375em; } }
 /*
@@ -408,12 +409,12 @@ blockquote p {
  * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
  * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
 */
-/* line 387, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+/* line 388, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
 .print-only {
   display: none !important; }
 
 @media print {
-  /* line 389, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  /* line 390, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -421,73 +422,73 @@ blockquote p {
     box-shadow: none !important;
     text-shadow: none !important; }
 
-  /* line 397, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  /* line 398, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
   a,
   a:visited {
     text-decoration: underline; }
 
-  /* line 398, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  /* line 399, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
   a[href]:after {
     content: " (" attr(href) ")"; }
 
-  /* line 400, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  /* line 401, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
   abbr[title]:after {
     content: " (" attr(title) ")"; }
 
-  /* line 405, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  /* line 406, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: ""; }
 
-  /* line 408, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  /* line 409, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
 
-  /* line 413, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  /* line 414, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
   thead {
     display: table-header-group;
     /* h5bp.com/t */ }
 
-  /* line 416, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  /* line 417, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
   tr,
   img {
     page-break-inside: avoid; }
 
-  /* line 418, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  /* line 419, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
   img {
     max-width: 100% !important; }
 
   @page {
     margin: 0.5cm; }
 
-  /* line 424, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  /* line 425, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3; }
 
-  /* line 430, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  /* line 431, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
   h2,
   h3 {
     page-break-after: avoid; }
 
-  /* line 432, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  /* line 433, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
   .hide-on-print {
     display: none !important; }
 
-  /* line 433, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  /* line 434, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
   .print-only {
     display: block !important; }
 
-  /* line 434, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  /* line 435, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
   .hide-for-print {
     display: none !important; }
 
-  /* line 435, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
+  /* line 436, /Users/murtun/angus/angus-web/source/assets/stylesheets/_type.scss */
   .show-for-print {
     display: inherit !important; } }
 /* Grid HTML Classes */
@@ -1321,13 +1322,1748 @@ th.hide-for-touch {
 .touch th.show-for-touch {
   display: table-cell !important; }
 
-/* line 29, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+/*!
+ *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("/angus/fonts/fontawesome-webfont.eot?v=4.0.3");
+  src: url("/angus/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3") format("embedded-opentype"), url("/angus/fonts/fontawesome-webfont.woff?v=4.0.3") format("woff"), url("/angus/fonts/fontawesome-webfont.ttf?v=4.0.3") format("truetype"), url("/angus/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* line 4, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_core.scss */
+.fa {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* makes the font 33% larger relative to the icon container */
+/* line 7, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_larger.scss */
+.fa-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -15%; }
+
+/* line 12, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_larger.scss */
+.fa-2x {
+  font-size: 2em; }
+
+/* line 13, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_larger.scss */
+.fa-3x {
+  font-size: 3em; }
+
+/* line 14, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_larger.scss */
+.fa-4x {
+  font-size: 4em; }
+
+/* line 15, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_larger.scss */
+.fa-5x {
+  font-size: 5em; }
+
+/* line 5, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_fixed-width.scss */
+.fa-fw {
+  width: 1.28571em;
+  text-align: center; }
+
+/* line 6, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_list.scss */
+.fa-ul {
+  padding-left: 0;
+  margin-left: 2.14286em;
+  list-style-type: none; }
+  /* line 10, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_list.scss */
+  .fa-ul > li {
+    position: relative; }
+
+/* line 12, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_list.scss */
+.fa-li {
+  position: absolute;
+  left: -2.14286em;
+  width: 2.14286em;
+  top: 0.14286em;
+  text-align: center; }
+  /* line 18, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_list.scss */
+  .fa-li.fa-lg {
+    left: -1.85714em; }
+
+/* line 6, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_bordered-pulled.scss */
+.fa-border {
+  padding: .2em .25em .15em;
+  border: solid 0.08em #eeeeee;
+  border-radius: .1em; }
+
+/* line 12, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_bordered-pulled.scss */
+.pull-right {
+  float: right; }
+
+/* line 13, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_bordered-pulled.scss */
+.pull-left {
+  float: left; }
+
+/* line 16, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_bordered-pulled.scss */
+.fa.pull-left {
+  margin-right: .3em; }
+/* line 17, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_bordered-pulled.scss */
+.fa.pull-right {
+  margin-left: .3em; }
+
+/* line 6, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_spinning.scss */
+.fa-spin {
+  -webkit-animation: spin 2s infinite linear;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear; }
+
+@-moz-keyframes spin {
+  /* line 14, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_spinning.scss */
+  0% {
+    -moz-transform: rotate(0deg); }
+
+  /* line 15, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_spinning.scss */
+  100% {
+    -moz-transform: rotate(359deg); } }
+
+@-webkit-keyframes spin {
+  /* line 18, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_spinning.scss */
+  0% {
+    -webkit-transform: rotate(0deg); }
+
+  /* line 19, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_spinning.scss */
+  100% {
+    -webkit-transform: rotate(359deg); } }
+
+@-o-keyframes spin {
+  /* line 22, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_spinning.scss */
+  0% {
+    -o-transform: rotate(0deg); }
+
+  /* line 23, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_spinning.scss */
+  100% {
+    -o-transform: rotate(359deg); } }
+
+@-ms-keyframes spin {
+  /* line 26, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_spinning.scss */
+  0% {
+    -ms-transform: rotate(0deg); }
+
+  /* line 27, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_spinning.scss */
+  100% {
+    -ms-transform: rotate(359deg); } }
+
+@keyframes spin {
+  /* line 30, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_spinning.scss */
+  0% {
+    transform: rotate(0deg); }
+
+  /* line 31, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_spinning.scss */
+  100% {
+    transform: rotate(359deg); } }
+
+/* line 6, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_rotated-flipped.scss */
+.fa-rotate-90 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg); }
+
+/* line 7, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_rotated-flipped.scss */
+.fa-rotate-180 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+/* line 8, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_rotated-flipped.scss */
+.fa-rotate-270 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg); }
+
+/* line 10, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_rotated-flipped.scss */
+.fa-flip-horizontal {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1); }
+
+/* line 11, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_rotated-flipped.scss */
+.fa-flip-vertical {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
+  -webkit-transform: scale(1, -1);
+  -moz-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  transform: scale(1, -1); }
+
+/* line 6, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_stacked.scss */
+.fa-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle; }
+
+/* line 14, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_stacked.scss */
+.fa-stack-1x, .fa-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center; }
+
+/* line 20, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_stacked.scss */
+.fa-stack-1x {
+  line-height: inherit; }
+
+/* line 21, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_stacked.scss */
+.fa-stack-2x {
+  font-size: 2em; }
+
+/* line 22, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_stacked.scss */
+.fa-inverse {
+  color: white; }
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+/* line 5, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-glass:before {
+  content: "\f000"; }
+
+/* line 6, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-music:before {
+  content: "\f001"; }
+
+/* line 7, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-search:before {
+  content: "\f002"; }
+
+/* line 8, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-envelope-o:before {
+  content: "\f003"; }
+
+/* line 9, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-heart:before {
+  content: "\f004"; }
+
+/* line 10, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-star:before {
+  content: "\f005"; }
+
+/* line 11, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-star-o:before {
+  content: "\f006"; }
+
+/* line 12, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-user:before {
+  content: "\f007"; }
+
+/* line 13, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-film:before {
+  content: "\f008"; }
+
+/* line 14, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-th-large:before {
+  content: "\f009"; }
+
+/* line 15, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-th:before {
+  content: "\f00a"; }
+
+/* line 16, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-th-list:before {
+  content: "\f00b"; }
+
+/* line 17, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-check:before {
+  content: "\f00c"; }
+
+/* line 18, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-times:before {
+  content: "\f00d"; }
+
+/* line 19, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-search-plus:before {
+  content: "\f00e"; }
+
+/* line 20, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-search-minus:before {
+  content: "\f010"; }
+
+/* line 21, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-power-off:before {
+  content: "\f011"; }
+
+/* line 22, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-signal:before {
+  content: "\f012"; }
+
+/* line 24, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-gear:before,
+.fa-cog:before {
+  content: "\f013"; }
+
+/* line 25, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-trash-o:before {
+  content: "\f014"; }
+
+/* line 26, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-home:before {
+  content: "\f015"; }
+
+/* line 27, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-file-o:before {
+  content: "\f016"; }
+
+/* line 28, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-clock-o:before {
+  content: "\f017"; }
+
+/* line 29, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-road:before {
+  content: "\f018"; }
+
+/* line 30, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-download:before {
+  content: "\f019"; }
+
+/* line 31, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-arrow-circle-o-down:before {
+  content: "\f01a"; }
+
+/* line 32, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-arrow-circle-o-up:before {
+  content: "\f01b"; }
+
+/* line 33, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-inbox:before {
+  content: "\f01c"; }
+
+/* line 34, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-play-circle-o:before {
+  content: "\f01d"; }
+
+/* line 36, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-rotate-right:before,
+.fa-repeat:before {
+  content: "\f01e"; }
+
+/* line 37, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-refresh:before {
+  content: "\f021"; }
+
+/* line 38, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-list-alt:before {
+  content: "\f022"; }
+
+/* line 39, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-lock:before {
+  content: "\f023"; }
+
+/* line 40, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-flag:before {
+  content: "\f024"; }
+
+/* line 41, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-headphones:before {
+  content: "\f025"; }
+
+/* line 42, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-volume-off:before {
+  content: "\f026"; }
+
+/* line 43, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-volume-down:before {
+  content: "\f027"; }
+
+/* line 44, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-volume-up:before {
+  content: "\f028"; }
+
+/* line 45, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-qrcode:before {
+  content: "\f029"; }
+
+/* line 46, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-barcode:before {
+  content: "\f02a"; }
+
+/* line 47, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-tag:before {
+  content: "\f02b"; }
+
+/* line 48, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-tags:before {
+  content: "\f02c"; }
+
+/* line 49, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-book:before {
+  content: "\f02d"; }
+
+/* line 50, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-bookmark:before {
+  content: "\f02e"; }
+
+/* line 51, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-print:before {
+  content: "\f02f"; }
+
+/* line 52, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-camera:before {
+  content: "\f030"; }
+
+/* line 53, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-font:before {
+  content: "\f031"; }
+
+/* line 54, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-bold:before {
+  content: "\f032"; }
+
+/* line 55, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-italic:before {
+  content: "\f033"; }
+
+/* line 56, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-text-height:before {
+  content: "\f034"; }
+
+/* line 57, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-text-width:before {
+  content: "\f035"; }
+
+/* line 58, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-align-left:before {
+  content: "\f036"; }
+
+/* line 59, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-align-center:before {
+  content: "\f037"; }
+
+/* line 60, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-align-right:before {
+  content: "\f038"; }
+
+/* line 61, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-align-justify:before {
+  content: "\f039"; }
+
+/* line 62, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-list:before {
+  content: "\f03a"; }
+
+/* line 64, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-dedent:before,
+.fa-outdent:before {
+  content: "\f03b"; }
+
+/* line 65, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-indent:before {
+  content: "\f03c"; }
+
+/* line 66, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-video-camera:before {
+  content: "\f03d"; }
+
+/* line 67, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-picture-o:before {
+  content: "\f03e"; }
+
+/* line 68, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-pencil:before {
+  content: "\f040"; }
+
+/* line 69, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-map-marker:before {
+  content: "\f041"; }
+
+/* line 70, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-adjust:before {
+  content: "\f042"; }
+
+/* line 71, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-tint:before {
+  content: "\f043"; }
+
+/* line 73, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-edit:before,
+.fa-pencil-square-o:before {
+  content: "\f044"; }
+
+/* line 74, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-share-square-o:before {
+  content: "\f045"; }
+
+/* line 75, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-check-square-o:before {
+  content: "\f046"; }
+
+/* line 76, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-arrows:before {
+  content: "\f047"; }
+
+/* line 77, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-step-backward:before {
+  content: "\f048"; }
+
+/* line 78, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-fast-backward:before {
+  content: "\f049"; }
+
+/* line 79, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-backward:before {
+  content: "\f04a"; }
+
+/* line 80, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-play:before {
+  content: "\f04b"; }
+
+/* line 81, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-pause:before {
+  content: "\f04c"; }
+
+/* line 82, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-stop:before {
+  content: "\f04d"; }
+
+/* line 83, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-forward:before {
+  content: "\f04e"; }
+
+/* line 84, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-fast-forward:before {
+  content: "\f050"; }
+
+/* line 85, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-step-forward:before {
+  content: "\f051"; }
+
+/* line 86, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-eject:before {
+  content: "\f052"; }
+
+/* line 87, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-chevron-left:before {
+  content: "\f053"; }
+
+/* line 88, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-chevron-right:before {
+  content: "\f054"; }
+
+/* line 89, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-plus-circle:before {
+  content: "\f055"; }
+
+/* line 90, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-minus-circle:before {
+  content: "\f056"; }
+
+/* line 91, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-times-circle:before {
+  content: "\f057"; }
+
+/* line 92, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-check-circle:before {
+  content: "\f058"; }
+
+/* line 93, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-question-circle:before {
+  content: "\f059"; }
+
+/* line 94, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-info-circle:before {
+  content: "\f05a"; }
+
+/* line 95, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-crosshairs:before {
+  content: "\f05b"; }
+
+/* line 96, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-times-circle-o:before {
+  content: "\f05c"; }
+
+/* line 97, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-check-circle-o:before {
+  content: "\f05d"; }
+
+/* line 98, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-ban:before {
+  content: "\f05e"; }
+
+/* line 99, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-arrow-left:before {
+  content: "\f060"; }
+
+/* line 100, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-arrow-right:before {
+  content: "\f061"; }
+
+/* line 101, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-arrow-up:before {
+  content: "\f062"; }
+
+/* line 102, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-arrow-down:before {
+  content: "\f063"; }
+
+/* line 104, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-mail-forward:before,
+.fa-share:before {
+  content: "\f064"; }
+
+/* line 105, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-expand:before {
+  content: "\f065"; }
+
+/* line 106, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-compress:before {
+  content: "\f066"; }
+
+/* line 107, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-plus:before {
+  content: "\f067"; }
+
+/* line 108, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-minus:before {
+  content: "\f068"; }
+
+/* line 109, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-asterisk:before {
+  content: "\f069"; }
+
+/* line 110, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-exclamation-circle:before {
+  content: "\f06a"; }
+
+/* line 111, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-gift:before {
+  content: "\f06b"; }
+
+/* line 112, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-leaf:before {
+  content: "\f06c"; }
+
+/* line 113, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-fire:before {
+  content: "\f06d"; }
+
+/* line 114, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-eye:before {
+  content: "\f06e"; }
+
+/* line 115, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-eye-slash:before {
+  content: "\f070"; }
+
+/* line 117, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-warning:before,
+.fa-exclamation-triangle:before {
+  content: "\f071"; }
+
+/* line 118, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-plane:before {
+  content: "\f072"; }
+
+/* line 119, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-calendar:before {
+  content: "\f073"; }
+
+/* line 120, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-random:before {
+  content: "\f074"; }
+
+/* line 121, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-comment:before {
+  content: "\f075"; }
+
+/* line 122, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-magnet:before {
+  content: "\f076"; }
+
+/* line 123, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-chevron-up:before {
+  content: "\f077"; }
+
+/* line 124, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-chevron-down:before {
+  content: "\f078"; }
+
+/* line 125, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-retweet:before {
+  content: "\f079"; }
+
+/* line 126, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-shopping-cart:before {
+  content: "\f07a"; }
+
+/* line 127, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-folder:before {
+  content: "\f07b"; }
+
+/* line 128, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-folder-open:before {
+  content: "\f07c"; }
+
+/* line 129, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-arrows-v:before {
+  content: "\f07d"; }
+
+/* line 130, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-arrows-h:before {
+  content: "\f07e"; }
+
+/* line 131, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-bar-chart-o:before {
+  content: "\f080"; }
+
+/* line 132, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-twitter-square:before {
+  content: "\f081"; }
+
+/* line 133, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-facebook-square:before {
+  content: "\f082"; }
+
+/* line 134, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-camera-retro:before {
+  content: "\f083"; }
+
+/* line 135, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-key:before {
+  content: "\f084"; }
+
+/* line 137, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-gears:before,
+.fa-cogs:before {
+  content: "\f085"; }
+
+/* line 138, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-comments:before {
+  content: "\f086"; }
+
+/* line 139, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-thumbs-o-up:before {
+  content: "\f087"; }
+
+/* line 140, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-thumbs-o-down:before {
+  content: "\f088"; }
+
+/* line 141, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-star-half:before {
+  content: "\f089"; }
+
+/* line 142, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-heart-o:before {
+  content: "\f08a"; }
+
+/* line 143, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-sign-out:before {
+  content: "\f08b"; }
+
+/* line 144, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-linkedin-square:before {
+  content: "\f08c"; }
+
+/* line 145, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-thumb-tack:before {
+  content: "\f08d"; }
+
+/* line 146, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-external-link:before {
+  content: "\f08e"; }
+
+/* line 147, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-sign-in:before {
+  content: "\f090"; }
+
+/* line 148, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-trophy:before {
+  content: "\f091"; }
+
+/* line 149, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-github-square:before {
+  content: "\f092"; }
+
+/* line 150, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-upload:before {
+  content: "\f093"; }
+
+/* line 151, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-lemon-o:before {
+  content: "\f094"; }
+
+/* line 152, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-phone:before {
+  content: "\f095"; }
+
+/* line 153, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-square-o:before {
+  content: "\f096"; }
+
+/* line 154, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-bookmark-o:before {
+  content: "\f097"; }
+
+/* line 155, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-phone-square:before {
+  content: "\f098"; }
+
+/* line 156, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-twitter:before {
+  content: "\f099"; }
+
+/* line 157, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-facebook:before {
+  content: "\f09a"; }
+
+/* line 158, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-github:before {
+  content: "\f09b"; }
+
+/* line 159, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-unlock:before {
+  content: "\f09c"; }
+
+/* line 160, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-credit-card:before {
+  content: "\f09d"; }
+
+/* line 161, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-rss:before {
+  content: "\f09e"; }
+
+/* line 162, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-hdd-o:before {
+  content: "\f0a0"; }
+
+/* line 163, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-bullhorn:before {
+  content: "\f0a1"; }
+
+/* line 164, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-bell:before {
+  content: "\f0f3"; }
+
+/* line 165, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-certificate:before {
+  content: "\f0a3"; }
+
+/* line 166, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-hand-o-right:before {
+  content: "\f0a4"; }
+
+/* line 167, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-hand-o-left:before {
+  content: "\f0a5"; }
+
+/* line 168, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-hand-o-up:before {
+  content: "\f0a6"; }
+
+/* line 169, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-hand-o-down:before {
+  content: "\f0a7"; }
+
+/* line 170, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-arrow-circle-left:before {
+  content: "\f0a8"; }
+
+/* line 171, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-arrow-circle-right:before {
+  content: "\f0a9"; }
+
+/* line 172, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-arrow-circle-up:before {
+  content: "\f0aa"; }
+
+/* line 173, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-arrow-circle-down:before {
+  content: "\f0ab"; }
+
+/* line 174, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-globe:before {
+  content: "\f0ac"; }
+
+/* line 175, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-wrench:before {
+  content: "\f0ad"; }
+
+/* line 176, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-tasks:before {
+  content: "\f0ae"; }
+
+/* line 177, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-filter:before {
+  content: "\f0b0"; }
+
+/* line 178, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-briefcase:before {
+  content: "\f0b1"; }
+
+/* line 179, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-arrows-alt:before {
+  content: "\f0b2"; }
+
+/* line 181, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-group:before,
+.fa-users:before {
+  content: "\f0c0"; }
+
+/* line 183, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-chain:before,
+.fa-link:before {
+  content: "\f0c1"; }
+
+/* line 184, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-cloud:before {
+  content: "\f0c2"; }
+
+/* line 185, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-flask:before {
+  content: "\f0c3"; }
+
+/* line 187, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-cut:before,
+.fa-scissors:before {
+  content: "\f0c4"; }
+
+/* line 189, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-copy:before,
+.fa-files-o:before {
+  content: "\f0c5"; }
+
+/* line 190, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-paperclip:before {
+  content: "\f0c6"; }
+
+/* line 192, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-save:before,
+.fa-floppy-o:before {
+  content: "\f0c7"; }
+
+/* line 193, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-square:before {
+  content: "\f0c8"; }
+
+/* line 194, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-bars:before {
+  content: "\f0c9"; }
+
+/* line 195, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-list-ul:before {
+  content: "\f0ca"; }
+
+/* line 196, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-list-ol:before {
+  content: "\f0cb"; }
+
+/* line 197, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-strikethrough:before {
+  content: "\f0cc"; }
+
+/* line 198, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-underline:before {
+  content: "\f0cd"; }
+
+/* line 199, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-table:before {
+  content: "\f0ce"; }
+
+/* line 200, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-magic:before {
+  content: "\f0d0"; }
+
+/* line 201, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-truck:before {
+  content: "\f0d1"; }
+
+/* line 202, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-pinterest:before {
+  content: "\f0d2"; }
+
+/* line 203, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-pinterest-square:before {
+  content: "\f0d3"; }
+
+/* line 204, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-google-plus-square:before {
+  content: "\f0d4"; }
+
+/* line 205, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-google-plus:before {
+  content: "\f0d5"; }
+
+/* line 206, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-money:before {
+  content: "\f0d6"; }
+
+/* line 207, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-caret-down:before {
+  content: "\f0d7"; }
+
+/* line 208, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-caret-up:before {
+  content: "\f0d8"; }
+
+/* line 209, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-caret-left:before {
+  content: "\f0d9"; }
+
+/* line 210, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-caret-right:before {
+  content: "\f0da"; }
+
+/* line 211, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-columns:before {
+  content: "\f0db"; }
+
+/* line 213, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-unsorted:before,
+.fa-sort:before {
+  content: "\f0dc"; }
+
+/* line 215, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-sort-down:before,
+.fa-sort-asc:before {
+  content: "\f0dd"; }
+
+/* line 217, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-sort-up:before,
+.fa-sort-desc:before {
+  content: "\f0de"; }
+
+/* line 218, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-envelope:before {
+  content: "\f0e0"; }
+
+/* line 219, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-linkedin:before {
+  content: "\f0e1"; }
+
+/* line 221, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-rotate-left:before,
+.fa-undo:before {
+  content: "\f0e2"; }
+
+/* line 223, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-legal:before,
+.fa-gavel:before {
+  content: "\f0e3"; }
+
+/* line 225, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-dashboard:before,
+.fa-tachometer:before {
+  content: "\f0e4"; }
+
+/* line 226, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-comment-o:before {
+  content: "\f0e5"; }
+
+/* line 227, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-comments-o:before {
+  content: "\f0e6"; }
+
+/* line 229, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-flash:before,
+.fa-bolt:before {
+  content: "\f0e7"; }
+
+/* line 230, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-sitemap:before {
+  content: "\f0e8"; }
+
+/* line 231, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-umbrella:before {
+  content: "\f0e9"; }
+
+/* line 233, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-paste:before,
+.fa-clipboard:before {
+  content: "\f0ea"; }
+
+/* line 234, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-lightbulb-o:before {
+  content: "\f0eb"; }
+
+/* line 235, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-exchange:before {
+  content: "\f0ec"; }
+
+/* line 236, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-cloud-download:before {
+  content: "\f0ed"; }
+
+/* line 237, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-cloud-upload:before {
+  content: "\f0ee"; }
+
+/* line 238, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-user-md:before {
+  content: "\f0f0"; }
+
+/* line 239, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-stethoscope:before {
+  content: "\f0f1"; }
+
+/* line 240, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-suitcase:before {
+  content: "\f0f2"; }
+
+/* line 241, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-bell-o:before {
+  content: "\f0a2"; }
+
+/* line 242, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-coffee:before {
+  content: "\f0f4"; }
+
+/* line 243, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-cutlery:before {
+  content: "\f0f5"; }
+
+/* line 244, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-file-text-o:before {
+  content: "\f0f6"; }
+
+/* line 245, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-building-o:before {
+  content: "\f0f7"; }
+
+/* line 246, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-hospital-o:before {
+  content: "\f0f8"; }
+
+/* line 247, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-ambulance:before {
+  content: "\f0f9"; }
+
+/* line 248, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-medkit:before {
+  content: "\f0fa"; }
+
+/* line 249, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-fighter-jet:before {
+  content: "\f0fb"; }
+
+/* line 250, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-beer:before {
+  content: "\f0fc"; }
+
+/* line 251, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-h-square:before {
+  content: "\f0fd"; }
+
+/* line 252, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-plus-square:before {
+  content: "\f0fe"; }
+
+/* line 253, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-angle-double-left:before {
+  content: "\f100"; }
+
+/* line 254, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-angle-double-right:before {
+  content: "\f101"; }
+
+/* line 255, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-angle-double-up:before {
+  content: "\f102"; }
+
+/* line 256, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-angle-double-down:before {
+  content: "\f103"; }
+
+/* line 257, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-angle-left:before {
+  content: "\f104"; }
+
+/* line 258, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-angle-right:before {
+  content: "\f105"; }
+
+/* line 259, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-angle-up:before {
+  content: "\f106"; }
+
+/* line 260, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-angle-down:before {
+  content: "\f107"; }
+
+/* line 261, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-desktop:before {
+  content: "\f108"; }
+
+/* line 262, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-laptop:before {
+  content: "\f109"; }
+
+/* line 263, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-tablet:before {
+  content: "\f10a"; }
+
+/* line 265, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-mobile-phone:before,
+.fa-mobile:before {
+  content: "\f10b"; }
+
+/* line 266, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-circle-o:before {
+  content: "\f10c"; }
+
+/* line 267, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-quote-left:before {
+  content: "\f10d"; }
+
+/* line 268, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-quote-right:before {
+  content: "\f10e"; }
+
+/* line 269, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-spinner:before {
+  content: "\f110"; }
+
+/* line 270, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-circle:before {
+  content: "\f111"; }
+
+/* line 272, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-mail-reply:before,
+.fa-reply:before {
+  content: "\f112"; }
+
+/* line 273, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-github-alt:before {
+  content: "\f113"; }
+
+/* line 274, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-folder-o:before {
+  content: "\f114"; }
+
+/* line 275, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-folder-open-o:before {
+  content: "\f115"; }
+
+/* line 276, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-smile-o:before {
+  content: "\f118"; }
+
+/* line 277, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-frown-o:before {
+  content: "\f119"; }
+
+/* line 278, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-meh-o:before {
+  content: "\f11a"; }
+
+/* line 279, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-gamepad:before {
+  content: "\f11b"; }
+
+/* line 280, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-keyboard-o:before {
+  content: "\f11c"; }
+
+/* line 281, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-flag-o:before {
+  content: "\f11d"; }
+
+/* line 282, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-flag-checkered:before {
+  content: "\f11e"; }
+
+/* line 283, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-terminal:before {
+  content: "\f120"; }
+
+/* line 284, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-code:before {
+  content: "\f121"; }
+
+/* line 285, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-reply-all:before {
+  content: "\f122"; }
+
+/* line 286, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-mail-reply-all:before {
+  content: "\f122"; }
+
+/* line 289, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-star-half-empty:before,
+.fa-star-half-full:before,
+.fa-star-half-o:before {
+  content: "\f123"; }
+
+/* line 290, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-location-arrow:before {
+  content: "\f124"; }
+
+/* line 291, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-crop:before {
+  content: "\f125"; }
+
+/* line 292, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-code-fork:before {
+  content: "\f126"; }
+
+/* line 294, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-unlink:before,
+.fa-chain-broken:before {
+  content: "\f127"; }
+
+/* line 295, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-question:before {
+  content: "\f128"; }
+
+/* line 296, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-info:before {
+  content: "\f129"; }
+
+/* line 297, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-exclamation:before {
+  content: "\f12a"; }
+
+/* line 298, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-superscript:before {
+  content: "\f12b"; }
+
+/* line 299, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-subscript:before {
+  content: "\f12c"; }
+
+/* line 300, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-eraser:before {
+  content: "\f12d"; }
+
+/* line 301, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-puzzle-piece:before {
+  content: "\f12e"; }
+
+/* line 302, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-microphone:before {
+  content: "\f130"; }
+
+/* line 303, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-microphone-slash:before {
+  content: "\f131"; }
+
+/* line 304, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-shield:before {
+  content: "\f132"; }
+
+/* line 305, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-calendar-o:before {
+  content: "\f133"; }
+
+/* line 306, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-fire-extinguisher:before {
+  content: "\f134"; }
+
+/* line 307, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-rocket:before {
+  content: "\f135"; }
+
+/* line 308, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-maxcdn:before {
+  content: "\f136"; }
+
+/* line 309, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-chevron-circle-left:before {
+  content: "\f137"; }
+
+/* line 310, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-chevron-circle-right:before {
+  content: "\f138"; }
+
+/* line 311, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-chevron-circle-up:before {
+  content: "\f139"; }
+
+/* line 312, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-chevron-circle-down:before {
+  content: "\f13a"; }
+
+/* line 313, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-html5:before {
+  content: "\f13b"; }
+
+/* line 314, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-css3:before {
+  content: "\f13c"; }
+
+/* line 315, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-anchor:before {
+  content: "\f13d"; }
+
+/* line 316, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-unlock-alt:before {
+  content: "\f13e"; }
+
+/* line 317, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-bullseye:before {
+  content: "\f140"; }
+
+/* line 318, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-ellipsis-h:before {
+  content: "\f141"; }
+
+/* line 319, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-ellipsis-v:before {
+  content: "\f142"; }
+
+/* line 320, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-rss-square:before {
+  content: "\f143"; }
+
+/* line 321, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-play-circle:before {
+  content: "\f144"; }
+
+/* line 322, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-ticket:before {
+  content: "\f145"; }
+
+/* line 323, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-minus-square:before {
+  content: "\f146"; }
+
+/* line 324, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-minus-square-o:before {
+  content: "\f147"; }
+
+/* line 325, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-level-up:before {
+  content: "\f148"; }
+
+/* line 326, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-level-down:before {
+  content: "\f149"; }
+
+/* line 327, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-check-square:before {
+  content: "\f14a"; }
+
+/* line 328, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-pencil-square:before {
+  content: "\f14b"; }
+
+/* line 329, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-external-link-square:before {
+  content: "\f14c"; }
+
+/* line 330, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-share-square:before {
+  content: "\f14d"; }
+
+/* line 331, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-compass:before {
+  content: "\f14e"; }
+
+/* line 333, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-toggle-down:before,
+.fa-caret-square-o-down:before {
+  content: "\f150"; }
+
+/* line 335, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-toggle-up:before,
+.fa-caret-square-o-up:before {
+  content: "\f151"; }
+
+/* line 337, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-toggle-right:before,
+.fa-caret-square-o-right:before {
+  content: "\f152"; }
+
+/* line 339, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-euro:before,
+.fa-eur:before {
+  content: "\f153"; }
+
+/* line 340, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-gbp:before {
+  content: "\f154"; }
+
+/* line 342, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-dollar:before,
+.fa-usd:before {
+  content: "\f155"; }
+
+/* line 344, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-rupee:before,
+.fa-inr:before {
+  content: "\f156"; }
+
+/* line 348, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-cny:before,
+.fa-rmb:before,
+.fa-yen:before,
+.fa-jpy:before {
+  content: "\f157"; }
+
+/* line 351, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-ruble:before,
+.fa-rouble:before,
+.fa-rub:before {
+  content: "\f158"; }
+
+/* line 353, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-won:before,
+.fa-krw:before {
+  content: "\f159"; }
+
+/* line 355, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-bitcoin:before,
+.fa-btc:before {
+  content: "\f15a"; }
+
+/* line 356, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-file:before {
+  content: "\f15b"; }
+
+/* line 357, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-file-text:before {
+  content: "\f15c"; }
+
+/* line 358, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-sort-alpha-asc:before {
+  content: "\f15d"; }
+
+/* line 359, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-sort-alpha-desc:before {
+  content: "\f15e"; }
+
+/* line 360, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-sort-amount-asc:before {
+  content: "\f160"; }
+
+/* line 361, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-sort-amount-desc:before {
+  content: "\f161"; }
+
+/* line 362, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-sort-numeric-asc:before {
+  content: "\f162"; }
+
+/* line 363, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-sort-numeric-desc:before {
+  content: "\f163"; }
+
+/* line 364, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-thumbs-up:before {
+  content: "\f164"; }
+
+/* line 365, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-thumbs-down:before {
+  content: "\f165"; }
+
+/* line 366, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-youtube-square:before {
+  content: "\f166"; }
+
+/* line 367, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-youtube:before {
+  content: "\f167"; }
+
+/* line 368, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-xing:before {
+  content: "\f168"; }
+
+/* line 369, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-xing-square:before {
+  content: "\f169"; }
+
+/* line 370, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-youtube-play:before {
+  content: "\f16a"; }
+
+/* line 371, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-dropbox:before {
+  content: "\f16b"; }
+
+/* line 372, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-stack-overflow:before {
+  content: "\f16c"; }
+
+/* line 373, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-instagram:before {
+  content: "\f16d"; }
+
+/* line 374, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-flickr:before {
+  content: "\f16e"; }
+
+/* line 375, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-adn:before {
+  content: "\f170"; }
+
+/* line 376, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-bitbucket:before {
+  content: "\f171"; }
+
+/* line 377, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-bitbucket-square:before {
+  content: "\f172"; }
+
+/* line 378, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-tumblr:before {
+  content: "\f173"; }
+
+/* line 379, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-tumblr-square:before {
+  content: "\f174"; }
+
+/* line 380, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-long-arrow-down:before {
+  content: "\f175"; }
+
+/* line 381, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-long-arrow-up:before {
+  content: "\f176"; }
+
+/* line 382, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-long-arrow-left:before {
+  content: "\f177"; }
+
+/* line 383, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-long-arrow-right:before {
+  content: "\f178"; }
+
+/* line 384, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-apple:before {
+  content: "\f179"; }
+
+/* line 385, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-windows:before {
+  content: "\f17a"; }
+
+/* line 386, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-android:before {
+  content: "\f17b"; }
+
+/* line 387, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-linux:before {
+  content: "\f17c"; }
+
+/* line 388, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-dribbble:before {
+  content: "\f17d"; }
+
+/* line 389, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-skype:before {
+  content: "\f17e"; }
+
+/* line 390, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-foursquare:before {
+  content: "\f180"; }
+
+/* line 391, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-trello:before {
+  content: "\f181"; }
+
+/* line 392, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-female:before {
+  content: "\f182"; }
+
+/* line 393, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-male:before {
+  content: "\f183"; }
+
+/* line 394, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-gittip:before {
+  content: "\f184"; }
+
+/* line 395, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-sun-o:before {
+  content: "\f185"; }
+
+/* line 396, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-moon-o:before {
+  content: "\f186"; }
+
+/* line 397, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-archive:before {
+  content: "\f187"; }
+
+/* line 398, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-bug:before {
+  content: "\f188"; }
+
+/* line 399, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-vk:before {
+  content: "\f189"; }
+
+/* line 400, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-weibo:before {
+  content: "\f18a"; }
+
+/* line 401, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-renren:before {
+  content: "\f18b"; }
+
+/* line 402, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-pagelines:before {
+  content: "\f18c"; }
+
+/* line 403, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-stack-exchange:before {
+  content: "\f18d"; }
+
+/* line 404, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-arrow-circle-o-right:before {
+  content: "\f18e"; }
+
+/* line 405, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-arrow-circle-o-left:before {
+  content: "\f190"; }
+
+/* line 407, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-toggle-left:before,
+.fa-caret-square-o-left:before {
+  content: "\f191"; }
+
+/* line 408, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-dot-circle-o:before {
+  content: "\f192"; }
+
+/* line 409, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-wheelchair:before {
+  content: "\f193"; }
+
+/* line 410, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-vimeo-square:before {
+  content: "\f194"; }
+
+/* line 412, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-turkish-lira:before,
+.fa-try:before {
+  content: "\f195"; }
+
+/* line 413, /Users/murtun/.rvm/gems/ruby-1.9.3-p448@angus-web/gems/font-awesome-middleman-4.0.3/app/assets/stylesheets/_icons.scss */
+.fa-plus-square-o:before {
+  content: "\f196"; }
+
+/* line 30, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
 header {
   position: relative;
   background: transparent url("/angus/assets/images/home_bg.png") no-repeat 50% 50%;
   background-size: cover;
   padding: 2em 0; }
-  /* line 34, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 35, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   header h1.logo {
     background: url("/angus/assets/images/angus_logo.png") no-repeat 50% 50%;
     background-size: auto 100%;
@@ -1339,17 +3075,17 @@ header {
     margin-bottom: 0;
     margin-left: 55%;
     margin-right: auto; }
-    /* line 21, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    /* line 22, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
     header h1.logo a {
       display: block;
       height: 6.5em; }
-      /* line 24, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+      /* line 25, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
       header h1.logo a > span {
         display: none; }
-  /* line 37, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 38, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   header .column {
     margin-top: 2em; }
-    /* line 39, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    /* line 40, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
     header .column h2 {
       color: #fff;
       position: relative;
@@ -1357,36 +3093,36 @@ header {
       text-transform: uppercase;
       font-size: 1.8em;
       line-height: 1em; }
-    /* line 47, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    /* line 48, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
     header .column p {
       color: #fff;
       line-height: 1.15em; }
 
-/* line 53, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+/* line 54, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
 .navigation {
   position: fixed;
   top: 0;
   width: 100%; }
-  /* line 57, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 58, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   .navigation .wrapper {
     max-width: 75em;
     margin: 0 auto; }
-  /* line 61, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 62, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   .navigation ul.nav {
     margin-right: 0.9375em;
     font-size: 1.125em;
     -webkit-transition: margin-top 0.25s ease-out;
     -moz-transition: margin-top 0.25s ease-out;
     transition: margin-top 0.25s ease-out; }
-    /* line 65, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    /* line 66, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
     .navigation ul.nav.fixed {
       margin-top: 1em; }
-    /* line 68, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    /* line 69, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
     .navigation ul.nav li {
       float: right;
       clear: right;
       margin-bottom: .5em; }
-      /* line 72, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+      /* line 73, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
       .navigation ul.nav li a {
         color: #fff;
         background: #9d0c0c;
@@ -1396,17 +3132,17 @@ header {
         -moz-transition: all 0.25s ease-out;
         transition: all 0.25s ease-out;
         display: block; }
-        /* line 79, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+        /* line 80, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
         .navigation ul.nav li a:hover {
           background: #c30000;
           cursor: pointer; }
-        /* line 83, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+        /* line 84, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
         .navigation ul.nav li a span {
           display: none; }
-        /* line 86, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+        /* line 87, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
         .navigation ul.nav li a.active, .navigation ul.nav li a.active:hover {
           background: #999999; }
-      /* line 90, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+      /* line 91, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
       .navigation ul.nav li.home {
         opacity: 0;
         padding: 0;
@@ -1414,51 +3150,85 @@ header {
         -webkit-transition: all 0.25s ease-out;
         -moz-transition: all 0.25s ease-out;
         transition: all 0.25s ease-out; }
-        /* line 95, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+        /* line 96, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
         .navigation ul.nav li.home a {
           display: block;
           background: transparent url("/angus/home.png") no-repeat 100% 50%;
           background-size: auto 100%;
           height: 1em;
           width: 2em; }
-          /* line 101, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+          /* line 102, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
           .navigation ul.nav li.home a span {
             text-indent: 9999em; }
-        /* line 105, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+        /* line 106, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
         .navigation ul.nav li.home.visible {
           opacity: 1; }
+  /* line 112, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  .navigation.mobile-fixed ul.nav li.home {
+    opacity: 1; }
 
-@media only screen and (max-width: 480px) {
-  /* line 114, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+@media only screen and (max-width: 390px) {
+  /* line 118, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   header h1.logo {
     position: absolute;
     right: 0;
     background-size: 80% auto;
     top: 160px; } }
+/* line 126, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+.charts {
+  background: #f5f5f5;
+  border-radius: .25em;
+  padding: .5em;
+  margin-bottom: 3em; }
+  /* line 131, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  .charts a {
+    display: block; }
+  /* line 134, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  .charts p {
+    margin-bottom: 0;
+    margin-top: .5em;
+    padding-top: .5em;
+    border-top: 1px solid #ddd;
+    font-size: 80%; }
+
+/* line 144, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+.tools i {
+  font-size: 4em;
+  color: #d9d9d9;
+  position: relative;
+  top: 15px; }
+
+/* line 152, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+span.go-to {
+  margin-left: 1em;
+  text-shadow: 1px 1px 0 #e6e6e6;
+  font-weight: bold;
+  position: relative; }
+
 @media only screen and (max-width: 768px) {
-  /* line 123, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 160, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   .navigation {
     position: relative; }
-    /* line 125, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    /* line 162, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
     .navigation ul.nav {
       margin: 0; }
-      /* line 127, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+      /* line 164, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
       .navigation ul.nav li {
         float: left;
         clear: none;
         font-size: .9em;
-        width: 23%; }
-        /* line 132, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+        width: 29.16667%; }
+        /* line 169, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
         .navigation ul.nav li a {
           padding: .3em .5em;
           height: 3.25em;
-          line-height: 1.15em;
+          line-height: 2.75em;
           box-shadow: inset 5em 0 5em rgba(0, 0, 0, 0.1); }
-        /* line 138, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+        /* line 175, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
         .navigation ul.nav li.home {
           opacity: 1;
-          width: 8%; }
-          /* line 141, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+          width: 12.5%; }
+          /* line 178, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
           .navigation ul.nav li.home a {
             padding: 0;
             text-align: center;
@@ -1467,74 +3237,84 @@ header {
             background-size: auto auto;
             background-position: 50% 50%;
             background-color: #fff; }
-            /* line 149, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+            /* line 186, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
             .navigation ul.nav li.home a span {
               display: block;
               float: none; }
-    /* line 158, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    /* line 195, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
     .navigation.mobile-fixed {
       position: fixed;
       top: 0;
       z-index: 9999; }
-      /* line 162, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+      /* line 199, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
       .navigation.mobile-fixed ul.nav.fixed {
         margin-top: 0; } }
-/* line 169, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+/* line 206, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
 #fork {
   position: absolute;
   right: 0;
-  top: 0; }
-  /* line 173, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  top: 0;
+  z-index: 5; }
+  /* line 211, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   #fork a {
     float: right; }
-    /* line 175, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    /* line 213, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
     #fork a img {
       height: 7em; }
 
-/* line 181, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+/* line 219, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
 .container {
   background: #cccccc; }
-  /* line 183, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
-  .container .row {
+  /* line 222, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  .container > .row, .container > .row > .column > .row {
     padding: 4em 0; }
-  /* line 186, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 226, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   .container p.lead {
     font-weight: 800;
     margin-bottom: .5em;
     font-size: 1.75em;
     line-height: 1.15em; }
-  /* line 192, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 232, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   .container h3 {
     color: #999999;
     font-size: 2.5em;
     margin-bottom: 1.5em; }
-  /* line 197, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 237, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   .container .image {
     margin-bottom: 1em; }
 
-/* line 203, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+/* line 243, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
 footer, footer .container {
   background: #1a1a1a; }
-/* line 206, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+/* line 246, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
 footer .container .row {
   padding: 1em 0; }
-/* line 209, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+/* line 249, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
 footer p {
   color: #cccccc;
   font-size: .75em; }
   @media only screen and (min-width: 1280px) {
-    /* line 209, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    /* line 249, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
     footer p {
       margin-bottom: 0; } }
+/* line 256, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+footer a {
+  color: #cccccc;
+  font-size: 1.5em;
+  line-height: 2em;
+  margin: 0 .25em; }
+  /* line 261, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  footer a:hover {
+    color: #fff; }
 
 @media only screen and (min-width: 768px) {
-  /* line 220, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 269, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   header .column {
     margin-top: 5em; }
-    /* line 222, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    /* line 271, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
     header .column h2 {
       font-size: 1.5em; }
-  /* line 226, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 275, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   header h1.logo {
     background: url("/angus/assets/images/angus_logo.png") no-repeat 50% 50%;
     background-size: auto 100%;
@@ -1546,35 +3326,43 @@ footer p {
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto; }
-    /* line 21, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    /* line 22, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
     header h1.logo a {
       display: block;
       height: 6.5em; }
-      /* line 24, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+      /* line 25, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
       header h1.logo a > span {
         display: none; }
 
-  /* line 230, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 279, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   .navigation ul {
     margin-top: 5em; }
-    /* line 232, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    /* line 281, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
     .navigation ul li {
       font-size: .9em; }
 
-  /* line 237, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
-  .container .row {
-    padding-bottom: 9em; } }
+  /* line 286, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  .container > .row {
+    padding-bottom: 9em; }
+
+  /* line 290, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  #main {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    width: 75%;
+    float: left; } }
 @media only screen and (min-width: 1280px) {
-  /* line 247, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 296, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   header {
     padding: 4em 0; }
-    /* line 249, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    /* line 298, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
     header .column {
       margin-top: 9em; }
-      /* line 251, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+      /* line 300, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
       header .column h2 {
         font-size: 2em; }
-    /* line 255, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    /* line 304, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
     header h1.logo {
       background: url("/angus/assets/images/angus_logo.png") no-repeat 50% 50%;
       background-size: auto 100%;
@@ -1586,32 +3374,32 @@ footer p {
       margin-bottom: 0;
       margin-left: auto;
       margin-right: auto; }
-      /* line 21, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+      /* line 22, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
       header h1.logo a {
         display: block;
         height: 9em; }
-        /* line 24, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+        /* line 25, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
         header h1.logo a > span {
           display: none; }
 
-  /* line 259, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 308, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   .navigation ul {
     margin-top: 7em; }
-    /* line 261, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    /* line 310, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
     .navigation ul li {
       font-size: 1em; }
 
-  /* line 267, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 316, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   #fork a img {
     height: auto; } }
 @media only screen and (min-width: 1440px) {
-  /* line 276, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 325, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   header .column {
     margin-top: 10em; }
-    /* line 278, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    /* line 327, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
     header .column h2 {
       font-size: 2.5em; }
-  /* line 282, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 331, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   header h1.logo {
     background: url("/angus/assets/images/angus_logo.png") no-repeat 50% 50%;
     background-size: auto 100%;
@@ -1623,14 +3411,14 @@ footer p {
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto; }
-    /* line 21, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+    /* line 22, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
     header h1.logo a {
       display: block;
       height: 10em; }
-      /* line 24, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+      /* line 25, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
       header h1.logo a > span {
         display: none; }
 
-  /* line 286, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
+  /* line 335, /Users/murtun/angus/angus-web/source/assets/stylesheets/application.scss */
   .navigation ul {
     margin-top: 9em; } }

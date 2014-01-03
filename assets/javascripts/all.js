@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+  $(".charts a").fancybox();
+
   $('.navigation').localScroll();
 
   $('section').waypoint(function(direction) {
