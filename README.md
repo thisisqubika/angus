@@ -4,13 +4,13 @@
 ## What is Angus?
 
 Angus is a REST-like API framework which fits perfectly with Ruby.
-It is based on rack, so it can we used to complement an existing app or as standalone service to
+It is based on rack, so it can be used to complement an existing app or as standalone service to
 easily develop RESTful APIs. It is a lightweight framework, with
 special focus on simplicity. Angus is an excellent option for creating REST-like APIs
 
 ## Status
 
-Angus is production ready but under development, we are working hard to keep bringing new features and fixing any bug that may appear.
+Angus is production-ready but under development, we are working hard to keep bringing new features and fixing any bug that may appear.
 
 ## Project Page
 
@@ -57,7 +57,7 @@ After creating the API, you should create one or more resources. Just type the f
 
     angus scaffold account
 
-Angus will generate two files, which completely defines the resource inside your API.
+Angus will generate two files, which completely define the resource inside your API.
 
  * resources/account.rb
  * definitions/accounts/operations.yml
@@ -188,7 +188,7 @@ index:
       description: ''
 ```
 
-Last, there is a base class for the API, called `api-name.rb` and a configuration file called `service.yml`, which have the following content:
+Last, there is a base class for the API, called `api-name.rb` and a configuration file called `service.yml`, which has the following content:
 
 ```ruby
 class Api < Angus::Base
@@ -204,7 +204,7 @@ code_name: 'api'
 version:   '0.1'
 ```
 
-The first file, register each resource in the API. Every time you create a new resource, executing `angus resource name`, a line is added into this file.
+The first file, registers each resource in the API. Every time you create a new resource, executing `angus resource name`, a line is added into this file.
 The second file is a configuration YAML which handles the API version, the name, and the code name.
 
 ### Rails
@@ -232,8 +232,7 @@ For example, if you have an API version 1.1, and an stable version named 1, you 
 
 ## Contributing to Angus
 
-Angus encouraged you to submit pull requests, propose features and discuss issues. Just fork the repository
-on your Github account, and code what you want!
+We encourage you to submit pull requests, propose features and discuss issues. Just fork the repository on your Github account, and code what you want!" en vez de "Angus encouraged you to submit pull requests, propose features and discuss issues. Just fork the repository on your Github account, and code what you want!
 
 ## Copyright
 
