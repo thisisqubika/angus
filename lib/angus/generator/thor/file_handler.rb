@@ -16,7 +16,7 @@ module Angus
       tmp_file = Tempfile.new(File.basename(file))
 
       source = File.expand_path(base.find_in_source_paths(file.to_s))
-      content  = ERB.new(File.binread(source)).result(binding)
+      content  = ERB.new(File.binread(source), nil,  '%<>-').result(binding)
 
       File.open(tmp_file.path, 'w') { |f| f << content }
       tmp_file.close

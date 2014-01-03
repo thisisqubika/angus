@@ -1,4 +1,4 @@
-# coding: utf-8
+# coding: UTF-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'angus/version'
@@ -6,11 +6,12 @@ require 'angus/version'
 Gem::Specification.new do |spec|
   spec.name          = 'angus'
   spec.version       = Angus::VERSION
-  spec.authors       = ['Pablo Ifran', 'Adrian Gomez', 'Gianfranco Zas']
+  spec.authors       = ['Pablo Ifran', 'Adrian Gomez', 'Gianfranco Zas', 'Gabriel Fagundez',
+                        'Maximo Gomez', 'Guzman Iglesias', 'Martin Cabrera', 'Marcelo Casiraghi']
   spec.email         = %w[angus@moove-it.com]
-  spec.description   = %q{angus}
-  spec.summary       = %q{angus}
-  spec.homepage      = 'http://mooveit.github.io/angus-sdoc'
+  spec.description   = %q{Angus is a simple and powerful framework to build REST APIs using Ruby.}
+  spec.summary       = %q{A web services summary}
+  spec.homepage      = 'http://moove-it.github.io/angus'
   spec.license       = 'MIT'
 
   spec.files         = Dir.glob('{lib}/**/*')

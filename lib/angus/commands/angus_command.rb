@@ -1,6 +1,7 @@
 require 'erb'
 require 'thor'
 require 'thor/runner'
+require 'angus'
 
 require_relative 'command_processor'
 

@@ -64,7 +64,7 @@ class Thor
 
       protected
 
-      def is_generating_demo?
+      def is_demo?
         @config[:demo]
       end
 
