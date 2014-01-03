@@ -232,7 +232,7 @@ For example, if you have an API version 1.1, and an stable version named 1, you 
 
 ## Contributing to Angus
 
-We encourage you to submit pull requests, propose features and discuss issues. Just fork the repository on your Github account, and code what you want!" en vez de "Angus encouraged you to submit pull requests, propose features and discuss issues. Just fork the repository on your Github account, and code what you want!
+We encourage you to submit pull requests, propose features and discuss issues. Just fork the repository on your Github account, and code what you want!
 
 ## Copyright
 
