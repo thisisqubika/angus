@@ -3,7 +3,7 @@ class <%= classify(resource_name) %> < Angus::BaseResource
 <% actions.each do |action_name| %>
   def <%= action_name %>
   <% if is_demo? -%>
-  { users: [{ id: 1, name: 'User one' }, { id: 2, name: 'User two' }] }
+  { users: [{ id: 1, name: 'Bon Scott' }, { id: 2, name: 'Brian Johnson' }] }
   <% end -%>
 end
 <% end %>
