@@ -10,6 +10,8 @@ special focus on simplicity. Angus is an excellent option for creating REST-like
 
 ## Status
 
+[![BuildStatus](https://api.travis-ci.org/Moove-it/angus.png)](https://travis-ci.org/Moove-it/angus)
+
 Angus is production-ready but under development, we are working hard to keep bringing new features and fixing any bug that may appear.
 
 ## Project Page
