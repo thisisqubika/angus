@@ -12,7 +12,7 @@ special focus on simplicity. Angus is an excellent option for creating REST-like
 
 [![BuildStatus](https://api.travis-ci.org/Moove-it/angus.png)](https://travis-ci.org/Moove-it/angus)
 
-Angus is production-ready but under development, we are working hard to keep bringing new features and fixing any bug that may appear.
+Angus is production-ready, but still under development. We are working hard to keep bringing new features and fixing any bug that may appear.
 
 ## Project Page
 
@@ -36,11 +36,11 @@ Creating your first API using Angus is very simple. Just type on your terminal:
 
     angus demo
 
-This command will create an API with two users. Run the API typing on your console:
+This command will create an API with two users. Run the API typing the following command on your console:
 
     angus server
 
-Enter to the documentation typing this url on your favourite browser:
+Enter to the documentation typing this url on your favorite browser:
 
     http://localhost:9292/demo/doc/0.1
 
@@ -190,7 +190,7 @@ index:
       description: ''
 ```
 
-Last, there is a base class for the API, called `api-name.rb` and a configuration file called `service.yml`, which has the following content:
+There is also a base class for the API, called `api-name.rb` and a configuration file called `service.yml`, with the following content:
 
 ```ruby
 class Api < Angus::Base
@@ -236,6 +236,10 @@ For example, if you have an API version 1.1, and an stable version named 1, you 
 
 We encourage you to submit pull requests, propose features and discuss issues. Just fork the repository on your Github account, and code what you want!
 
+## License
+
+MIT License. See [LICENSE] (https://github.com/Moove-it/angus/blob/master/LICENSE.txt) for details.
+
 ## Copyright
 
-Copyright (c) 2010-2014 Moove-IT
+Copyright (c) 2010-2014 Moove-iT
