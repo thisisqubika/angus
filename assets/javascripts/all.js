@@ -42,12 +42,11 @@ $(document).ready(function(){
       }
   });
 
-  $('section#getting_started').waypoint(function(direction){
-    $("li.home").toggleClass("visible");
+  $('section#why_angus').waypoint(function(direction){
     $(".navigation ul.nav").toggleClass("fixed");
   },{offset: 20})
 
-  $('.navigation li.home').waypoint(function(direction){
+  $('#main').waypoint(function(direction){
     $(".navigation").toggleClass("mobile-fixed");
   },{offset: 0})
 
