@@ -32,7 +32,7 @@ describe Spec::Functional::Basic, { :work_dir => "#{File.dirname(__FILE__ )}/bas
     end
 
     context 'when no format' do
-      it 'sets a html content type' do
+      it 'sets an html content type' do
         get '/basic/doc/0.1'
 
         last_response.header['Content-Type'].should eq('text/html;charset=utf-8')
@@ -63,7 +63,7 @@ describe Spec::Functional::Basic, { :work_dir => "#{File.dirname(__FILE__ )}/bas
       last_response.header['Content-Type'].should eq('application/json')
     end
 
-    context 'when a expected error happens' do
+    context 'when an expected error happens' do
       it 'sets the correct status code' do
         get '/basic/api/0.1/users/-1'
 

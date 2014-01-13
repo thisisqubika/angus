@@ -16,7 +16,7 @@ describe Spec::Functional::EmptyResource,
     last_response.status.should eq(200)
   end
 
-  describe 'when a unknown url' do
+  describe 'when an unknown url' do
 
     let(:url) { '/empty_resource/api/0.1/unknown' }
 
@@ -45,7 +45,7 @@ describe Spec::Functional::EmptyResource,
     end
 
     context 'when no format' do
-      it 'sets a html content type' do
+      it 'sets an html content type' do
         get url
 
         last_response.header['Content-Type'].should eq('text/html;charset=utf-8')
