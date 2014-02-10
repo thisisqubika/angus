@@ -11,7 +11,8 @@ require_relative 'examples/describe_errors'
 #
 # @param operation the operation being specified, ex: GET /profiles
 # @param service the Service (rack app) that exposes the operation
-def describe_operation(operation, service, &block)
+def describe_operation(operation, service_class, &block)
+  service = service_class.new
 
   describe(operation) do
     include Rack::Test::Methods
@@ -44,7 +45,7 @@ def describe_operation(operation, service, &block)
         it "raises #{e} with status = #{status_code}", :caller => __caller do
 
           Angus::RSpec::Examples::DescribeErrors.mock_service(service, e, self) do
-            get '/'
+            get '/error'
 
             if response.http_status_code != status_code
               e = RSpec::Expectations::ExpectationNotMetError.new(

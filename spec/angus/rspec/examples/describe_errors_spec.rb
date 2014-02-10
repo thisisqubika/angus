@@ -1,5 +1,7 @@
 require 'spec_helper'
 
+require 'angus-router'
+
 require 'angus/rspec/support/examples/describe_errors'
 
 describe Angus::RSpec::Examples::DescribeErrors do
@@ -10,6 +12,10 @@ describe Angus::RSpec::Examples::DescribeErrors do
     Class.new do
       def self.get(path, &block)
         :get_v0
+      end
+
+      def router
+        @router ||= Angus::Router.new
       end
     end
   end
