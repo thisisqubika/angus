@@ -12,6 +12,8 @@ require_relative 'base_actions'
 require_relative 'proxy_actions'
 require_relative 'definition_reader'
 
+require_relative 'utils/params_validator'
+
 require 'angus/sdoc'
 
 module Angus
@@ -120,11 +122,12 @@ module Angus
         response_metadata = resource_definition.build_response_metadata(operation.response_elements)
 
         router.on(method, op_path) do |env, params|
-          request = Rack::Request.new(env)
-          params = Params.indifferent_params(params)
+          request  = Rack::Request.new(env)
+          params   = Params.indifferent_params(params)
           response = Response.new
 
-          resource = resource_definition.resource_class.new(request, params)
+          resource = resource_definition.resource_class.new(request, params, operation)
+          resource.run_validations!
 
           op_response = resource.send(operation.code_name)
           op_response = {} unless op_response.is_a?(Hash)

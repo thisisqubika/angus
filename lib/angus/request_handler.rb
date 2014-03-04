@@ -4,6 +4,7 @@ require_relative 'response'
 require_relative 'responses'
 require_relative 'middleware/exception_handler'
 require_relative 'exceptions'
+require_relative 'base_proxy'
 
 module Angus
   class RequestHandler
@@ -30,17 +31,16 @@ module Angus
     end
 
     def to_app
-      inner_app = lambda { |env| self.dup.call!(env) }
+      inner_app = BaseProxy.new(self, lambda { @definitions })
+
       @app ||= @middleware.reverse.inject(inner_app) do |app, middleware|
         klass, args, block = middleware
 
-        # HACK to improve performance for now, in reality Middleware::ExceptionHandler should get
-        # the doc from a know place or the documentation should be available to all middleware.
-        if klass == Middleware::ExceptionHandler
-          klass.new(app, @definitions)
-        else
-          klass.new(app, *args, &block)
+        app.class.send(:define_method, :base_middleware) do
+          inner_app
         end
+
+        klass.new(app, *args, &block)
       end
     end
 

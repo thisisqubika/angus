@@ -5,7 +5,7 @@ require 'angus/middleware/exception_handler'
 work_dir =  File.join(File.dirname(__FILE__), '..', '..', 'functional', 'basic')
 describe Angus::Middleware::ExceptionHandler, { :work_dir => work_dir } do
 
-  let(:app) { double(:app, :call => app_response) }
+  let(:app) { double(:app, :call => app_response, :definitions => nil) }
 
   let(:app_response) { :ok }
 
