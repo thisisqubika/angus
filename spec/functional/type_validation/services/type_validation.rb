@@ -5,7 +5,7 @@ module Spec
 
     class TypeValidation < Angus::Base
       def configure
-        register :users
+        register :admins
       end
     end
 

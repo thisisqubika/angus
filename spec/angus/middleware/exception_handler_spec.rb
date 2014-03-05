@@ -1,11 +1,26 @@
 require 'spec_helper'
 
+require 'angus/base_proxy'
 require 'angus/middleware/exception_handler'
 
 work_dir =  File.join(File.dirname(__FILE__), '..', '..', 'functional', 'basic')
 describe Angus::Middleware::ExceptionHandler, { :work_dir => work_dir } do
 
-  let(:app) { double(:app, :call => app_response, :definitions => nil) }
+  let(:request_handler) {
+    double(:request_handler, call: double(:app))
+  }
+
+  let(:definition_block) {
+    double(:definition_handler, call: nil)
+  }
+
+  let(:base_proxy) {
+    Angus::BaseProxy.new(request_handler, definition_block)
+  }
+
+  let(:app) {
+    double(:app, :call => app_response,
+                 :base_middleware => base_proxy) }
 
   let(:app_response) { :ok }
 

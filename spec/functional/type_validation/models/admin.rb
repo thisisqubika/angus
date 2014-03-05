@@ -1,0 +1,1 @@
+Admin = Struct.new(:id, :name, :age)

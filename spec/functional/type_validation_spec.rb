@@ -11,7 +11,7 @@ describe Spec::Functional::TypeValidation, { :work_dir => working_dir } do
 
   describe 'required fields validation' do
     it 'responds correctly if all required fields are given' do
-      get '/type_validation/api/0.1/users?requester_id=1'
+      get '/type_validation/api/0.1/admins?requester_id=1'
 
       response = JSON(last_response.body)
 
@@ -19,7 +19,7 @@ describe Spec::Functional::TypeValidation, { :work_dir => working_dir } do
     end
 
     it 'responds with an error when a required field is not present' do
-      get '/type_validation/api/0.1/users'
+      get '/type_validation/api/0.1/admins'
 
       expect(last_response).to have_error_response
       expect(last_response).to have_in_message({
@@ -43,7 +43,7 @@ describe Spec::Functional::TypeValidation, { :work_dir => working_dir } do
 
     context 'string type' do
       it 'should be valid if a number is given' do
-        post '/type_validation/api/0.1/users', valid_params.merge({
+        post '/type_validation/api/0.1/admins', valid_params.merge({
           'name' => 22
         })
 
@@ -51,7 +51,7 @@ describe Spec::Functional::TypeValidation, { :work_dir => working_dir } do
       end
 
       it 'should be valid if a text is given' do
-        post '/type_validation/api/0.1/users', valid_params.merge({
+        post '/type_validation/api/0.1/admins', valid_params.merge({
           'name' => 'Example Text'
         })
 
@@ -59,7 +59,7 @@ describe Spec::Functional::TypeValidation, { :work_dir => working_dir } do
       end
 
       it 'should be valid if a date is given' do
-        post '/type_validation/api/0.1/users', valid_params.merge({
+        post '/type_validation/api/0.1/admins', valid_params.merge({
           'name' => Date.today
         })
 
@@ -69,7 +69,7 @@ describe Spec::Functional::TypeValidation, { :work_dir => working_dir } do
 
     context 'integer type' do
       it 'should be valid if a number is given' do
-        post '/type_validation/api/0.1/users', valid_params.merge({
+        post '/type_validation/api/0.1/admins', valid_params.merge({
           'age' => 22
         })
 
@@ -77,7 +77,7 @@ describe Spec::Functional::TypeValidation, { :work_dir => working_dir } do
       end
 
       it 'should not be valid if a decimal is given' do
-        post '/type_validation/api/0.1/users', valid_params.merge({
+        post '/type_validation/api/0.1/admins', valid_params.merge({
           'age' => 22.1
         })
 
@@ -90,7 +90,7 @@ describe Spec::Functional::TypeValidation, { :work_dir => working_dir } do
       end
 
       it 'should not be valid if a text is given' do
-        post '/type_validation/api/0.1/users', valid_params.merge({
+        post '/type_validation/api/0.1/admins', valid_params.merge({
           'age' => 'Example Text'
         })
 
@@ -103,7 +103,7 @@ describe Spec::Functional::TypeValidation, { :work_dir => working_dir } do
       end
 
       it 'should not be valid if a date is given' do
-        post '/type_validation/api/0.1/users', valid_params.merge({
+        post '/type_validation/api/0.1/admins', valid_params.merge({
           'age' => Date.today
         })
 
@@ -118,7 +118,7 @@ describe Spec::Functional::TypeValidation, { :work_dir => working_dir } do
 
     context 'decimal type' do
       it 'should be valid if a number is given' do
-        post '/type_validation/api/0.1/users', valid_params.merge({
+        post '/type_validation/api/0.1/admins', valid_params.merge({
           'favorite_decimal' => 22
         })
 
@@ -126,7 +126,7 @@ describe Spec::Functional::TypeValidation, { :work_dir => working_dir } do
       end
 
       it 'should be valid if a decimal is given' do
-        post '/type_validation/api/0.1/users', valid_params.merge({
+        post '/type_validation/api/0.1/admins', valid_params.merge({
           'favorite_decimal' => 22.1
         })
 
@@ -134,7 +134,7 @@ describe Spec::Functional::TypeValidation, { :work_dir => working_dir } do
       end
 
       it 'should not be valid if a text is given' do
-        post '/type_validation/api/0.1/users', valid_params.merge({
+        post '/type_validation/api/0.1/admins', valid_params.merge({
           'favorite_decimal' => 'Example Text'
         })
 
@@ -147,7 +147,7 @@ describe Spec::Functional::TypeValidation, { :work_dir => working_dir } do
       end
 
       it 'should not be valid if a date is given' do
-        post '/type_validation/api/0.1/users', valid_params.merge({
+        post '/type_validation/api/0.1/admins', valid_params.merge({
           'favorite_decimal' => Date.today
         })
 
@@ -162,7 +162,7 @@ describe Spec::Functional::TypeValidation, { :work_dir => working_dir } do
 
     context 'date type' do
       it 'should be valid if a number is given' do
-        post '/type_validation/api/0.1/users', valid_params.merge({
+        post '/type_validation/api/0.1/admins', valid_params.merge({
           'birth_date' => 22
         })
 
@@ -175,7 +175,7 @@ describe Spec::Functional::TypeValidation, { :work_dir => working_dir } do
       end
 
       it 'should be valid if a decimal is given' do
-        post '/type_validation/api/0.1/users', valid_params.merge({
+        post '/type_validation/api/0.1/admins', valid_params.merge({
           'birth_date' => 22.1
         })
 
@@ -188,7 +188,7 @@ describe Spec::Functional::TypeValidation, { :work_dir => working_dir } do
       end
 
       it 'should not be valid if a text is given' do
-        post '/type_validation/api/0.1/users', valid_params.merge({
+        post '/type_validation/api/0.1/admins', valid_params.merge({
           'birth_date' => 'Example Text'
         })
 
@@ -201,7 +201,7 @@ describe Spec::Functional::TypeValidation, { :work_dir => working_dir } do
       end
 
       it 'should be valid if a date is given' do
-        post '/type_validation/api/0.1/users', valid_params.merge({
+        post '/type_validation/api/0.1/admins', valid_params.merge({
           'birth_date' => Date.today.iso8601
         })
 
@@ -209,7 +209,7 @@ describe Spec::Functional::TypeValidation, { :work_dir => working_dir } do
       end
 
       it 'should not be valid if a date is given' do
-        post '/type_validation/api/0.1/users', valid_params.merge({
+        post '/type_validation/api/0.1/admins', valid_params.merge({
           'birth_date' => DateTime.now.iso8601
         })
 
@@ -219,7 +219,7 @@ describe Spec::Functional::TypeValidation, { :work_dir => working_dir } do
 
     context 'datetime type' do
       it 'should be valid if a number is given' do
-        post '/type_validation/api/0.1/users', valid_params.merge({
+        post '/type_validation/api/0.1/admins', valid_params.merge({
           'last_signed_in_at' => 22
         })
 
@@ -232,7 +232,7 @@ describe Spec::Functional::TypeValidation, { :work_dir => working_dir } do
       end
 
       it 'should be valid if a decimal is given' do
-        post '/type_validation/api/0.1/users', valid_params.merge({
+        post '/type_validation/api/0.1/admins', valid_params.merge({
           'last_signed_in_at' => 22.1
         })
 
@@ -245,7 +245,7 @@ describe Spec::Functional::TypeValidation, { :work_dir => working_dir } do
       end
 
       it 'should not be valid if a text is given' do
-        post '/type_validation/api/0.1/users', valid_params.merge({
+        post '/type_validation/api/0.1/admins', valid_params.merge({
           'last_signed_in_at' => 'Example Text'
         })
 
@@ -258,7 +258,7 @@ describe Spec::Functional::TypeValidation, { :work_dir => working_dir } do
       end
 
       it 'should not be valid if a date is given' do
-        post '/type_validation/api/0.1/users', valid_params.merge({
+        post '/type_validation/api/0.1/admins', valid_params.merge({
           'last_signed_in_at' => Date.today.iso8601
         })
 
@@ -271,7 +271,7 @@ describe Spec::Functional::TypeValidation, { :work_dir => working_dir } do
       end
 
       it 'should not be valid if a date is given' do
-        post '/type_validation/api/0.1/users', valid_params.merge({
+        post '/type_validation/api/0.1/admins', valid_params.merge({
           'last_signed_in_at' => DateTime.now.iso8601
         })
 

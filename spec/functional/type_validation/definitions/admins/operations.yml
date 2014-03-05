@@ -3,7 +3,7 @@ show:
   description: >
     Returns all the information about a given user.
 
-  path: /users/:id
+  path: /admins/:id
   method: get
   uri:
     - element: user_id
@@ -20,7 +20,7 @@ index:
   description: >
     Returns all the information about all users.
 
-  path: /users
+  path: /admins
   method: get
   request:
     - element: requester_id
@@ -39,7 +39,7 @@ create:
   description: >
     Returns the recently created user.
 
-  path: /users
+  path: /admins
   method: post
   request:
     - element: name

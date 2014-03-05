@@ -18,7 +18,7 @@ RSpec::Matchers.define :have_error_response do
     if @error
       @error
     elsif @json && @json['status']
-      "expect #{@json['status']} to be error"
+      "expect #{@json['status']} to be error\n#{@json.inspect}"
     else
       "expect #{@json} to include status in it's keys"
     end
@@ -28,7 +28,7 @@ RSpec::Matchers.define :have_error_response do
     if @error
       @error
     elsif @json && @json['status']
-      "expect #{@json['status']} to not be error"
+      "expect #{@json['status']} to not be error\n#{@json.inspect}"
     else
       "expect #{@json} to include status in it's keys"
     end
