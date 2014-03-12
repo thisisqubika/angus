@@ -11,7 +11,7 @@ class Thor
     #
     # @example
     #
-    #   resource 'user', 'resouces', 'definitions'
+    #   resource 'user', 'resources', 'definitions'
     #
     def resource(name, actions, config = {})
       action Resource.new(self, name, actions, config)
