@@ -8,17 +8,34 @@ module Angus
         #
         # @param [Class] Class that responds to .get
         # @param error Exception that will be raised when executing a get route
-        # @param [#app] example Runing example
+        # @param [#app] example Running example
         def self.mock_service(base, error, example, &block)
 
-          mock = Class.new(base) do
-            get '/' do
-              raise error
+          base_class = if base.is_a?(Class)
+                         base
+                       else
+                         base.class
+                       end
+
+          mock = Class.new(base_class) do
+            def initialize(base, error)
+              @base = base
+              @error = error
+
+              super()
+
+              router.on(:get, '/error') do
+                raise error
+              end
+            end
+
+            def class
+              @base
             end
           end
 
           example.define_singleton_method :app do
-            mock
+            mock.new(base_class, error)
           end
 
           begin
