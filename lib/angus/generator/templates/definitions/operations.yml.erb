@@ -17,8 +17,10 @@
       required: <%= response_required(action_name) %>
       type: <%= response_type(action_name) %>
 
+  <% if is_demo? %>
   messages:
     - key: <%= message_key(action_name) %>
       description: '<%= message_description(action_name) %>'
+  <% end %>
 <% end %>
 <% end %>
