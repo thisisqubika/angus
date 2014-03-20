@@ -1,0 +1,70 @@
+show:
+  name: Get information about a given user.
+  description: >
+    Returns all the information about a given user.
+
+  path: /admins/:id
+  method: get
+  uri:
+    - element: user_id
+      description: User identifier.
+
+  response:
+    - element: profile
+      description: User profile.
+      required: true
+      type: user
+
+index:
+  name: Gets a list of users.
+  description: >
+    Returns all the information about all users.
+
+  path: /admins
+  method: get
+  request:
+    - element: requester_id
+      type: integer
+      required: true
+      description: User identifier.
+
+  response:
+    - element: users
+      description: Perfil del usuario
+      required: true
+      elements_type: user
+
+create:
+  name: Create a user with the given parameters.
+  description: >
+    Returns the recently created user.
+
+  path: /admins
+  method: post
+  request:
+    - element: name
+      type: string
+      required: true
+      description: User name.
+    - element: age
+      type: integer
+      required: true
+      description: User age.
+    - element: favorite_decimal
+      type: decimal
+      required: true
+      description: User favorite decimal number.
+    - element: birth_date
+      type: date
+      required: true
+      description: The last time that the user signed in.
+    - element: last_signed_in_at
+      type: datetime
+      required: true
+      description: The last time that the user signed in.
+
+  response:
+    - element: user
+      description: Perfil del usuario
+      required: true
+      elements_type: user

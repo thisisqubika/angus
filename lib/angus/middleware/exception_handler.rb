@@ -8,9 +8,9 @@ module Angus
     class ExceptionHandler
       include Angus::StatusCodes
 
-      def initialize(app, definitions = nil)
+      def initialize(app)
         @app = app
-        @definition_reader = Angus::DefinitionReader.new(definitions)
+        @definition_reader = Angus::DefinitionReader.new(app.base_middleware.definitions)
       end
 
       def call(env)
