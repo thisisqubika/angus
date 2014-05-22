@@ -5,6 +5,6 @@ require 'bundler'
 Bundler.setup
 
 require 'angus'
-require 'services/<%= app_name %>'
+require 'services/<%= underscore(app_name) %>'
 
 run <%= classify(name) %>.new
