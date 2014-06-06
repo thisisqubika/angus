@@ -51,9 +51,7 @@ Also, try getting the resources typing these urls on the browser:
     http://localhost:9292/demo/api/0.1/users/1
 
 ## Basic usage
-You can see our wiki documentation - "Creating a new Project with Angus"
-https://github.com/Moove-it/angus/wiki/Getting-Started
-
+You can see our wiki documentation - [Creating a new Project with Angus] (https://github.com/Moove-it/angus/wiki/Getting-Started)
 
 ### Clients
 
