@@ -12,7 +12,13 @@ require_relative 'examples/describe_errors'
 # @param operation the operation being specified, ex: GET /profiles
 # @param service the Service (rack app) that exposes the operation
 def describe_operation(operation, service_class, &block)
-  service = service_class.new
+  service = if service_class.is_a?(Angus::Base)
+              warn "Calling describe_operation with a service instance is deprecated use a class instead."
+              service_class
+            else
+              service_class.new
+            end
+
 
   describe(operation) do
     include Rack::Test::Methods

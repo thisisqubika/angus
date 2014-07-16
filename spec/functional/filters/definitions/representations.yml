@@ -1,0 +1,9 @@
+user:
+  - field: id
+    description: User identifier
+    required: true
+    type: integer
+  - field: name
+    description: User name
+    required: true
+    type: string

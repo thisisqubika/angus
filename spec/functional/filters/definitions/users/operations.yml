@@ -1,0 +1,58 @@
+get_user:
+  name: Obtener Informacion de un Usuario
+  description: >
+    Devuelve informacion del usuario, como por ejemplo e-mail y fecha de nacimiento.
+
+  path: /users/:user_id
+  method: get
+  uri:
+    - element: user_id
+      description: Identificador del usuario
+
+  response:
+    - element: profile
+      description: Perfil del usuario
+      required: true
+      type: user
+
+  messages:
+    - key: UserNotFound
+
+get_users:
+  name: Obtener Lista de usuarios
+  description: >
+    Devuelve lista de usarios.
+
+  path: /users
+  method: get
+
+  response:
+    - element: users
+      description: Perfil del usuario
+      required: true
+      elements_type: user
+
+create_user:
+  name: Create a new user
+  description: >
+    Creates and returns a new user.
+
+  path: /users
+  method: post
+
+  messages:
+    - key: UserCreatedSuccessfully
+
+delete_user:
+  name: Delete user
+  description: >
+    Deletes a user.
+
+  path: /users/:id
+  method: delete
+  uri:
+    - element: id
+      description: User identifier.
+
+  messages:
+      - key: UserDeletedSuccessfully
