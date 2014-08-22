@@ -64,7 +64,7 @@ module Angus
     end
 
     def build_proxy_client(url)
-      Angus::Remote::ProxyClient.new(url)
+      Angus::Remote::ProxyClient.new(url, 60)
     end
 
     def proxy_clients

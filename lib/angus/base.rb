@@ -32,6 +32,7 @@ module Angus
     attr_reader :definitions
 
     attr_accessor :default_doc_language
+    attr_accessor :validate_params
 
     def initialize
       super
@@ -43,6 +44,7 @@ module Angus
       @definitions            = nil
       @logger                 = Logger.new(STDOUT)
       @default_doc_language   = DEFAULT_DOC_LANGUAGE
+      @validate_params        = :return_error
 
       configure!
 
@@ -127,9 +129,20 @@ module Angus
           response = Response.new
 
           resource = resource_definition.resource_class.new(request, params, operation)
-          resource.run_validations!
 
-          op_response = resource.send(operation.code_name)
+          if validate_params == :return_error
+            resource.run_validations!
+          end
+
+          resource.run_before_filters
+
+          begin
+            op_response = resource.send(operation.code_name)
+          rescue Exception
+            resource.run_after_filters(response)
+            raise
+          end
+
           op_response = {} unless op_response.is_a?(Hash)
 
           messages = op_response.delete(:messages)
@@ -137,6 +150,8 @@ module Angus
           op_response = build_data_response(op_response, response_metadata, messages)
 
           response.write(op_response)
+
+          resource.run_after_filters(response)
 
           response
         end

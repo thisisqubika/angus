@@ -3,9 +3,13 @@ require_relative '../models/user'
 
 class Users < Angus::BaseResource
 
-  USERS = [{ :id => 1, :name => 'ac/dc', 'last_login' => DateTime.now, :birth_date => Date.today,
-             :gender => :male, :roles => [1, 2, 3] },
-           User.new(2, 'madonna', DateTime.now, Date.today, :female)]
+  before :before_filter_method, :exclude => [:get_user]
+  before { |resource| resource; resource.before_filter_block }
+
+  after :after_filter_method, :only => [:get_users, :get_user]
+  after { |resource, response| resource.after_filter_block }
+
+  USERS = [User.new(2, 'madonna', DateTime.now, Date.today, :female)]
 
   def get_user
     user = if params[:user_id] == '3'
@@ -34,5 +38,17 @@ class Users < Angus::BaseResource
       { :messages => [:UserDeletedSuccessfully] }
     end
   end
+
+  def before_filter_method; end
+
+  def before_filter_block; end
+
+  def after_filter_method(response); end
+
+  def after_filter_block; end
+
+  def exclude_filter_method; end
+
+  def only_filter_method; end
 
 end
