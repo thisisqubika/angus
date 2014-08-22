@@ -1,26 +1,30 @@
-<% unless actions.nil? %>
-<% actions.each do |action_name| %>
+<% unless actions.nil? -%>
+<% actions.each_with_index do |action_name, index| -%>
+<% unless index.zero? -%>
+
+<% end -%>
 <%= action_name %>:
   name: '<%= action_name %>'
   description: '<%= action_description(action_name) %>'
   path: '<%= action_path(action_name) %>'
   method: '<%= action_method(action_name) %>'
-  <% unless is_demo? %>
+  <% if action_has_id_in_path?(action_name) -%>
+
   uri:
-    - element:
-      description:
-  <% end %>
+  - element: id
+    description: <%= resource_name %> id.
+  <% end -%>
 
   response:
     - element: '<%= response_element(action_name) %>'
       description: '<%= response_description(action_name) %>'
       required: <%= response_required(action_name) %>
       type: <%= response_type(action_name) %>
+  <% if is_demo? -%>
 
-  <% if is_demo? %>
   messages:
     - key: <%= message_key(action_name) %>
       description: '<%= message_description(action_name) %>'
-  <% end %>
-<% end %>
-<% end %>
+  <% end -%>
+<% end -%>
+<% end -%>

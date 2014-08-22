@@ -1,4 +1,4 @@
-$: << (File.dirname(__FILE__))
+$LOAD_PATH << (File.dirname(__FILE__))
 
 require 'bundler'
 
@@ -7,4 +7,4 @@ Bundler.setup
 require 'angus'
 require 'services/<%= underscore(app_name) %>'
 
-run <%= classify(name) %>.new
+run <%= classify(underscore(name)) %>.new

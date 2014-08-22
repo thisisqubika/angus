@@ -65,11 +65,10 @@ class Thor
         if is_demo?
           '/users'
         elsif is_scaffold?
-          case action_name
-            when 'show', 'update', 'destroy'
-              "#{underscore(resource_name)}/:id"
-            else
-              "#{underscore(resource_name)}"
+          if action_has_id_in_path?(action_name)
+            "/#{underscore(resource_name)}/:id"
+          else
+            "/#{underscore(resource_name)}"
           end
         end
       end
@@ -89,6 +88,10 @@ class Thor
               'get'
           end
         end
+      end
+
+      def action_has_id_in_path?(action_name)
+        %w[show update destroy].include?(action_name)
       end
 
       def response_element(action_name)
