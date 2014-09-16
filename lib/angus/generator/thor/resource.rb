@@ -106,7 +106,15 @@ class Thor
         true if is_demo?
       end
 
-      def response_type(action_name)
+      def response_type
+        if is_demo?
+          'elements_type'
+        else
+          'type'
+        end
+      end
+
+      def element_type(action_name)
         'user_profile' if is_demo?
       end
 
