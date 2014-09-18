@@ -19,7 +19,7 @@
     - element: '<%= response_element(action_name) %>'
       description: '<%= response_description(action_name) %>'
       required: <%= response_required(action_name) %>
-      type: <%= response_type(action_name) %>
+      <%= response_type %>: <%= element_type(action_name) %>
   <% if is_demo? -%>
 
   messages:

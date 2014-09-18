@@ -15,96 +15,42 @@ special focus on simplicity. Angus is an excellent option for creating REST-like
 Angus is production-ready, but still under development. We are working hard to keep bringing new
 features and fixing any bug that may appear.
 
-## Project Page
+## Getting Started
 
-[Angus Page] (http://moove-it.github.io/angus)
+1. Install Angus if you haven't yet:
 
-## Installation
+        gem install angus
 
-Install Angus as a gem:
+2. At the command prompt, create a new Angus service:
 
-    gem install angus
+        angus new myapp
 
-If you are using bundler, add it to your Gemfile:
+   where "myapp" is the application name.
 
-    gem 'angus'
+3. Change directory to `myapp`, run bundle and start the web server:
 
-Run `bundle install`.
+        cd myapp
+        bundle
+        angus server
 
-## Angus Demo
+4. Using a browser, go to `http://localhost:8080`
 
-Creating your first API using Angus is very simple. Just type on your terminal:
+## Usage
 
-    angus demo
+You can see our wiki to get information on how to use angus:  [Angus Wiki] (https://github.com/Moove-it/angus/wiki)
 
-This command will create an API with two users. Run the API typing the following command on your console:
+#### Useful links
 
-    angus server
+ * [Demo] (https://github.com/Moove-it/angus/wiki/Demo)
+ * [Creating a new Project with Angus] (https://github.com/Moove-it/angus/wiki/Getting-Started)
+ * [Consume angus api] (https://github.com/Moove-it/angus/wiki/Clients)
+ * [Versioning] (https://github.com/Moove-it/angus/wiki/Versioning)
 
-Enter to the documentation typing this url on your favorite browser:
-
-    http://localhost:9292/demo/doc/0.1
-
-Also, try getting the resources typing these urls on the browser:
-
-    http://localhost:9292/demo/api/0.1/users
-    http://localhost:9292/demo/api/0.1/users/1
-
-## Basic usage
-You can see our wiki documentation - [Creating a new Project with Angus] (https://github.com/Moove-it/angus/wiki/Getting-Started)
-
-### Clients
-
-A big bonus of using documented services is that you can easily create automated clients for it.
-And with this in mind be have!
-
-[angus-remote] (https://github.com/Moove-it/angus-remote) is a dynamic angus remote client generator.
-So invoking angus applications is almost as easy (if not more) than developing an API with angus.
-
-For example to get the users list exposed by angus demo, you just have to create 2 files:
-
-remote_demo.rb
-```ruby
-require 'angus-remote'
-
-remote_service = Angus::Remote::ServiceDirectory.lookup('demo', '0.1')
-
-users = remote_service.get_users.users
-
-users.each do |user|
-  puts "#{user.id} => #{user.name}"
-end
-```
-config/services.yml
-```yml
-demo:
-  v0.1:
-    api_url: http://localhost:9292/demo/api/0.1/
-    doc_url: http://localhost:9292/demo/doc/0.1/
-```
-
-This is just a little example, for the full documentation visit [angus-remote GitHub page] (https://github.com/Moove-it/angus-remote)
-
-### Versioning
-
-API versioning with Angus is done by URL. This means that you can easily have more than one version
-of you service running in the same url and do the corresponding redirection based in the requested
-version.
-
-Support for multiple versions in the same process was considered and even implemented but it was
-later removed because it proved to be hard to maintain an app that had to expose multiple versions
-in the same process.
-
-But the version was kept in the url so that it was easy to have multiple process running with
-different versions and have Nginx or Apache to invoke the right one.
 
 ## Contributing to Angus
 
 We encourage you to submit pull requests, propose features and discuss issues. Just fork the
 repository on your GitHub account, and code what you want!
-
-## Wiki
-https://github.com/Moove-it/angus/wiki
 
 ## License
 
@@ -112,4 +58,4 @@ MIT License. See [LICENSE] (https://github.com/Moove-it/angus/blob/master/LICENS
 
 ## Copyright
 
-Copyright (c) 2010-2014 Moove-iT
+Copyright (c) 2010-2014 Moove-IT
