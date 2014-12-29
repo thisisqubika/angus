@@ -1,3 +1,3 @@
 module Angus
-  VERSION = '0.0.13.beta2'
+  VERSION = '0.0.13.beta3'
 end

@@ -58,7 +58,7 @@ module Angus
           end
         elsif error.respond_to?(:error_key)
           messages << { :level => level, :key => error.error_key,
-                        :dsc => error_message(error) }
+                        :dsc => error_message(error) }.merge(additional_message_attributes(error))
         else
           messages << { :level => level, :key => error.class.name, :dsc => error.message }
         end
@@ -82,6 +82,14 @@ module Angus
           error_definition.text
         else
           error.message
+        end
+      end
+
+      def additional_message_attributes(error)
+        error_definition = error_definition(error)
+
+        error_definition.fields.inject({}) do |attributes, field|
+          attributes.merge!({ field.name => error.send(field.name)})
         end
       end
 
