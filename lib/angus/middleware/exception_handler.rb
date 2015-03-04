@@ -88,6 +88,8 @@ module Angus
       def additional_message_attributes(error)
         error_definition = error_definition(error)
 
+        return {} unless error_definition
+
         error_definition.fields.inject({}) do |attributes, field|
           attributes.merge!({ field.name => error.send(field.name)})
         end
