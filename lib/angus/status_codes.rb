@@ -4,6 +4,7 @@ module Angus
     # TODO remove HTTP_STATUS from all constants
     HTTP_STATUS_CODE_OK                     = 200
 
+    HTTP_STATUS_CODE_UNAUTHORIZED           = 401
     HTTP_STATUS_CODE_FORBIDDEN              = 403
     HTTP_STATUS_CODE_NOT_FOUND              = 404
     HTTP_STATUS_CODE_CONFLICT               = 409
