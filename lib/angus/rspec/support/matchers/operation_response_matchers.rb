@@ -36,6 +36,24 @@ RSpec::Matchers.define :be_success do
   end
 end
 
+RSpec::Matchers.define :be_unauthorized do
+  match do |operation_response|
+    operation_response.unauthorized?
+  end
+
+  failure_message_for_should do |operation_response|
+    "expected that (#{operation_response.http_status_code}, #{operation_response.status}) would be (401, unauthorized)"
+  end
+
+  failure_message_for_should_not do |operation_response|
+    "expected that (#{operation_response.http_status_code}, #{operation_response.status}) would not be (401, unauthorized)"
+  end
+
+  description do
+    'be a (401, unauthorized) response'
+  end
+end
+
 RSpec::Matchers.define :be_forbidden do
   match do |operation_response|
     operation_response.forbidden?
@@ -58,7 +76,7 @@ RSpec::Matchers.define :contain_message do |level = nil, key = nil, description 
   match do |operation_response|
     operation_response.messages.find do |message|
       level_and_key_matches = message['level'] == level.to_s && message['key'] == key
-     
+
       description_matches = true
 
       if level_and_key_matches && description.present?

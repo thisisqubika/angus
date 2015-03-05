@@ -23,27 +23,32 @@ class OperationResponse
   end
 
   def success?
-    @parsed_response['status'] == 'success' && 
+    @parsed_response['status'] == 'success' &&
       http_status_code == Angus::Responses::HTTP_STATUS_CODE_OK
   end
 
+  def unauthorized?
+    @parsed_response['status'] == 'error' &&
+      http_status_code == Angus::Responses::HTTP_STATUS_CODE_UNAUTHORIZED
+  end
+
   def forbidden?
-    @parsed_response['status'] == 'error' && 
+    @parsed_response['status'] == 'error' &&
       http_status_code == Angus::Responses::HTTP_STATUS_CODE_FORBIDDEN
   end
 
   def not_found?
-    @parsed_response['status'] == 'error' && 
+    @parsed_response['status'] == 'error' &&
       http_status_code == Angus::Responses::HTTP_STATUS_CODE_NOT_FOUND
   end
 
   def conflict?
-    @parsed_response['status'] == 'error' && 
+    @parsed_response['status'] == 'error' &&
       http_status_code == Angus::Responses::HTTP_STATUS_CODE_CONFLICT
   end
 
   def unprocessable_entity?
-    @parsed_response['status'] == 'error' && 
+    @parsed_response['status'] == 'error' &&
       http_status_code == Angus::Responses::HTTP_STATUS_CODE_UNPROCESSABLE_ENTITY
   end
 
