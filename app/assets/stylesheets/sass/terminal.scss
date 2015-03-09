@@ -75,7 +75,12 @@
   color: #3eaad9;
   margin-left: 5px;
   margin-right: 5px;
-
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .terminal-arrow{
