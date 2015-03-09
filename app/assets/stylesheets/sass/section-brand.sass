@@ -1,0 +1,162 @@
+.SectionBrand
+  @extend %SectionPages
+
+  max-height: 100%
+  position: relative
+
+  background: url(/images/angus_line_bg.svg) center center no-repeat fixed
+
+  @media #{$landscape}
+    background-size: auto 750px
+    @media #{$medium-up}
+      background-size: 1500px
+
+  @media #{$portrait}
+    background-size: auto 600px
+    @media #{$medium-up}
+      background-size: auto
+
+  &-scroll
+    display: none
+
+    @media #{$large-up}
+      @include animation(scroll 1s ease-in)
+      @include animation-iteration-count(infinite)
+      @include animation-fill-mode(both)
+      width: rem-calc(40)
+      height: rem-calc(40)
+      text-align: center
+      color: DimGray
+      position: absolute
+      top: calc(100% - 80px)
+      left: calc(50% - 20px)
+      font-size: rem-calc(37)
+      display: block
+      &:link, &:active, &:hover, &:visited
+       text-decoration: none
+       border: 0
+
+  &-thunder
+    position: absolute
+    @include animation-duration(2s)
+    @include animation-delay(1s)
+
+    @media #{$landscape}
+      width: 200px
+      height: 300px
+      top: calc(50% - 271px)
+      left: calc(50% - 100px)
+      margin-left: 1px
+
+    @media #{$portrait}
+      width: 200px
+      height: 300px
+      top: calc(50% - 232px)
+      left: calc(50% - 97px)
+      margin-left: 1px
+
+    @media #{$large-up}
+      width: 400px
+      height: 300px
+      top: calc(50% - 316px)
+      left: calc(50% - 197px)
+      margin-left: 1px
+
+  &-guitar
+    position: absolute
+    @include animation-duration(1s)
+    @include animation-delay(0.9s)
+
+    @media #{$landscape}
+      left: calc(50% - 100px)
+      height: 400px
+      top: calc(50% - 200px)
+      width: 200px
+
+    @media #{$portrait}
+      width: 200px
+      left: calc(50% - 100px)
+      margin-left: 1px
+      height: 300px
+      top: calc(50% - 152px)
+
+    @media #{$large-up}
+      width: 200px
+      height: 700px
+      top: calc(50% - 366px)
+      left: calc(50% - 100px)
+      margin-left: 1px
+
+  &-logo
+    position: absolute
+    @include animation-duration(5s)
+    @include animation-delay(0.5s)
+
+    @media #{$landscape}
+      width: 200px
+      height: 200px
+      top: calc(30%)
+      left: calc(50% - 100px)
+      margin-left: 1px
+
+    @media #{$portrait}
+      width: 200px
+      left: calc(50% - 100px)
+      margin-left: 1px
+      height: 300px
+      top: calc(48% - 152px)
+
+    @media #{$large-up}
+      width: 300px
+      height: 216px
+      top: calc(30%)
+      left: calc(50% - 150px)
+      margin-left: 1px
+
+  &-moto
+    font-weight: 100
+    color: DimGray
+    text-align: center
+    position: absolute
+
+    @media #{$landscape}
+      width: rem-calc(700)
+      top: calc(15%)
+      left: calc(50% - 350px)
+      font-size: rem-calc(30)
+
+    @media #{$portrait}
+      width: rem-calc(250)
+      top: calc(15%)
+      left: calc(50% - 125px)
+      font-size: rem-calc(24)
+
+    @media #{$large-up}
+      width: rem-calc(700)
+      top: calc(9%)
+      left: calc(50% - 350px)
+      font-size: rem-calc(60)
+
+  &-rubies
+    width: 100%
+    height: 100%
+
+    &-layer
+      background-position: center center
+      background-repeat: no-repeat
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      display: none
+
+      @media #{$landscape}
+        background-size: auto 1000px
+        display: block
+        @media #{$large-up}
+          background-size: auto
+
+    @for $i from 1 to 5
+      &__#{$i}
+        background-image: url('/images/rubies-0#{$i}.png')
