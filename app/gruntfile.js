@@ -42,8 +42,9 @@ module.exports = function(grunt) {
             dest: 'public/dist/main.js'
         },
         css: {
-            src: 'assets/stylesheets/css/*.css',
-            dest: 'public/dist/main.css'
+            src: [ 'assets/stylesheets/css/*.css' ,
+                   'bower_components/animate.css/animate.css'],
+            dest:  'public/dist/main.css'
         }
     },
     uglify: {
