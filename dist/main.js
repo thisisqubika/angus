@@ -21232,7 +21232,7 @@ $(function($){
   rubyBenchmark.createAxisY();
 
 
-  $.get("/data/ruby.json",function(){}).done(function(data) {
+  $.get("data/ruby.json",function(){}).done(function(data) {
     var dataAngus = [];
     var dataRails = [];
     var dataGrape = [];
@@ -21283,7 +21283,7 @@ $(function($){
   jrubyBenchmark.createAxisY();
 
 
-  $.get("/data/jruby.json",function(){}).done(function(data) {
+  $.get("data/jruby.json",function(){}).done(function(data) {
     var dataAngus = [];
     var dataRails = [];
     var dataGrape = [];
