@@ -23,7 +23,7 @@ module.exports = function(grunt) {
             tasks: ['sass', 'concat', 'cssmin']
         },
         js: {
-            files: ['assets/javascripts/application.js'],
+            files: ['assets/javascripts/*.js'],
             tasks: ['concat', 'uglify', 'jshint']
         }
     },
@@ -37,8 +37,10 @@ module.exports = function(grunt) {
             src: ['bower_components/jquery/dist/jquery.js',
                   'bower_components/jquery-waypoints/lib/jquery.waypoints.js',
                   'bower_components/google-code-prettify/src/prettify.js',
+                  'bower_components/d3/d3.js',
                   'assets/javascripts/jquery.scrolly.js',
-                  'assets/javascripts/application.js'],
+                  'assets/javascripts/application.js',
+                  'assets/javascripts/benchmark.js'],
             dest: 'public/dist/main.js'
         },
         css: {

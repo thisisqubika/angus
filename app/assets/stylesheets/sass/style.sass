@@ -8,6 +8,15 @@
   max-width: 100%
   max-height: rem-calc(856)
 
+  border-bottom: 1px solid #ccc
+  padding-bottom: 20%
+  margin-bottom: 20%
+
+  @media #{$medium-up}
+    border-bottom: none
+    padding-bottom: 0
+    margin-bottom: 0
+
 .fork-top
   position: absolute
   top: 0
@@ -27,7 +36,13 @@
 
   &-logo
     img
-      width: 11rem
+      width: 9rem
+
+    @media #{$medium-up}
+      img
+        width: 11rem
+
+
 
 @include keyframes(scroll)
   from
@@ -82,9 +97,10 @@
     margin: 0 auto
     margin-bottom: rem-calc(50)
 
-
 @import 'section-brand'
+@import 'section-benchmark'
 @import 'section-why'
 @import 'section-install'
 @import 'section-using'
+@import 'section-tools'
 @import 'footer'

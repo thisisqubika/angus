@@ -3,6 +3,10 @@
 
   max-height: 100%
   position: relative
+  border-bottom: none
+  padding-bottom: 0
+  margin-bottom: 0
+  pointer-events: none
 
   background: url(/images/angus_line_bg.svg) center center no-repeat fixed
 
@@ -41,25 +45,17 @@
     @include animation-duration(2s)
     @include animation-delay(1s)
 
-    @media #{$landscape}
-      width: 200px
-      height: 300px
-      top: calc(50% - 271px)
-      left: calc(50% - 100px)
-      margin-left: 1px
+    width: 200px
+    height: 200px
+    left: calc(50% - 100px)
+    margin-left: 1px
+    top: calc(50% - 150px)
 
-    @media #{$portrait}
-      width: 200px
+    @media #{$medium-up}
+      width: 300px
       height: 300px
-      top: calc(50% - 232px)
-      left: calc(50% - 97px)
-      margin-left: 1px
-
-    @media #{$large-up}
-      width: 400px
-      height: 300px
-      top: calc(50% - 316px)
-      left: calc(50% - 197px)
+      top: calc(50% - 250px)
+      left: calc(50% - 150px)
       margin-left: 1px
 
   &-guitar
@@ -68,10 +64,10 @@
     @include animation-delay(0.9s)
 
     @media #{$landscape}
-      left: calc(50% - 100px)
+      width: 80px
       height: 400px
       top: calc(50% - 200px)
-      width: 200px
+      left: calc(50% - 40px)
 
     @media #{$portrait}
       width: 200px
@@ -80,10 +76,10 @@
       height: 300px
       top: calc(50% - 152px)
 
-    @media #{$large-up}
+    @media #{$medium-up}
       width: 200px
-      height: 700px
-      top: calc(50% - 366px)
+      height: 400px
+      top: calc(50% - 200px)
       left: calc(50% - 100px)
       margin-left: 1px
 
@@ -92,25 +88,17 @@
     @include animation-duration(5s)
     @include animation-delay(0.5s)
 
-    @media #{$landscape}
+    width: 150px
+    height: 150px
+    top: calc(50% - 100px)
+    left: calc(50% - 75px)
+    margin-left: 1px
+
+    @media #{$medium-up}
       width: 200px
       height: 200px
-      top: calc(30%)
+      top: calc(50% - 150px)
       left: calc(50% - 100px)
-      margin-left: 1px
-
-    @media #{$portrait}
-      width: 200px
-      left: calc(50% - 100px)
-      margin-left: 1px
-      height: 300px
-      top: calc(48% - 152px)
-
-    @media #{$large-up}
-      width: 300px
-      height: 216px
-      top: calc(30%)
-      left: calc(50% - 150px)
       margin-left: 1px
 
   &-moto
@@ -120,22 +108,22 @@
     position: absolute
 
     @media #{$landscape}
-      width: rem-calc(700)
-      top: calc(15%)
+      width: 43.75rem
+      top: calc(9%)
       left: calc(50% - 350px)
-      font-size: rem-calc(30)
+      rem-calc(26)
 
     @media #{$portrait}
       width: rem-calc(250)
-      top: calc(15%)
+      top: calc(9%)
       left: calc(50% - 125px)
-      font-size: rem-calc(24)
+      font-size: rem-calc(26)
 
-    @media #{$large-up}
+    @media #{$medium-up}
       width: rem-calc(700)
       top: calc(9%)
       left: calc(50% - 350px)
-      font-size: rem-calc(60)
+      font-size: rem-calc(48)
 
   &-rubies
     width: 100%
@@ -152,9 +140,9 @@
       display: none
 
       @media #{$landscape}
-        background-size: auto 1000px
+        background-size: auto 600px
         display: block
-        @media #{$large-up}
+        @media #{$medium-up}
           background-size: auto
 
     @for $i from 1 to 5

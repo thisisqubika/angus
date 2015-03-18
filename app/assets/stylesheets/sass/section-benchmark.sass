@@ -1,0 +1,123 @@
+%framework
+  .line
+    width: 15px
+    height: 2px
+    margin-top: 10px
+    float: left
+  .text
+    padding-left: 9px
+    display: inline
+
+.SectionBenchmark
+  @extend %SectionPages
+  padding-top: 9%
+
+  &-title
+
+    @include grid-column(12)
+    padding-bottom: 3%
+
+    @media #{$medium-up}
+      @include grid-column(8, $offset: 2)
+
+    @media #{$large-up}
+      @include grid-column(8, $offset: 2, $collapse: true)
+
+  &-descripcion
+    @include grid-column(12)
+
+    @media #{$medium-up}
+      @include grid-column(8, $offset: 2)
+
+    @media #{$large-up}
+      @include grid-column(8, $offset: 2, $collapse: true)
+
+
+  &-ruby
+    text-align: center
+    @include grid-column(12)
+
+    @media #{$medium-up}
+      @include grid-column(8, $offset: 2)
+
+    @media #{$large-up}
+      @include grid-column(3.5, $offset: 0.5, $collapse: true)
+
+  &-jruby
+    text-align: center
+    @include grid-column(12)
+
+    @media #{$medium-up}
+      @include grid-column(8, $offset: 2)
+
+    @media #{$large-up}
+      @include grid-column(3.5, $offset: 0, $collapse: true)
+
+  &-reference
+    @include grid-column(12)
+    margin-bottom: 85px;
+
+    @media #{$large-up}
+      @include grid-column(3, $offset: 0, $collapse: true)
+      margin-bottom: 13%
+
+
+    .reference-list
+      margin-left: 40%
+
+    .angus
+      @extend %framework
+      .line
+        background-color: red
+    .grape
+      @extend %framework
+      .line
+        background-color: steelblue
+    .rails-api
+      @extend %framework
+      .line
+        background-color: yellow
+    .sinatra
+      @extend %framework
+      .line
+        background-color: green
+
+  svg
+    width: 286px
+    height: 286px
+
+    @media #{$medium-up}
+      width: 540px
+      height: 450px
+
+    .g-container
+      transform: translate(32.2px, 5.5px) scale(0.6)
+      @media #{$medium-up}
+        transform: translate(51.2px, 5.5px) scale(1);
+    .angus
+      fill: none
+      stroke: red
+      stroke-width: 2px
+    .grape
+      fill: none
+      stroke: steelblue
+      stroke-width: 2px
+    .rails
+      fill: none
+      stroke: yellow
+      stroke-width: 2px
+    .sinatra
+      fill: none
+      stroke: green
+      stroke-width: 2px
+
+    .axis--x text,
+    .axis--y text
+      font: oblique 12px Georgia, serif
+
+
+    .axis path,
+    .axis line
+      fill: none
+      stroke: #000
+      shape-rendering: crispEdges

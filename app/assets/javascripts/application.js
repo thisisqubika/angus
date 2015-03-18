@@ -39,10 +39,10 @@ $(function($){
   });
 
   var why = new Waypoint({
-    element: $("#why"),
+    element: $("#benchmark"),
     offset: '30%',
     handler: function(direction) {
-    var $selector = $("a[href^='#why']");
+    var $selector = $("a[href^='#benchmark']");
     if (direction == 'down'){
       $('.Header').removeClass('hide').addClass('Header-show');
       setCurrentPage($selector);
@@ -56,8 +56,20 @@ $(function($){
     }
   });
 
+
+  var why = new Waypoint({
+    element: $("#why"),
+    offset: '10%',
+    handler: function(direction) {
+      var $selector = $("a[href^='#why']");
+      setCurrentPage($selector);
+    }
+  });
+
+
   var install = new Waypoint({
     element: $("#install"),
+    offset: '10%',
     handler: function(direction) {
       var $selector = $("a[href^='#install']");
       setCurrentPage($selector);
@@ -65,9 +77,19 @@ $(function($){
   });
 
   var using = new Waypoint({
+    offset: '10%',
     element: $("#using"),
     handler: function(direction) {
       var $selector = $("a[href^='#using']");
+      setCurrentPage($selector);
+    }
+  });
+
+  var tools = new Waypoint({
+    offset: '10%',
+    element: $("#tools"),
+    handler: function(direction) {
+      var $selector = $("a[href^='#tools']");
       setCurrentPage($selector);
     }
   });

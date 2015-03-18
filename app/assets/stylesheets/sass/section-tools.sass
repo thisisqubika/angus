@@ -1,0 +1,30 @@
+.SectionTools
+  @extend %SectionPages
+
+  border-bottom: none
+  padding-bottom: 0
+  margin-bottom: 0
+
+  &-title
+    @include grid-column(12)
+
+    @media #{$medium-up}
+      @include grid-column(10, $offset: 2, $collapse: true)
+
+  &-items
+    @include grid-column(12)
+
+    @media #{$medium-up}
+      @include grid-column(10, $offset: 2, $collapse: true)
+      padding-left: rem-calc(40)
+
+  &-item
+    margin: rem-calc(20 0)
+    a
+      text-decoration: none
+
+  &-icon
+    margin-right: rem-calc(20)
+
+  &-description
+    margin-left:  rem-calc(40)
