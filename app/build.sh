@@ -18,4 +18,10 @@ rm -rf ../data ../dist ../fonts ../images ../index.html
 
 cp -r build/* ../
 
+cd ../
+
+git add . --all
+git commit -m 'Deploy build.'
+git push origin gh-pages
+
 # tar czf $tarFileName ./build

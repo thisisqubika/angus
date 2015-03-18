@@ -21239,7 +21239,6 @@ $(function($){
     var dataSinatra = [];
 
     for (var i = 0; i < data['angus'].length; i++) {
-      console.log(i);
       dataAngus.push([data['angus'][i], i])
     };
     for (var i = 0; i < data['grape'].length; i++) {
@@ -21290,7 +21289,6 @@ $(function($){
     var dataSinatra = [];
 
     for (var i = 0; i < data['angus'].length; i++) {
-      console.log(i);
       dataAngus.push([data['angus'][i], i])
     };
     for (var i = 0; i < data['grape'].length; i++) {
@@ -21334,7 +21332,6 @@ var Benchmark = function(selector) {
                   };
 
   self.setSize = function(height, width) {
-    console.log(height, width);
     self.default.height = height;
     self.default.width  = width;
   }
