@@ -1,4 +1,7 @@
 %framework
+  float: left
+  @include grid-column(3)
+
   .line
     width: 15px
     height: 2px
@@ -32,38 +35,48 @@
     @media #{$large-up}
       @include grid-column(8, $offset: 2, $collapse: true)
 
+  &-chart
+    @include grid-column(12, $offset: 0)
+    padding-left: 0
+    padding-rigth: 0
 
-  &-ruby
-    text-align: center
-    @include grid-column(12)
-
-    @media #{$medium-up}
-      @include grid-column(8, $offset: 2)
-
-    @media #{$large-up}
-      @include grid-column(3.5, $offset: 0.5, $collapse: true)
-
-  &-jruby
-    text-align: center
-    @include grid-column(12)
 
     @media #{$medium-up}
       @include grid-column(8, $offset: 2)
 
-    @media #{$large-up}
-      @include grid-column(3.5, $offset: 0, $collapse: true)
+    &-ruby
+      padding-left: 0
+      text-align: center
+      @include grid-column(12)
+
+      @media #{$medium-up}
+        @include grid-column(8, $offset: 2)
+
+      @media #{$large-up}
+        @include grid-column(5, $offset: 0, $collapse: true)
+
+    &-jruby
+      text-align: center
+      padding-left: 0
+      @include grid-column(12)
+
+      @media #{$medium-up}
+        @include grid-column(8, $offset: 2)
+
+      @media #{$large-up}
+        @include grid-column(5, $offset: 2, $collapse: true)
 
   &-reference
     @include grid-column(12)
-    margin-bottom: 85px;
+    margin-bottom: 85px
 
-    @media #{$large-up}
-      @include grid-column(3, $offset: 0, $collapse: true)
-      margin-bottom: 13%
+    @media #{$medium-up}
+      @include grid-column(5, $offset: 4, $collapse: true)
+      margin-bottom: 5%
 
 
     .reference-list
-      margin-left: 40%
+      @include clearfix
 
     .angus
       @extend %framework
@@ -85,15 +98,24 @@
   svg
     width: 286px
     height: 286px
+    background-color: #2C2A2A
+    border-radius: 10px
+    overflow: hidden
 
     @media #{$medium-up}
-      width: 540px
-      height: 450px
+      height: 300px
+      width: 400px
+      text-align: center
+      padding-left: 9px
+
+    .benchmark-title
+      fill: #fff
 
     .g-container
-      transform: translate(32.2px, 5.5px) scale(0.6)
+      transform: translate(35.2px, 54.5px) scale(0.78)
+
       @media #{$medium-up}
-        transform: translate(51.2px, 5.5px) scale(1);
+        transform: translate(50px, 30px) scale(1)
     .angus
       fill: none
       stroke: red
@@ -113,11 +135,13 @@
 
     .axis--x text,
     .axis--y text
-      font: oblique 12px Georgia, serif
+      font: oblique 12px 'Open Sans'
+      fill: #484848
+      font-weight: 100
 
 
     .axis path,
     .axis line
       fill: none
-      stroke: #000
+      stroke: #484848
       shape-rendering: crispEdges

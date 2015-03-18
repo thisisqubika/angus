@@ -1,5 +1,5 @@
 $(function($){
-  var rubyBenchmark = new Benchmark('.SectionBenchmark-ruby-svg-container');
+  var rubyBenchmark = new Benchmark('.SectionBenchmark-chart-ruby-svg-container');
 
   rubyBenchmark.default = {
                             yAxis: { orient: 'left',
@@ -12,11 +12,12 @@ $(function($){
                                       bottom: 50.5,
                                       left: 60.5 },
                             height: 0,
-                            width: 0
+                            width: 0,
                           };
 
-  rubyBenchmark.setSize(400, 500);
+  rubyBenchmark.setSize(300, 400);
   rubyBenchmark.createSvg();
+  rubyBenchmark.createTitle('Ruby');
   rubyBenchmark.createAxisX();
   rubyBenchmark.createAxisY();
 
@@ -49,7 +50,7 @@ $(function($){
   })
 
 
-  var jrubyBenchmark = new Benchmark('.SectionBenchmark-jruby-svg-container');
+  var jrubyBenchmark = new Benchmark('.SectionBenchmark-chart-jruby-svg-container');
 
   jrubyBenchmark.default = {
                             yAxis: { orient: 'left',
@@ -65,8 +66,9 @@ $(function($){
                             width: 0
                           };
 
-  jrubyBenchmark.setSize(400, 500);
+  jrubyBenchmark.setSize(300, 400);
   jrubyBenchmark.createSvg();
+  jrubyBenchmark.createTitle('JRuby');
   jrubyBenchmark.createAxisX();
   jrubyBenchmark.createAxisY();
 
@@ -186,18 +188,27 @@ var Benchmark = function(selector) {
             .attr("transform",  translate);
   }
 
+  self.createTitle = function(title){
+    svg.append("text")
+       .attr("transform", "translate(110, 0)")
+       .attr("class", "benchmark-title")
+       .attr("x", 6)
+       .attr("dx", ".71em")
+       .text(title);
+  }
+
   self.createAxisX = function(){
     var xAxis = self.getAxisX();
     svg.append("g")
-       .attr("class", "axis axis--x")
-       .attr("transform", "translate(0," + (self.calcHeight().min + 10) + ")")
-       .call(xAxis)
+         .attr("class", "axis axis--x")
+         .attr("transform", "translate(0," + (self.calcHeight().min + 10) + ")")
+         .call(xAxis)
        .append("text")
-        .attr("transform", "translate(350, -10)")
-        .attr("class", "title")
-        .attr("x", 6)
-        .attr("dx", ".71em")
-        .text("Request");
+         .attr("transform", "translate(250, -10)")
+         .attr("class", "title")
+         .attr("x", 6)
+         .attr("dx", ".71em")
+         .text("Request")
   }
 
   self.createAxisY = function(){
@@ -208,7 +219,7 @@ var Benchmark = function(selector) {
        .call(yAxis)
        .append("text")
         .attr("class", "title")
-        .attr("transform", "translate(10, 110) rotate(-90)")
+        .attr("transform", "translate(10, 90) rotate(-90)")
         .attr("y", 2)
         .attr("dy", ".51em")
         .text("Response time (ms)");

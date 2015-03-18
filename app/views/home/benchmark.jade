@@ -8,10 +8,11 @@ section#benchmark.SectionBenchmark
           | Benchmark
         .SectionBenchmark-github-proyect
           +link('https://github.com/Moove-it/angus-benchmark', 'View angus-benchmark on GitHub')(target='_blank')
-      .SectionBenchmark-ruby
-        .SectionBenchmark-ruby-title
-          | Ruby
-        .SectionBenchmark-ruby-svg-container
+      .SectionBenchmark-chart
+        .SectionBenchmark-chart-ruby
+          .SectionBenchmark-chart-ruby-svg-container
+        .SectionBenchmark-chart-jruby
+          .SectionBenchmark-chart-jruby-svg-container
       .SectionBenchmark-reference
         .reference-list
           .angus
@@ -31,10 +32,6 @@ section#benchmark.SectionBenchmark
             .text
               | Rails Api
 
-      .SectionBenchmark-jruby
-        .SectionBenchmark-jruby-title
-          | JRuby
-        .SectionBenchmark-jruby-svg-container
       .SectionBenchmark-descripcion
         | We made this charts using Apache Benchmark. We created one project per framework
         | (Grape, Rails API, Sinatra and Angus) that provides a simple service 'get users'
