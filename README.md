@@ -1,4 +1,4 @@
-![angus logo](http://moove-it.github.io/angus/angus_logo.png)
+![angus logo](http://moove-it.github.io/angus/images/angus_logo2.svg)
 
 
 ## What is Angus?
