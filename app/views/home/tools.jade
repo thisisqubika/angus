@@ -1,0 +1,41 @@
+include ../mixin.jade
+
+section#tools.SectionTools
+  .container-cell
+    .row
+      h2.SectionTools-title
+        | Tools
+      .SectionTools-items
+        .SectionTools-item
+          h3.SectionTools-name
+            span.SectionTools-icon
+              i.fa.fa-star
+            span
+              +link('https://rubygems.org/gems/angus-remote', 'Remote client')(target='_blank')
+          .SectionTools-description
+            | angus-remote gem provides a way to interact with a service created with Angus.
+        .SectionTools-item
+          h3.SectionTools-name
+            span.SectionTools-icon
+              i.fa.fa-star
+            span
+              +link('https://rubygems.org/gems/angus-authentication', 'Authentication')(target='_blank')
+          .SectionTools-description
+            | angus-authentication gem provides an authentication layer to Angus services.
+        .SectionTools-item
+
+          h3.SectionTools-name
+            span.SectionTools-icon
+              i.fa.fa-star
+            span
+              | More to come
+          .SectionTools-description
+            | We are creating some new features and gems to enrich Angus.
+
+
+
+
+
+
+
+

@@ -1,162 +1,220 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset='utf-8'>
-    <meta content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width target-densitydpi=device-dpi' name='viewport'>
-    <!-- Always force latest IE rendering engine or request Chrome Frame -->
-    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
-      <!-- Use title if it's in the page YAML frontmatter -->
-      <title>Angus</title>
-      <link href="assets/stylesheets/normalize-6197e73d.css" media="screen" rel="stylesheet" type="text/css" />
-      <link href="assets/stylesheets/application-60df018b.css" media="screen" rel="stylesheet" type="text/css" />
-      <link href="assets/stylesheets/jquery.fancybox-7cef2942.css" media="screen" rel="stylesheet" type="text/css" />
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
-      <script src="assets/javascripts/jquery.fancybox.pack-245267b0.js" type="text/javascript"></script>
-      <script src="assets/javascripts/jquery.scrollTo-1.4.3.1-8378d95f.js" type="text/javascript"></script>
-      <script src="assets/javascripts/jquery.localscroll-1.2.7-578a2bd0.js" type="text/javascript"></script>
-      <script src="assets/javascripts/waypoints-52272b10.js" type="text/javascript"></script>
-      <script src="assets/javascripts/waypoints-sticky.min-5ca0330c.js" type="text/javascript"></script>
-      <script src="assets/javascripts/all-564ae002.js" type="text/javascript"></script>
-      <link href='favicon.ico' rel='icon' type='image/ico'>
-    </meta>
+    <title>Angus - A Web service framework</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dist/main.css">
+    <link rel="icon" href="images/angus.ico">
   </head>
-  <body class='index'>
-    <header class='row' id='top'>
-      <div class='column small-6 medium-4 large-4'>
-        <h2>A web services framework</h2>
-        <p>Angus is a simple and powerful framework to build REST APIs using Ruby.</p>
+  <body>
+    <header itemscope="" itemtype="http://schema.org/Organization" class="Header">
+      <div class="Header-wrapper"><a href="/" class="Header-logo"><img src="images/angus_logo.svg"></a>
+        <nav class="Navbar">
+          <div class="Navbar-doc"><a href="https://github.com/Moove-it/angus" target="_blank">docs</a>
+          </div>
+          <ul class="Navbar-list">
+                <li class="Navbar-listItem benchmark-index"><a href="#benchmark">benchmark</a>
+                </li>
+                <li class="Navbar-listItem why-index"><a href="#why">why</a>
+                </li>
+                <li class="Navbar-listItem install-index"><a href="#install">install</a>
+                </li>
+                <li class="Navbar-listItem using-index"><a href="#using">using</a>
+                </li>
+                <li class="Navbar-listItem tools-index"><a href="#tools">tools</a>
+                </li>
+                <li class="Navbar-listItem docs-index Navbar-listItem--doc"><a href="https://github.com/Moove-it/angus" target="_blank">docs</a>
+                </li>
+          </ul>
+        </nav>
       </div>
-      <h1 class='logo'><a href="/"><span>Angus</span></a></h1>
     </header>
-    <div id='fork'>
-        <a href="https://github.com/moove-it/angus"><img alt='Fork me on GitHub' src='https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png'>
-      </a>
-    
-    </div>
-    <div class='navigation'>
-      <div class='wrapper'>
-        <ul class='no-bullet nav'>
-          <li class='home'><a href="#top"><span class="fa fa-home">Home</span></a></li>
-          <li><a class="getting_started" href="#why_angus">Why Angus</a></li>
-          <li><a class="how_to_use" href="#using_angus">Using Angus</a></li>
-          <li><a class="documentation" target="_blank" href="https://github.com/moove-it/angus/blob/master/README.md"><span class="show-for-small">Docs</span><span class="hide-for-small">Full Documentation</span></a></li>
-        </ul>
+    <section id="brand" class="SectionBrand">
+      <div class="container-cell">
+        <div class="row">
+          <div class="SectionBrand-moto">A web services framework</div>
+          <div class="SectionBrand-rubies">
+            <div data-velocity=".5" class="SectionBrand-rubies-layer SectionBrand-rubies__1 parallax"></div>
+            <div data-velocity=".4" class="SectionBrand-rubies-layer SectionBrand-rubies__2 parallax"></div>
+            <div data-velocity=".3" class="SectionBrand-rubies-layer SectionBrand-rubies__3 parallax"></div>
+            <div data-velocity=".2" class="SectionBrand-rubies-layer SectionBrand-rubies__4 parallax"></div>
+          </div><img src="images/angus_guitar.svg" class="SectionBrand-guitar animated bounce"><img src="images/angus_logo2.svg" class="SectionBrand-logo animated bounceInDown"><img src="images/thunder.svg" class="SectionBrand-thunder animated bounceIn">
+        </div><a href="#benchmark" class="SectionBrand-scroll"><i class="fa fa-chevron-down"></i></a>
       </div>
-    </div>
-    <div class='container'>
-      <div class='row'>
-        <div class='column small-12' id='main'>
-          <section class='row' id='why_angus'>
-            <div class='column'>
-              <h3>Why Angus</h3>
+    </section>
+    <div class="fork-top"><a href="https://github.com/Moove-it/angus" target="_blank"><img src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a></div>
+    <section id="benchmark" class="SectionBenchmark">
+      <div class="container-cell">
+        <div class="row">
+          <div class="SectionBenchmark-title">
+            <h2>Benchmark</h2>
+            <div class="SectionBenchmark-github-proyect"><a href="https://github.com/Moove-it/angus-benchmark" target="_blank">View angus-benchmark on GitHub</a>
             </div>
-            <div class='column small-12'>
-              <p class='lead'>Performance</p>
-              <div class='charts'>
-                <a href="assets/images/charts-f2ee64ab.png"><img title="Ruby and JRuby web services comparation chart." src="assets/images/charts-f2ee64ab.png" /></a>
-                <p>
-                  <b>Information about this charts</b>
-                </p>
-                <p>
-                  We made this charts using Apache Benchmark. We created one project per framework (Grape, Rails API, Sinatra and Angus) that provides a simple service 'get users' which return a list of users in JSON format with the default and basic configuration.
-                  In the Ruby environment we use Unicorn with defult configuration. With jRuby we use Mizuno.
-                  The test consisted of 5000 requests executed with a concurrency level of 100.
-                </p>
+          </div>
+          <div class="SectionBenchmark-chart">
+            <div class="SectionBenchmark-chart-ruby">
+              <div class="SectionBenchmark-chart-ruby-svg-container"></div>
+            </div>
+            <div class="SectionBenchmark-chart-jruby">
+              <div class="SectionBenchmark-chart-jruby-svg-container"></div>
+            </div>
+          </div>
+          <div class="SectionBenchmark-reference">
+            <div class="reference-list">
+              <div class="angus">
+                <div class="line"></div>
+                <div class="text">Angus</div>
+              </div>
+              <div class="grape">
+                <div class="line"></div>
+                <div class="text">Grape</div>
+              </div>
+              <div class="sinatra">
+                <div class="line"></div>
+                <div class="text">Sinatra</div>
+              </div>
+              <div class="rails-api">
+                <div class="line"></div>
+                <div class="text">Rails Api</div>
               </div>
             </div>
-            <div class='column small-12 features'>
-              <p class='lead'>Tools</p>
-              <div class='row'>
-                <div class='column icon'>
-                  <i class='fa fa-globe'></i>
-                </div>
-                <p class='column small-8'>
-                  <b>
-                    Remote client
-                  </b>
-                  <br>
-                  <a href="http://rubygems.org/gems/angus-remote">angus-remote</a>
-                  gem provides a way to interact with a service created with Angus.
-                </p>
-              </div>
-              <div class='row'>
-                <div class='column icon'>
-                  <i class='fa fa-sign-in'></i>
-                </div>
-                <p class='column small-8'>
-                  <b>
-                    Authentication
-                  </b>
-                  <br>
-                  <a href="http://rubygems.org/gems/angus-authentication">angus-authentication</a>
-                  gem provides an authentication layer to Angus services.
-                </p>
-              </div>
-              <div class='row'>
-                <div class='column icon'>
-                  <i class='fa fa-gift'></i>
-                </div>
-                <p class='column small-8'>
-                  <b>More to come</b>
-                  <br>
-                  We are creating some new features and gems to enrich Angus.
-                </p>
-              </div>
-            </div>
-          </section>
-          <section class='row' id='using_angus'>
-            <div class='column'>
-              <h3>Using Angus</h3>
-              <code>$ gem install angus
-              <br>
-              $ angus demo
-              <br>
-              $ cd demo
-              <br>
-              $ bundle install
-              <br>
-              $ angus server</code>
-              <p>
-                Ready! Go to
-                <br>
-                <ul class='no-bullet nav'>
-                  <li>
-                    <span class='go-to'>
-                      <i class='fa fa-hand-o-up'></i>
-                      Documentation
-                      <a href="http://localhost:9292/demo/doc/0.1">http://localhost:9292/demo/doc/0.1</a>
-                    </span>
-                  </li>
-                  <li>
-                    <span class='go-to'>
-                      <i class='fa fa-hand-o-up'></i>
-                      Get users service
-                      <a href="http://localhost:9292/demo/api/0.1/users">http://localhost:9292/demo/api/0.1/users</a>
-                    </span>
-                  </li>
-                </ul>
-              </p>
-            </div>
-          </section>
+          </div>
+          <div class="SectionBenchmark-descripcion">
+            We made this charts using Apache Benchmark. We created one project per framework
+            (Grape, Rails API, Sinatra and Angus) that provides a simple service 'get users'
+            which return a list of users in JSON format with the default and basic configuration.
+            In the Ruby environment we use Unicorn with defult configuration. With jRuby we use Mizuno.
+            The test consisted of 1000 requests executed with a concurrency level of 100.
+          </div>
         </div>
       </div>
-    </div>
-    <footer>
-      <div class='container'>
-        <div class='row'>
-          <div class='column small-12'>
-            <p><img src="assets/images/angus_logo_mini-7fcc9cbf.png" /></p>
+    </section>
+    <section id="why" class="SectionWay">
+      <div class="container-cell">
+        <div class="row">
+          <div class="SectionWay-description">
+            <div class="container-cell">
+              <h2 class="SectionWay-title">Why Angus</h2>
+              <div class="SectionWay-description-paragraph">
+                <p class="SectionWay-description-paragraph-text">
+                  Angus is a REST-like API framework which fits
+                  perfectly with Ruby.
+                </p>
+                <p class="SectionWay-description-paragraph-text">
+                  It is based on rack, so it can be used to
+                  complement an existing app or as standalone
+                  service to easily develop RESTful APIs.
+                </p>
+                <p class="SectionWay-description-paragraph-text">
+                  It is a lightweight framework, with special
+                  focus on simplicity.
+                </p>
+                <p class="SectionWay-description-paragraph-text">
+                  Angus is an excellent option for creating
+                  REST-like APIs
+                </p>
+              </div>
+            </div>
           </div>
-          <div class='column small-12'>
-            <a target="_blank" href="https://github.com/moove-it"><i class="fa fa-github"></i></a>
-            <a target="_blank" href="https://twitter.com/moove_it"><i class="fa fa-twitter"></i></a>
-            <a target="_blank" href="https://www.facebook.com/mooveitcrew"><i class="fa fa-facebook"></i></a>
+          <div class="SectionWay-diagram">
+            <div class="container-cell"><img src="images/diagram.svg"></div>
           </div>
-          <div class='column small-12'>
-            <a target="_blank" class="pull-right" href="http://moove-it.com"><img width="100px" src="assets/images/moove-it_logo-6b401b4d.png" /></a>
+        </div>
+      </div>
+    </section>
+    <section id="install" class="SectionInstall">
+      <div class="container-cell">
+        <div class="row">
+          <h2 class="SectionInstall-title">Install</h2>
+          <div class="SectionInstall-terminal">
+            <div class="terminal-window">
+              <header>
+                <div class="terminal-button green"></div>
+                <div class="terminal-button yellow"></div>
+                <div class="terminal-button red"></div>
+              </header>
+              <section class="terminal"><span class="terminal-arrow"><i class="fa fa-long-arrow-right"></i></span><span class="terminal-tilde">~</span><span class="command">gem install angus</span><span class="prompt"></span><span class="typed-cursor"></span></section>
+            </div>
           </div>
+          <div class="separator vertical">
+            <div class="separator-text">or</div>
+          </div>
+          <div class="SectionInstall-sublime">
+            <div class="terminal-window">
+              <header>
+                <div class="terminal-button green"></div>
+                <div class="terminal-button yellow"></div>
+                <div class="terminal-button red"></div>
+              </header>
+              <section class="terminal">
+                <header class="terminal-header">
+                  <ul>
+                    <li>Gemfile</li>
+                  </ul>
+                </header>
+                <section class="terminal-body">
+                  <pre class="prettyprint linenums lang-rb"><code>source 'http://rubygems.org'
+
+gem  'angus',  '0.0.12’
+</code></pre>
+                </section>
+              </section>
+              <footer class="terminal-footer"></footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="using" class="SectionUsing">
+      <div class="container-cell">
+        <div class="row">
+          <h2 class="SectionUsing-title">Using</h2>
+          <div class="SectionUsing-terminal">
+            <div class="terminal-window">
+              <header>
+                <div class="terminal-button green"></div>
+                <div class="terminal-button yellow"></div>
+                <div class="terminal-button red"></div>
+              </header>
+              <section class="terminal">
+                <p><span class="terminal-arrow"><i class="fa fa-long-arrow-right"></i></span><span class="terminal-tilde">~</span><span class="command">gem install angus</span></p>
+                <p><span class="terminal-arrow"><i class="fa fa-long-arrow-right"></i></span><span class="terminal-tilde">~</span><span class="command">angus demo</span></p>
+                <p><span class="terminal-arrow"><i class="fa fa-long-arrow-right"></i></span><span class="terminal-tilde">~</span><span class="command">cd demo</span></p>
+                <p><span class="terminal-arrow"><i class="fa fa-long-arrow-right"></i></span><span class="terminal-tilde">demo</span><span class="command">bundle install</span></p>
+                <p><span class="terminal-arrow"><i class="fa fa-long-arrow-right"></i></span><span class="terminal-tilde">demo</span><span class="command">angus server</span></p>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="tools" class="SectionTools">
+      <div class="container-cell">
+        <div class="row">
+          <h2 class="SectionTools-title">Tools</h2>
+          <div class="SectionTools-items">
+            <div class="SectionTools-item">
+              <h3 class="SectionTools-name"><span class="SectionTools-icon"><i class="fa fa-star"></i></span><span><a href="https://rubygems.org/gems/angus-remote" target="_blank">Remote client</a></span></h3>
+              <div class="SectionTools-description">angus-remote gem provides a way to interact with a service created with Angus.</div>
+            </div>
+            <div class="SectionTools-item">
+              <h3 class="SectionTools-name"><span class="SectionTools-icon"><i class="fa fa-star"></i></span><span><a href="https://rubygems.org/gems/angus-authentication" target="_blank">Authentication</a></span></h3>
+              <div class="SectionTools-description">angus-authentication gem provides an authentication layer to Angus services.</div>
+            </div>
+            <div class="SectionTools-item">
+              <h3 class="SectionTools-name"><span class="SectionTools-icon"><i class="fa fa-star"></i></span><span>More to come</span></h3>
+              <div class="SectionTools-description">We are creating some new features and gems to enrich Angus.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="Footer">
+      <div class="Footer-row">
+        <div class="Footer-content"><a href="https://github.com/Moove-it/angus" target="_blank"><img src="images/angus_logo.svg" class="angus"></a><span class="maintained">is maintained by</span><a href="http://www.moove-it.com" target="_blank"><img src="images/mooveit_logo.svg" class="moove-it"></a>
         </div>
       </div>
     </footer>
+    <script src="dist/main.js"></script>
   </body>
 </html>

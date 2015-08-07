@@ -1,0 +1,17 @@
+include ../mixin.jade
+
+header.Header(itemscope = '' itemtype = 'http://schema.org/Organization')
+  .Header-wrapper
+    +link('/', 'Angus')(class = 'Header-logo')
+      +image('angus_logo.svg')
+    nav.Navbar
+      .Navbar-doc
+        +link('https://github.com/Moove-it/angus', 'docs')(target='_blank')
+      ul.Navbar-list
+        +navItem('index', 'benchmark', '#benchmark')
+        +navItem('index', 'why', '#why')
+        +navItem('index', 'install', '#install')
+        +navItem('index', 'using', '#using')
+        +navItem('index', 'tools', '#tools')
+        +navItem('index', 'docs', '')(class='Navbar-listItem--doc')
+          +link('https://github.com/Moove-it/angus', 'docs')(target='_blank')

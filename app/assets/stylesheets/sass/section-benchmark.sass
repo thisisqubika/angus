@@ -1,0 +1,147 @@
+%framework
+  float: left
+  @include grid-column(3)
+
+  .line
+    width: 15px
+    height: 2px
+    margin-top: 10px
+    float: left
+  .text
+    padding-left: 9px
+    display: inline
+
+.SectionBenchmark
+  @extend %SectionPages
+  padding-top: 9%
+
+  &-title
+
+    @include grid-column(12)
+    padding-bottom: 3%
+
+    @media #{$medium-up}
+      @include grid-column(8, $offset: 2)
+
+    @media #{$large-up}
+      @include grid-column(8, $offset: 2, $collapse: true)
+
+  &-descripcion
+    @include grid-column(12)
+
+    @media #{$medium-up}
+      @include grid-column(8, $offset: 2)
+
+    @media #{$large-up}
+      @include grid-column(8, $offset: 2, $collapse: true)
+
+  &-chart
+    @include grid-column(12, $offset: 0)
+    padding-left: 0
+    padding-rigth: 0
+
+
+    @media #{$medium-up}
+      @include grid-column(8, $offset: 2)
+
+    &-ruby
+      padding-left: 0
+      text-align: center
+      @include grid-column(12)
+
+      @media #{$medium-up}
+        @include grid-column(8, $offset: 2)
+
+      @media #{$large-up}
+        @include grid-column(5, $offset: 0, $collapse: true)
+
+    &-jruby
+      text-align: center
+      padding-left: 0
+      @include grid-column(12)
+
+      @media #{$medium-up}
+        @include grid-column(8, $offset: 2)
+
+      @media #{$large-up}
+        @include grid-column(5, $offset: 2, $collapse: true)
+
+  &-reference
+    @include grid-column(12)
+    margin-bottom: 85px
+
+    @media #{$medium-up}
+      @include grid-column(5, $offset: 4, $collapse: true)
+      margin-bottom: 5%
+
+
+    .reference-list
+      @include clearfix
+
+    .angus
+      @extend %framework
+      .line
+        background-color: red
+    .grape
+      @extend %framework
+      .line
+        background-color: steelblue
+    .rails-api
+      @extend %framework
+      .line
+        background-color: yellow
+    .sinatra
+      @extend %framework
+      .line
+        background-color: green
+
+  svg
+    width: 286px
+    height: 286px
+    background-color: #2C2A2A
+    border-radius: 10px
+    overflow: hidden
+
+    @media #{$medium-up}
+      height: 300px
+      width: 400px
+      text-align: center
+      padding-left: 9px
+
+    .benchmark-title
+      fill: #fff
+
+    .g-container
+      transform: translate(35.2px, 54.5px) scale(0.78)
+
+      @media #{$medium-up}
+        transform: translate(50px, 30px) scale(1)
+    .angus
+      fill: none
+      stroke: red
+      stroke-width: 2px
+    .grape
+      fill: none
+      stroke: steelblue
+      stroke-width: 2px
+    .rails
+      fill: none
+      stroke: yellow
+      stroke-width: 2px
+    .sinatra
+      fill: none
+      stroke: green
+      stroke-width: 2px
+
+    .axis--x text,
+    .axis--y text
+      font: oblique 12px 'Open Sans'
+      fill: #484848
+      font-weight: 100
+
+
+    .axis path,
+    .axis line
+      fill: none
+      stroke: #484848
+      shape-rendering: crispEdges
