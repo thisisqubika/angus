@@ -10,7 +10,7 @@ special focus on simplicity. Angus is an excellent option for creating REST-like
 
 ## Status
 
-[![BuildStatus](https://api.travis-ci.org/Moove-it/angus.png)](https://travis-ci.org/Moove-it/angus) [![Gem Version](https://badge.fury.io/rb/angus.png)](http://badge.fury.io/rb/angus)
+[![BuildStatus](https://api.travis-ci.org/moove-it/angus.png)](https://travis-ci.org/moove-it/angus) [![Gem Version](https://badge.fury.io/rb/angus.png)](http://badge.fury.io/rb/angus)
 
 Angus is production-ready, but still under development. We are working hard to keep bringing new
 features and fixing any bug that may appear.
@@ -37,14 +37,14 @@ features and fixing any bug that may appear.
 
 ## Usage
 
-You can see our wiki to get information on how to use angus:  [Angus Wiki] (https://github.com/Moove-it/angus/wiki)
+You can see our wiki to get information on how to use angus:  [Angus Wiki] (https://github.com/moove-it/angus/wiki)
 
 #### Useful links
 
- * [Demo] (https://github.com/Moove-it/angus/wiki/Demo)
- * [Creating a new Project with Angus] (https://github.com/Moove-it/angus/wiki/Getting-Started)
- * [Consume angus api] (https://github.com/Moove-it/angus/wiki/Clients)
- * [Versioning] (https://github.com/Moove-it/angus/wiki/Versioning)
+ * [Demo] (https://github.com/moove-it/angus/wiki/Demo)
+ * [Creating a new Project with Angus] (https://github.com/moove-it/angus/wiki/Getting-Started)
+ * [Consume angus api] (https://github.com/moove-it/angus/wiki/Clients)
+ * [Versioning] (https://github.com/moove-it/angus/wiki/Versioning)
 
 
 ## Contributing to Angus
@@ -54,8 +54,8 @@ repository on your GitHub account, and code what you want!
 
 ## License
 
-MIT License. See [LICENSE] (https://github.com/Moove-it/angus/blob/master/LICENSE.txt) for details.
+MIT License. See [LICENSE] (https://github.com/moove-it/angus/blob/master/LICENSE.txt) for details.
 
 ## Copyright
 
-Copyright (c) 2010-2014 Moove-IT
+Copyright (c) 2010-2014 Moove-it
