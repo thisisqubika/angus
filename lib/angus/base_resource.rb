@@ -1,7 +1,10 @@
 require 'yaml'
 
+require_relative 'request/json_params'
+
 module Angus
   class BaseResource
+    include Angus::Request::JsonParams
 
     def self.inherited(subclass)
       self._before_filers.each { |before_filer| subclass._before_filers << before_filer }

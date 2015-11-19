@@ -33,11 +33,14 @@ module Angus
 
     attr_accessor :default_doc_language
     attr_accessor :validate_params
+    attr_accessor :path_prefix
+    attr_accessor :root_path
 
     def initialize
       super
 
       @resources_definitions  = []
+      @root_path              ||= ''
       @version                = FIRST_VERSION
       @name                   = self.class.name.downcase
       @configured             = false
@@ -91,7 +94,15 @@ module Angus
     def configure!
       raise 'Already configured' if configured?
 
-      @definitions = Angus::SDoc::DefinitionsReader.service_definition('definitions')
+      definitions_path = if @root_path.empty?
+                           'definitions'
+                         else
+                           File.join(@root_path, 'definitions')
+                         end
+
+      @definitions = Angus::SDoc::DefinitionsReader.service_definition(definitions_path)
+
+      self.path_prefix ||= @definitions.code_name
 
       configure
 
@@ -107,13 +118,13 @@ module Angus
     end
 
     def register(resource_name, options = {})
-      resource_definition = ResourceDefinition.new(resource_name, @definitions)
+      resource_definition = ResourceDefinition.new(@root_path, resource_name, @definitions)
 
       @resources_definitions << resource_definition
     end
 
     def base_path
-      "/#{service_code_name}"
+      "/#@path_prefix"
     end
 
     def register_resource_routes(resource_definition)

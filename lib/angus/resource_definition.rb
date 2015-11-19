@@ -3,10 +3,11 @@ require 'yaml'
 module Angus
   class ResourceDefinition
 
-    def initialize(resource_name, representations)
-      @resource_name       = resource_name
-      @resource_class_name = classify_resource(resource_name)
-      @representations     = representations || {}
+    def initialize(root_path, resource_name, representations)
+      @root_path            = root_path
+      @resource_name        = resource_name
+      @resource_class_name  = classify_resource(resource_name)
+      @representations      = representations || {}
     end
 
     def operations
@@ -25,7 +26,13 @@ module Angus
     end
 
     def resource_path
-      File.join('resources', canonical_name)
+      resource_path = File.join('resources', canonical_name)
+
+      if @root_path.empty?
+        resource_path
+      else
+        File.join(@root_path, resource_path)
+      end
     end
 
     def build_response_metadata(response_representation)
