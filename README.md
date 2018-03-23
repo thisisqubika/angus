@@ -37,14 +37,14 @@ features and fixing any bug that may appear.
 
 ## Usage
 
-You can see our wiki to get information on how to use angus:  [Angus Wiki] (https://github.com/moove-it/angus/wiki)
+You can see our wiki to get information on how to use angus:  [Angus Wiki](https://github.com/moove-it/angus/wiki)
 
 #### Useful links
 
- * [Demo] (https://github.com/moove-it/angus/wiki/Demo)
- * [Creating a new Project with Angus] (https://github.com/moove-it/angus/wiki/Getting-Started)
- * [Consume angus api] (https://github.com/moove-it/angus/wiki/Clients)
- * [Versioning] (https://github.com/moove-it/angus/wiki/Versioning)
+ * [Demo](https://github.com/moove-it/angus/wiki/Demo)
+ * [Creating a new Project with Angus](https://github.com/moove-it/angus/wiki/Getting-Started)
+ * [Consume angus api](https://github.com/moove-it/angus/wiki/Clients)
+ * [Versioning](https://github.com/moove-it/angus/wiki/Versioning)
 
 
 ## Contributing to Angus
@@ -54,8 +54,8 @@ repository on your GitHub account, and code what you want!
 
 ## License
 
-MIT License. See [LICENSE] (https://github.com/moove-it/angus/blob/master/LICENSE.txt) for details.
+MIT License. See [LICENSE](https://github.com/moove-it/angus/blob/master/LICENSE.txt) for details.
 
 ## Copyright
 
-Copyright (c) 2010-2014 Moove-it
+Copyright (c) 2010-2018 Moove-it
