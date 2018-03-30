@@ -2,8 +2,8 @@ module Angus
   class ServerCommand < Thor::Group
     include Thor::Actions
 
-    class_option :port, desc: 'use PORT (default: 9292)', type: :string, required: false
-    class_option :host, desc: 'listen on HOST (default: localhost)', type: :string, required: false
+    class_option :port, desc: 'use PORT (default: 9292)', type: :string, required: false, default: '9292'
+    class_option :host, desc: 'listen on HOST (default: localhost)', type: :string, required: false, default: '0.0.0.0'
 
     def server
       port_option = "-p #{options[:port]}" || ''
