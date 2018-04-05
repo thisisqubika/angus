@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = 'angus'
   spec.version       = Angus::VERSION
   spec.authors       = ['Pablo Ifran', 'Adrian Gomez', 'Gianfranco Zas', 'Gabriel Fagundez',
-                        'Maximo Gomez', 'Guzman Iglesias', 'Martin Cabrera', 'Marcelo Casiraghi']
+                        'Maximo Gomez', 'Guzman Iglesias', 'Martin Cabrera', 'Marcelo Casiraghi', 'Lucas Aragno']
   spec.email         = %w[angus@moove-it.com]
   spec.description   = %q{Angus is a simple and powerful framework to build REST APIs using Ruby.}
   spec.summary       = %q{A web services summary}
