@@ -12,6 +12,8 @@ module Angus
     def self.marshal_object(object, getters)
       result = {}
       getters.each do |getter|
+        next if getter.is_a?(Hash) && getter.key?(:optional_fields)
+
         if getter.is_a?(Hash)
           key = getter.keys[0]
           value = get_value(object, key)
