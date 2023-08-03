@@ -2,7 +2,6 @@ require 'yaml'
 
 module Angus
   class ResourceDefinition
-
     def initialize(root_path, resource_name, representations)
       @root_path            = root_path
       @resource_name        = resource_name
@@ -35,37 +34,54 @@ module Angus
       end
     end
 
-    def build_response_metadata(response_representation)
+    def build_response_metadata(response_representation, optional_fields = [], parent_name = nil)
       return {} unless response_representation
 
       case response_representation
-        when Angus::SDoc::Definitions::Representation
-          result = []
+      when Angus::SDoc::Definitions::Representation
+        result = []
 
-          response_representation.fields.each do |field|
-            result << build_response_metadata(field)
-          end
+        response_representation.fields.each do |field|
+          result << build_response_metadata(field, optional_fields, parent_name)
+        end
 
-          result
-        when Array
-          result = []
+        result << { optional_fields: optional_fields }
+      when Array
+        result = []
 
-          response_representation.each do |field|
-            result << build_response_metadata(field)
-          end
+        response_representation.each do |field|
+          result << build_response_metadata(field, optional_fields, parent_name)
+        end
 
-          result
+        result << { optional_fields: optional_fields }
+      else
+        field_name = response_representation.name
+        field_type_name = response_representation.type || response_representation.elements_type
+        field_optional = response_representation.optional
+
+        if field_optional
+          optional_fields << if parent_name
+                               "#{parent_name}.#{field_name}"
+                             else
+                               field_name
+                             end
+        end
+
+        representation = representation_by_name(field_type_name)
+
+        if representation.nil?
+          field_name.to_sym
         else
-          field_name = response_representation.name
-          field_type_name = response_representation.type || response_representation.elements_type
-
-          representation = representation_by_name(field_type_name)
-
-          if representation.nil?
-            field_name.to_sym
+          if parent_name
+            parent_name.concat(".#{field_name}")
           else
-            {field_name.to_sym => build_response_metadata(representation)}
+            parent_name = field_name
           end
+
+          {
+            field_name.to_sym => build_response_metadata(representation, optional_fields, parent_name)
+          }
+        end
       end
     end
 
@@ -79,6 +95,5 @@ module Angus
     def classify_resource(resource)
       Angus::String.camelize(resource)
     end
-
   end
 end
