@@ -73,7 +73,7 @@ module Angus
           field_name.to_sym
         else
           if parent_name
-            parent_name.concat(".#{field_name}")
+            parent_name += ".#{field_name}"
           else
             parent_name = field_name
           end
