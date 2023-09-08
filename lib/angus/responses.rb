@@ -17,7 +17,7 @@ module Angus
 
       if extra_response_attributes && optional_fields
         optional_fields.reject! do |optional_field|
-          extra_response_attributes.any? { |erp| optional_field.include?(erp) }
+          extra_response_attributes.any? { |erp| optional_field.eql?(erp) }
         end
       end
 
