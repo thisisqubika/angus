@@ -34,7 +34,7 @@ module Angus
       end
     end
 
-    def build_response_metadata(response_representation, optional_fields = [], parent_name = nil)
+    def build_response_metadata(response_representation, optional_fields = [], parent_name = '')
       return {} unless response_representation
 
       case response_representation
@@ -42,7 +42,7 @@ module Angus
         result = []
 
         response_representation.fields.each do |field|
-          result << build_response_metadata(field, optional_fields, parent_name)
+          result << build_response_metadata(field, optional_fields, parent_name.dup)
         end
 
         result << { optional_fields: optional_fields }
@@ -50,7 +50,7 @@ module Angus
         result = []
 
         response_representation.each do |field|
-          result << build_response_metadata(field, optional_fields, parent_name)
+          result << build_response_metadata(field, optional_fields, parent_name.dup)
         end
 
         result << { optional_fields: optional_fields }
@@ -60,7 +60,7 @@ module Angus
         field_optional = response_representation.optional
 
         if field_optional
-          optional_fields << if parent_name
+          optional_fields << if parent_name != ''
                                "#{parent_name}.#{field_name}"
                              else
                                field_name
@@ -72,14 +72,14 @@ module Angus
         if representation.nil?
           field_name.to_sym
         else
-          if parent_name
+          if parent_name != ''
             parent_name += ".#{field_name}"
           else
             parent_name = field_name
           end
 
           {
-            field_name.to_sym => build_response_metadata(representation, optional_fields, parent_name)
+            field_name.to_sym => build_response_metadata(representation, optional_fields, parent_name.dup)
           }
         end
       end
