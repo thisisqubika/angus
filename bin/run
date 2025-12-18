@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+docker build -t angus .
+
+(docker stop angus) || true
+(docker rm angus) || true
+
+docker run -it --name angus -v ${PWD}:/home/angus angus bash
