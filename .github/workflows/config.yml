@@ -1,0 +1,33 @@
+name: Gem Validations
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  tests:
+    name: 'Run tests'
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        ruby-version: ['2.5', '2.6', '2.7', '3.0', '3.1', '3.2', '3.3', '3.4']
+      fail-fast: false
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+    
+      - name: Set up Ruby ${{ matrix.ruby-version }}
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby-version }}
+          bundler: default
+          rubygems: default
+    
+      - name: Install dependencies
+        run: bundle install
+    
+      - name: Run tests
+        run: bundle exec rspec

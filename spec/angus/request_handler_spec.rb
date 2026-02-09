@@ -11,7 +11,7 @@ describe Angus::RequestHandler, { :work_dir => work_dir } do
 
   describe '.new' do
     it 'has a a exception handler middleware' do
-      handler.middleware.map(&:first).should include(Angus::Middleware::ExceptionHandler)
+      expect(handler.middleware.map(&:first)).to include(Angus::Middleware::ExceptionHandler)
     end
   end
 
@@ -22,7 +22,7 @@ describe Angus::RequestHandler, { :work_dir => work_dir } do
     it 'adds the given middleware after the rest' do
       handler.use(other_middleware)
 
-      handler.middleware.last.first.should eq(other_middleware)
+      expect(handler.middleware.last.first).to eq(other_middleware)
     end
 
     context 'when the given middleware is already present' do
@@ -31,7 +31,7 @@ describe Angus::RequestHandler, { :work_dir => work_dir } do
       it 'does not modify the middleware' do
         expect {
           handler.use(other_middleware)
-        }.to_not change { handler.middleware }
+        }.not_to change { handler.middleware }
       end
     end
 
@@ -43,8 +43,7 @@ describe Angus::RequestHandler, { :work_dir => work_dir } do
 
     it 'adds the given middleware after the given class' do
       handler.use_after(Angus::Middleware::ExceptionHandler, other_middleware)
-
-      handler.middleware.last.first.should eq(other_middleware)
+      expect(handler.middleware.last.first).to eq(other_middleware)
     end
 
     context 'when the given class is not present in the middleware' do
@@ -73,8 +72,7 @@ describe Angus::RequestHandler, { :work_dir => work_dir } do
 
     it 'adds the given middleware before the given class' do
       handler.use_before(Angus::Middleware::ExceptionHandler, other_middleware)
-
-      handler.middleware.first.first.should eq(other_middleware)
+      expect(handler.middleware.first.first).to eq(other_middleware)
     end
 
     context 'when the given class is not present in the middleware' do
@@ -91,7 +89,7 @@ describe Angus::RequestHandler, { :work_dir => work_dir } do
       it 'does not modify the middleware' do
         expect {
           handler.use_before(Angus::Middleware::ExceptionHandler, other_middleware)
-        }.to_not change { handler.middleware }
+        }.not_to change { handler.middleware }
       end
     end
 
@@ -103,17 +101,15 @@ describe Angus::RequestHandler, { :work_dir => work_dir } do
 
     it 'removes the given class from the middleware' do
       handler.disuse(Angus::Middleware::ExceptionHandler)
-
-      handler.middleware.map(&:first).should_not include(Angus::Middleware::ExceptionHandler)
+      expect(handler.middleware.map(&:first)).not_to include(Angus::Middleware::ExceptionHandler)
     end
 
     it 'removes only given class from the middleware' do
       handler.use(other_middleware)
 
       handler.disuse(Angus::Middleware::ExceptionHandler)
-
-      handler.middleware.map(&:first).should_not include(Angus::Middleware::ExceptionHandler)
-      handler.middleware.map(&:first).should include(other_middleware)
+      expect(handler.middleware.map(&:first)).not_to include(Angus::Middleware::ExceptionHandler)
+      expect(handler.middleware.map(&:first)).to include(other_middleware)
     end
 
     context 'when the given class is not present in the middleware' do
