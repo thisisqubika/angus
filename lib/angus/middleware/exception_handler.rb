@@ -8,9 +8,12 @@ module Angus
     class ExceptionHandler
       include Angus::StatusCodes
 
+      JSON_HEADERS = { 'Content-Type' => 'application/json' }.freeze
+
       def initialize(app)
         @app = app
-        @definition_reader = Angus::DefinitionReader.new(app.base_middleware.definitions)
+        @definition_reader =
+          Angus::DefinitionReader.new(app.base_middleware.definitions)
       end
 
       def call(env)
@@ -20,119 +23,170 @@ module Angus
       def call!(env)
         @app.call(env)
       rescue Exception => exception
-        [
-          status_code(exception),
-          { 'Content-Type' => 'application/json' },
-          [build_error_response(exception)]
-        ]
+        rack_error_response(exception)
       end
 
       private
 
-      # Builds a service error response
-      def build_error_response(error)
-        error_messages = messages_from_error(error)
-
-        JsonRender.convert(:status => :error, :messages => error_messages)
+      # Builds a Rack-compatible error response
+      #
+      # @param [Exception] exception
+      # @return [Array] Rack response tuple
+      def rack_error_response(exception)
+        [
+          status_code(exception),
+          JSON_HEADERS,
+          [build_error_response(exception)]
+        ]
       end
 
-      # Returns an array of messages errors to be sent in an operation response
+      # Builds a service error response
       #
-      # If {error} respond_to? :errors then the method returns one error message
-      #   for each one.
+      # @param [Exception] error
+      # @return [String] JSON serialized error response
+      def build_error_response(error)
+        JsonRender.convert(
+          status: :error,
+          messages: messages_from_error(error)
+        )
+      end
+
+      # Returns an array of error messages to be sent in the response
+      #
+      # If {error} responds to :errors, one message is returned per error entry.
+      # If {error} responds to :error_key, the message definition is used.
+      # Otherwise a generic fallback message is returned.
       #
       # Each message returned is a hash with:
       #  - level
       #  - key
-      #  - description
+      #  - dsc
       #
-      # @param [Exception] error The error to be returned
+      # @param [Exception] error
+      # @param [Symbol] level
       #
-      # @return [Array] an array of messages
+      # @return [Array<Hash>]
       def messages_from_error(error, level = :error)
-        messages = []
-
         if error.respond_to?(:errors)
-          error.errors.each do |key, description|
-            messages << {:level => level, :key => key, :dsc => description}
-          end
+          build_errors_from_collection(error.errors, level)
         elsif error.respond_to?(:error_key)
-          messages << { :level => level, :key => error.error_key,
-                        :dsc => error_message(error) }.merge(additional_message_attributes(error))
+          [build_message_from_definition(error, level)]
         else
-          messages << { :level => level, :key => error.class.name, :dsc => error.message }
+          [build_fallback_message(error, level)]
         end
-
-        messages
       end
 
-      # Returns the message for an error.
+      # Builds error messages from an error collection
       #
-      # It first tries to get the message from text attribute of the error definition
-      #   if no definition is found or if the text attribute is blank it the returns the error
-      #   message attribute.
+      # @param [Hash] errors
+      # @param [Symbol] level
       #
-      # @param [Exception] error The error to get the message for.
-      #
-      # @return [String] the error message.
-      def error_message(error)
-        error_definition = error_definition(error)
+      # @return [Array<Hash>]
+      def build_errors_from_collection(errors, level)
+        errors.map do |key, description|
+          {
+            level: level,
+            key: key,
+            dsc: description
+          }
+        end
+      end
 
-        if error_definition && !error_definition.text.blank?
-          error_definition.text
+      # Builds an error message using its definition
+      #
+      # @param [Exception] error
+      # @param [Symbol] level
+      #
+      # @return [Hash]
+      def build_message_from_definition(error, level)
+        {
+          level: level,
+          key: error.error_key,
+          dsc: error_message(error)
+        }.merge(additional_message_attributes(error))
+      end
+
+      # Builds a fallback error message when no definition is available
+      #
+      # @param [Exception] error
+      # @param [Symbol] level
+      #
+      # @return [Hash]
+      def build_fallback_message(error, level)
+        {
+          level: level,
+          key: error.class.name,
+          dsc: error.message
+        }
+      end
+
+      # Returns the message text for an error
+      #
+      # It first tries to retrieve the message from the error definition.
+      # If no definition is found or the text is blank, it falls back to
+      # the error's message attribute.
+      #
+      # @param [Exception] error
+      #
+      # @return [String]
+      def error_message(error)
+        definition = error_definition(error)
+
+        if definition && present?(definition.text)
+          definition.text
         else
           error.message
         end
       end
 
+      # Returns additional attributes defined for the error message
+      #
+      # @param [Exception] error
+      #
+      # @return [Hash]
       def additional_message_attributes(error)
-        error_definition = error_definition(error)
+        definition = error_definition(error)
+        return {} unless definition
 
-        return {} unless error_definition
-
-        error_definition.fields.inject({}) do |attributes, field|
-          attributes.merge!({ field.name => error.send(field.name)})
+        definition.fields.each_with_object({}) do |field, attrs|
+          attrs[field.name] = error.send(field.name)
         end
       end
 
-      # Returns the error definition.
+      # Returns the error definition
       #
-      # If the error does not responds to error_key nil will be returned, see EvolutionError.
+      # If the error does not respond to :error_key, nil will be returned.
       #
-      # @param [#error_key] error An error object
+      # @param [Exception] error
       #
-      # @return [Hash]
+      # @return [SDoc::Definitions::Message, nil]
       def error_definition(error)
-        error_key = error.class.name
-
-        @definition_reader.message_definition(error_key, SDoc::Definitions::Message::ERROR_LEVEL)
+        @definition_reader.message_definition(
+          error.class.name,
+          SDoc::Definitions::Message::ERROR_LEVEL
+        )
       end
 
       # Returns a suitable HTTP status code for the given error
       #
-      # If error param responds to #errors, then #{StatusCodes::HTTP_STATUS_CODE_CONFLICT} will
-      # be returned.
+      # If the error responds to :errors, HTTP 409 is returned.
+      # If the error has a message definition, its associated status code is used.
+      # Otherwise HTTP 500 is returned.
       #
-      # If error param responds to #error_key, then the status_code associated
-      #  with the message will be returned.
+      # @param [Exception] exception
       #
-      # @param [#errors, #error_key] exception An error object
-      #
-      # @return [Integer] HTTP status code
+      # @return [Integer]
       def status_code(exception)
-        if exception.respond_to?(:errors)
-          return HTTP_STATUS_CODE_CONFLICT
-        end
+        return HTTP_STATUS_CODE_CONFLICT if exception.respond_to?(:errors)
 
         message = error_definition(exception)
-
-        if message
-          message.status_code
-        else
-          HTTP_STATUS_CODE_INTERNAL_SERVER_ERROR
-        end
+        message ? message.status_code : HTTP_STATUS_CODE_INTERNAL_SERVER_ERROR
       end
 
+      # Avoid ActiveSupport dependency
+      def present?(value)
+        !value.nil? && !value.to_s.strip.empty?
+      end
     end
   end
 end

@@ -33,19 +33,19 @@ describe Angus::RSpec::Examples::DescribeErrors do
         mocked_app = example.app
       end
 
-      mocked_app.should_not eq(base)
+      expect(mocked_app).not_to eq(base)
     end
 
     it 'binds to the original app method after running' do
-      example.app.should eq(base)
+      expect(example.app).to eq(base)
       descriptor.mock_service(base, error, example) { }
 
-      example.app.should eq(base)
+      expect(example.app).to eq(base)
     end
 
     context 'when exception occurs' do
       it 'binds to the original app method after running' do
-        example.app.should eq(base)
+        expect(example.app).to eq(base)
 
         begin
           descriptor.mock_service(base, error, example) do
@@ -54,7 +54,7 @@ describe Angus::RSpec::Examples::DescribeErrors do
         rescue
         end
 
-        example.app.should eq(base)
+        expect(example.app).to eq(base)
       end
 
       it 'reraises the exception' do
