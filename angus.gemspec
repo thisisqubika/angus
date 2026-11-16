@@ -33,6 +33,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency('rspec-its', '~> 1.3', '>= 1.3.1')
   spec.add_development_dependency('faker')
   spec.add_development_dependency('simplecov', '>= 0.22', '< 1')
+  spec.add_development_dependency('simplecov_json_formatter')
   spec.add_development_dependency('rack-test', '~> 2.2', '< 3')
   spec.add_dependency('bigdecimal', '>= 3.1', '< 4')
 end
