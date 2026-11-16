@@ -1,12 +1,11 @@
 RSpec::Matchers.define :have_error_response do
-
   match do |response|
     begin
-      @json = JSON(response.body)
-
+      @json = JSON.parse(response.body)
       is_valid_response?
     rescue JSON::ParserError => exception
-      @error = "Error will parsing response: #{exception.message}"
+      @error = "Error while parsing response: #{exception.message}"
+      false
     end
   end
 
@@ -14,23 +13,23 @@ RSpec::Matchers.define :have_error_response do
     'have error response'
   end
 
-  failure_message_for_should do
+  failure_message do
     if @error
       @error
     elsif @json && @json['status']
-      "expect #{@json['status']} to be error\n#{@json.inspect}"
+      "expected #{@json['status']} to be error\n#{@json.inspect}"
     else
-      "expect #{@json} to include status in it's keys"
+      "expected #{@json.inspect} to include status in its keys"
     end
   end
 
-  failure_message_for_should_not do
+  failure_message_when_negated do
     if @error
       @error
     elsif @json && @json['status']
-      "expect #{@json['status']} to not be error\n#{@json.inspect}"
+      "expected #{@json['status']} not to be error\n#{@json.inspect}"
     else
-      "expect #{@json} to include status in it's keys"
+      "expected #{@json.inspect} to include status in its keys"
     end
   end
 
