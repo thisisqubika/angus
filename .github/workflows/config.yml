@@ -1,9 +1,16 @@
 name: Gem Validations
 
+# Runs once per commit: on pull requests, and on master after a merge. Running on every
+# branch push as well would bill the whole matrix twice for each push to an open PR.
 on:
   push:
-    branches:
-      - '**'
+    branches: [master]
+  pull_request:
+
+# A new push to the same branch cancels the run still in progress for the previous one.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   tests:
