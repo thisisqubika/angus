@@ -1,0 +1,9 @@
+# Lockfiles are resolved inside the image for its Ruby; a lockfile from the host
+# would be for a different Ruby / rack.
+Gemfile.lock
+gemfiles/*.lock
+.bundle/
+.git/
+.worktrees/
+*.gem
+coverage/
