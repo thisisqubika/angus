@@ -16,6 +16,11 @@ jobs:
   tests:
     name: Ruby ${{ matrix.ruby }} / rack ${{ matrix.rack }}
     runs-on: ${{ matrix.os }}
+    permissions:
+      contents: read
+      statuses: write       # commit status "coverage"
+      pull-requests: write  # coverage comment on the PR
+      actions: read
 
     strategy:
       fail-fast: false
@@ -50,8 +55,32 @@ jobs:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
 
+      # continue-on-error on Ruby 3.4 / rack 1: the coverage action has to run even when the
+      # tests fail; the job turns red in the last step.
       - name: Run tests
+        id: tests
+        continue-on-error: ${{ matrix.ruby == '3.4' && matrix.rack == '1' }}
         run: bundle exec rspec
+
+      # Runs only on Ruby 3.4 / rack 1 so there is a single comment and a single "coverage"
+      # commit status per PR.
+      - name: Coverage
+        if: matrix.ruby == '3.4' && matrix.rack == '1' && !cancelled()
+        uses: bancardsa/coverage-action@9ae20e1968f82ec5f8995c82805693da598acf16 # v1.0.0
+        with:
+          tests-outcome: ${{ steps.tests.outcome }}
+
+      - name: Upload coverage report
+        if: matrix.ruby == '3.4' && matrix.rack == '1' && !cancelled()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage
+          retention-days: 14
+
+      - name: Fail if tests failed
+        if: matrix.ruby == '3.4' && matrix.rack == '1' && !cancelled() && steps.tests.outcome != 'success'
+        run: exit 1
 
   # Single status for branch protection: master requires a check named "Run tests".
   # It passes only if every matrix job passed.
