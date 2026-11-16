@@ -1,6 +1,8 @@
 require 'spec_helper'
 
+require 'rbconfig'
 require 'stringio'
+require 'open3'
 require 'angus/request/json_params'
 
 describe Angus::Request::JsonParams do
@@ -91,6 +93,28 @@ describe Angus::Request::JsonParams do
 
     it 'parses the value as a time' do
       expect(params.get_json_datetime(:at)).to eq(Time.utc(2024, 3, 5, 10, 20, 30))
+    end
+
+    # Other libraries usually load 'time' first, so this runs in a clean interpreter.
+    it 'parses dates without relying on another library to have required time' do
+      script = <<-RUBY
+        require 'json'
+        require 'stringio'
+        require 'angus/request/json_params'
+
+        host = Class.new do
+          include Angus::Request::JsonParams
+          def request; Struct.new(:body).new(StringIO.new('{"at": "2024-03-05T10:20:30Z"}')); end
+        end
+
+        puts host.new.get_json_datetime(:at).utc.strftime('%F')
+      RUBY
+
+      lib = File.expand_path('../../../lib', __dir__)
+      output, status = Open3.capture2e(RbConfig.ruby, '--disable-gems', "-I#{lib}", '-e', script)
+
+      expect(status).to be_success, output
+      expect(output).to include('2024-03-05')
     end
 
     it 'raises InvalidValueError when the value is not a date' do
