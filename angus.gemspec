@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
   spec.bindir        = 'bin'
   spec.executables   = %w[angus]
 
-  spec.add_dependency('thor')
+  spec.add_dependency('thor', '>= 1.2', '< 2')
   spec.add_dependency('angus-sdoc', '~> 0.0', '>= 0.0.7')
   spec.add_dependency('angus-router', '~> 0.0', '>= 0.0.3')
 
