@@ -1,6 +1,7 @@
 # spec/angus/generator/generator_spec.rb
 require 'spec_helper'
 require 'fileutils'
+require 'yaml'
 require 'tmpdir'
 require 'angus/commands/command_processor'
 
@@ -89,6 +90,27 @@ RSpec.describe 'Angus Generator' do
       expect(operations_content).to include('create:')
       expect(operations_content).to include('update:')
       expect(operations_content).to include('destroy:')
+    end
+
+    it 'registers the resource in the service file' do
+      Dir.chdir(project_dir) do
+        processor.new_resource('user', %w[index])
+      end
+
+      service_content = File.read(File.join(project_dir, 'services', 'test_api.rb'))
+      expect(service_content).to include('register :users')
+    end
+
+    it 'adds the id uri element only to the actions that work on a single record' do
+      Dir.chdir(project_dir) do
+        processor.new_resource('user', %w[index show create update destroy])
+      end
+
+      operations = YAML.load_file(File.join(project_dir, 'definitions', 'users', 'operations.yml'))
+
+      expect(operations.keys).to eq(%w[index show create update destroy])
+      expect(operations.select { |_, operation| operation.key?('uri') }.keys).to eq(%w[show update destroy])
+      expect(operations['show']['uri']).to eq([{ 'element' => 'id', 'description' => 'users id.' }])
     end
 
     it 'handles complex resource names' do
