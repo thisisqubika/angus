@@ -35,7 +35,7 @@ jobs:
           # JRuby: the versions the services run in production, all on rack 1.
           # setup-ruby ships x64 builds for ubuntu-24.04 only from JRuby 9.4.8.0 on; older
           # versions have to run on ubuntu-22.04.
-          # 9.3.14.0 (external-commerce-service)
+          # 9.3.14.0
           - { os: ubuntu-22.04, ruby: 'jruby-9.3.14.0', rack: '1' }
           # 9.4.1.0
           - { os: ubuntu-22.04, ruby: 'jruby-9.4.1.0', rack: '1' }
