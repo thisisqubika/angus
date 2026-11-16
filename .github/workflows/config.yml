@@ -26,6 +26,16 @@ jobs:
         # rack 1.6.13 is the line the services run. angus-router, from every release on
         # rubygems, requires rack ~> 1.5, so there is no rack 2 line to test.
         rack: ['1']
+        include:
+          # JRuby: the versions the services run in production, all on rack 1.
+          # setup-ruby ships x64 builds for ubuntu-24.04 only from JRuby 9.4.8.0 on; older
+          # versions have to run on ubuntu-22.04.
+          # 9.3.14.0 (external-commerce-service)
+          - { os: ubuntu-22.04, ruby: 'jruby-9.3.14.0', rack: '1' }
+          # 9.4.1.0
+          - { os: ubuntu-22.04, ruby: 'jruby-9.4.1.0', rack: '1' }
+          # 9.4.5.0
+          - { os: ubuntu-22.04, ruby: 'jruby-9.4.5.0', rack: '1' }
 
     env:
       BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/rack_${{ matrix.rack }}.gemfile
