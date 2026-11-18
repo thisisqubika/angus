@@ -1,0 +1,61 @@
+{
+  "enabledPlugins": {
+    "bancard@bancard-agent-plugins": true,
+    "bancard-agentic-framework@bancard-agent-plugins": true,
+    "superpowers@claude-plugins-official": false,
+    "superpowers@superpowers-marketplace": false
+  },
+  "model": "sonnet",
+  "permissions": {
+    "allow": [
+      "Bash(git status *)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git fetch *)",
+      "Bash(git branch --list *)",
+      "Bash(git branch -a *)",
+      "Bash(git branch --show-current *)",
+      "Bash(git show *)",
+      "Bash(git stash list *)",
+      "Bash(git rev-parse *)",
+      "Bash(git ls-files *)",
+      "Bash(git grep *)",
+      "Bash(git blame *)",
+      "Bash(git merge-base *)",
+      "Bash(git worktree list *)",
+      "Bash(gh pr view *)",
+      "Bash(gh pr checks *)",
+      "Bash(gh pr diff *)",
+      "Bash(gh pr list *)",
+      "Bash(gh issue view *)",
+      "Bash(gh run list *)",
+      "Bash(gh run view *)",
+      "Bash(bundle exec rspec *)",
+      "Bash(bundle install *)",
+      "Bash(bundle exec rake -T *)",
+      "mcp__plugin_bancard_atlassian__getJiraIssue",
+      "mcp__plugin_bancard_atlassian__searchJiraIssuesUsingJql",
+      "mcp__plugin_bancard_atlassian__getConfluencePage",
+      "mcp__plugin_bancard_atlassian__getAccessibleAtlassianResources",
+      "mcp__plugin_bancard_atlassian__search",
+      "mcp__plugin_bancard_atlassian__searchConfluence",
+      "mcp__plugin_bancard_atlassian__getConfluenceContent"
+    ],
+    "ask": [
+      "Bash(git push *)",
+      "Bash(gh pr create *)",
+      "Bash(gh pr merge *)",
+      "Bash(gh pr comment *)",
+      "Bash(gh pr review *)",
+      "Bash(gh api *)",
+      "mcp__plugin_bancard_atlassian__createJiraIssue",
+      "mcp__plugin_bancard_atlassian__addCommentToJiraIssue",
+      "mcp__plugin_bancard_atlassian__editJiraIssue"
+    ],
+    "deny": [
+      "Bash(git push --force *)",
+      "Bash(git push -f *)",
+      "Bash(rm -rf *)"
+    ]
+  }
+}
