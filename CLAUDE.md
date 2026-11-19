@@ -2,14 +2,14 @@
 
 Instrucciones para agentes de IA que trabajan en este repo. Se carga entero en cada sesión, así que mantenelo corto: acá va lo que hace falta para orientarse y trabajar (stack, comandos, estructura, convenciones, flujo). Las decisiones, limitaciones, incidentes y correcciones, con su porqué, van en `.claude/memory/`.
 
-## Qué es este servicio
+## Qué es esta gema
 
 Gema `angus`: framework para construir servicios REST sobre Rack (routing con `angus-router`, parámetros y respuestas JSON, middleware de excepciones y generador `angus new` basado en thor). No se despliega; los servicios la consumen desde git.
 
 ## Stack y versiones
 
 - Ruby `>= 2.5` (`required_ruby_version` del gemspec); `.ruby-version` en 3.4.0.
-- Dependencias de runtime: `thor >= 1.2, < 2`, `angus-sdoc ~> 0.0, >= 0.0.7`, `angus-router ~> 0.0, >= 0.0.3` (exige `rack ~> 1.5`) y `bigdecimal >= 3.1, < 4`. De desarrollo: `rspec ~> 3.0`, `rspec-its`, `faker`, `rack-test`, `simplecov` y `simplecov_json_formatter`.
+- Dependencias de runtime: `thor >= 1.2, < 2`, `angus-sdoc ~> 0.0, >= 0.0.7`, `angus-router ~> 0.0, >= 0.0.3` y `bigdecimal >= 3.1, < 4`. De desarrollo: `rspec ~> 3.0`, `rspec-its`, `faker`, `rack-test`, `simplecov` y `simplecov_json_formatter`.
 - La CI prueba MRI 2.5 a 3.4 con rack 1.6.13 y JRuby 9.3.14.0, 9.4.1.0 y 9.4.5.0 (`.github/workflows/config.yml`).
 - Sin base de datos ni servicios externos.
 
@@ -46,15 +46,17 @@ Flujo de desarrollo: lo trae el plugin `bancard-agentic-framework` (BAF). Sus sk
 
 ## Convenciones
 
+- Es una dependencia interna: los servicios la declaran en su `Gemfile` desde git y el commit queda fijado en su `Gemfile.lock`. Un cambio llega a un servicio recién cuando actualiza ese lock, pero entonces le llega todo lo que haya en `master`. Por eso lo que entra a `master` tiene que funcionar para cualquier servicio que la use: no cambies ni saques clases, métodos o constantes públicas sin mantener compatibilidad, y no subas un piso del gemspec ni de Ruby sin revisar los `Gemfile.lock` de los servicios. Nunca se sube un piso para que un test pase.
 - Lo que escribas tiene que correr en Ruby 2.5 a 3.4 y en JRuby 9.3 y 9.4; la matriz de CI lo verifica.
-- Los rangos del gemspec tienen como piso la versión más vieja que usa algún consumidor y como techo el próximo major. Nunca se sube un piso para que un test pase.
+- Los rangos del gemspec tienen como piso la versión más vieja que usa algún consumidor y como techo el próximo major.
 - Cada fix de compatibilidad en `lib/` lleva su spec.
 - SimpleCov se configura en `.simplecov`, que se carga con `require 'simplecov'` al principio de `spec_helper.rb`. No llames a `SimpleCov.minimum_coverage`: si los tests fallan por coverage, la action no publica la medición. El piso (85%) lo exige `bancardsa/coverage-action` solo con `COVERAGE_ENFORCE=true`.
 
 ## Flujo de git y CI
 
-- Rama principal y default: master.
+- Rama principal y default: `master`.
 - La rama de un ticket se llama exactamente como el ticket (`QBK-123`), nace de su `feature/<X>` y se integra ahí **por PR**. Nunca se trabaja ni se integra sobre `develop` o `master`. Reglas completas en `bancard:manage-branches`.
+- El repo no tiene `develop`: las `feature/<X>` nacen de `master` y vuelven a `master` por PR, con merge commit.
 - Commits: `[TICKET-123] - Imperative description`, en inglés (`bancard:make-commit`). Sin atribución a IA ni co-authors.
 - CI: GitHub Actions (`.github/workflows/config.yml`, workflow «Gem Validations»), en cada PR y en cada push a `master`: `bundle exec rspec` en la matriz de MRI y JRuby sobre ubuntu-22.04; en Ruby 3.4 con rack 1 publica el coverage con `bancardsa/coverage-action`; el job `Run tests` agrega toda la matriz en un solo status. No construye ni publica imágenes.
 
@@ -64,7 +66,6 @@ Flujo de desarrollo: lo trae el plugin `bancard-agentic-framework` (BAF). Sus sk
 - Sentry: este repo no reporta a Sentry (no tiene gema `sentry-*`).
 - Dynatrace: el código no tiene instrumentación OpenTelemetry.
 - Despliegue: no se despliega; los servicios la consumen desde git.
-- No despliegues: podés explicar cómo se hace, pero el despliegue lo corre una persona.
 - Incidentes: `bancard:incident-runbook`.
 
 ## Memoria y contexto no obvio
