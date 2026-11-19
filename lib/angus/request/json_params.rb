@@ -1,3 +1,5 @@
+require 'time'
+
 require_relative '../exceptions/invalid_request_format'
 require_relative '../exceptions/invalid_value_error'
 require_relative '../exceptions/missing_parameter_error'

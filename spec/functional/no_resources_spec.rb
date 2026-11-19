@@ -13,7 +13,7 @@ describe Spec::Functional::NoResources,
   it 'responds to /' do
     get '/'
 
-    last_response.status.should eq(200)
+    expect(last_response.status).to eq(200)
   end
 
   describe 'when an unknown url' do
@@ -23,13 +23,13 @@ describe Spec::Functional::NoResources,
     it 'responds to /basic/doc/0.1' do
       get url
 
-      last_response.status.should eq(404)
+      expect(last_response.status).to eq(404)
     end
 
     it 'sets a json content type' do
       get url
 
-      last_response.header['Content-Type'].should eq('application/json')
+      expect(last_response.header['Content-Type']).to eq('application/json')
     end
 
   end
@@ -41,14 +41,14 @@ describe Spec::Functional::NoResources,
     it 'returns a success status' do
       get url
 
-      last_response.status.should eq(200)
+      expect(last_response.status).to eq(200)
     end
 
     context 'when no format' do
       it 'sets an html content type' do
         get url
 
-        last_response.header['Content-Type'].should eq('text/html;charset=utf-8')
+        expect(last_response.header['Content-Type']).to eq('text/html;charset=utf-8')
       end
     end
 
@@ -56,7 +56,7 @@ describe Spec::Functional::NoResources,
       it 'sets a json content type' do
         get "#{url}?format=json"
 
-        last_response.header['Content-Type'].should eq('application/json')
+        expect(last_response.header['Content-Type']).to eq('application/json')
       end
     end
 

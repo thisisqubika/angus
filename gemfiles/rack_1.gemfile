@@ -1,0 +1,8 @@
+source 'https://rubygems.org'
+
+# rack 1.6.13 is the rack the services run in production (they lock it through
+# angus-router). The default Gemfile resolves the newest rack instead, so this
+# gemfile keeps the line the services use under test.
+gemspec path: '..'
+
+gem 'rack', '1.6.13'
